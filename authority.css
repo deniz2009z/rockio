@@ -939,6 +939,34 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ── Careers — airy rhythm ── */
+
+body[data-page="careers"] .page-hero--band.page-hero-compact .page-hero-inner {
+  padding-top: clamp(56px, 9vw, 96px);
+  padding-bottom: clamp(56px, 9vw, 96px);
+}
+
+body[data-page="careers"] .page-hero--band h1 {
+  margin-bottom: clamp(24px, 4vw, 32px);
+}
+
+body[data-page="careers"] .page-lead {
+  max-width: 44ch;
+}
+
+body[data-page="careers"] .careers {
+  border-top: none;
+}
+
+body[data-page="careers"] .role-card-title {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+body[data-page="careers"] .page-cta--minimal .page-cta-inner {
+  max-width: 600px;
+}
+
 /* ── Mobile adjustments ── */
 
 @media (max-width: 768px) {
