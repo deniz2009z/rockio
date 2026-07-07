@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>RK-SPRAY — Spray Only the Weeds</title>
-  <meta name="description" content="RK-SPRAY finds weeds in your row and sprays only those spots. Less chemical. Less money. Spray records done for you.">
+  <title>RK-SPRAY — Intelligence Bar — Rockio</title>
+  <meta name="description" content="RK-SPRAY intelligence bar: edge perception, millisecond valve control, and safety-layer actuation for precision spot spraying. Retrofit to your tractor toolbar.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="field-anim.css">
+  <link rel="stylesheet" href="video-slot.css">
   <link rel="stylesheet" href="authority.css">
 </head>
 <body data-page="rk-spray">
@@ -46,224 +46,242 @@
           <div class="product-meta">
             <span class="product-id">RK-SPRAY</span>
             <span class="product-meta-divider" aria-hidden="true">/</span>
-            <span class="product-status">Our spraying machine</span>
+            <span class="product-status">Intelligence bar · Early access</span>
           </div>
-          <h1 class="product-hero-title">Finds the weed.<br>Sprays the weed.<br>That's it.</h1>
-          <p class="product-hero-lead">RK-SPRAY drives your crop row, spots the weeds, and hits only those spots. Your healthy plants stay dry. You use less chemical and spend less per acre.</p>
+          <h1 class="product-hero-title">Spot spray.<br>At field speed.</h1>
+          <p class="product-hero-lead">A retrofit intelligence bar that mounts to your tractor toolbar or 3-point hitch. Real-time edge perception drives individual nozzle valves — spray only the target, not the row.</p>
           <div class="product-hero-actions">
             <a href="#lead-form" class="cta cta-light">Request early access</a>
-            <a href="#specifications" class="cta-secondary cta-secondary-light">See specs</a>
+            <a href="#architecture" class="cta-secondary cta-secondary-light">System architecture</a>
           </div>
           <dl class="product-hero-stats">
             <div>
-              <dt>Your cost per acre</dt>
-              <dd>About 10× less</dd>
+              <dt>Bar width</dt>
+              <dd>3 m</dd>
             </div>
             <div>
-              <dt>Chemical you use</dt>
-              <dd>Up to 90% less</dd>
+              <dt>Ground speed</dt>
+              <dd>6 km/h</dd>
             </div>
             <div>
-              <dt>One tank lasts</dt>
-              <dd>Up to 8 hours</dd>
+              <dt>Valve response</dt>
+              <dd>6–12 ms</dd>
             </div>
           </dl>
         </div>
-        <figure class="product-hero-visual">
-          <div class="field-anim field-anim-dark" data-field-anim role="img" aria-label="Step-by-step: machine drives row, spots three weeds, sprays only weeds, leaves crop alone"></div>
-          <figcaption class="field-anim-caption">White dots = weeds (sprayed). Gray dots = your crop (left alone). Steps show at the bottom.</figcaption>
+        <figure class="product-hero-visual video-slot video-slot-dark">
+          <div class="video-slot-frame">
+            <video class="video-slot-player" controls playsinline preload="metadata" title="RK-SPRAY in operation">
+              <!-- <source src="videos/rk-spray-operation.mp4" type="video/mp4"> -->
+            </video>
+            <div class="video-slot-placeholder">
+              <div class="video-slot-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="video-slot-label">Video</span>
+              <p class="video-slot-title">RK-SPRAY field operation — coming soon</p>
+            </div>
+          </div>
+          <figcaption class="video-slot-caption">Spot application at 6 km/h · 3 m bar</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="ticker-mobile" aria-label="Quick facts">
+    <section class="ticker-mobile" aria-label="System highlights">
       <ul>
-        <li>120 gallon tank — runs up to 8 hours per fill</li>
-        <li>12 nozzles — each one fires only when it sees a weed</li>
-        <li>Works with no cell signal</li>
-        <li>Saves a spray log for every pass</li>
+        <li>3 m bar · 12–16 nozzles at 25 cm pitch</li>
+        <li>1.8 ha/hr at 6 km/h cruise speed</li>
+        <li>6–12 ms valve latency · ~2 cm spatial error</li>
+        <li>150–200 W total power budget</li>
       </ul>
     </section>
 
     <section class="ticker ticker-dark" aria-hidden="true">
       <div class="ticker-track">
-        <span>120 gallon tank</span>
+        <span>3 m intelligence bar</span>
         <span class="ticker-dot">·</span>
-        <span>12 smart nozzles</span>
+        <span>12–16 PWM nozzles</span>
         <span class="ticker-dot">·</span>
-        <span>No cell signal needed</span>
+        <span>6 km/h field speed</span>
         <span class="ticker-dot">·</span>
-        <span>Spray log included</span>
+        <span>67 TOPS edge compute</span>
         <span class="ticker-dot">·</span>
-        <span>120 gallon tank</span>
+        <span>Hardware safety layer</span>
         <span class="ticker-dot">·</span>
-        <span>12 smart nozzles</span>
+        <span>3 m intelligence bar</span>
         <span class="ticker-dot">·</span>
-        <span>No cell signal needed</span>
+        <span>12–16 PWM nozzles</span>
         <span class="ticker-dot">·</span>
-        <span>Spray log included</span>
+        <span>6 km/h field speed</span>
+        <span class="ticker-dot">·</span>
+        <span>67 TOPS edge compute</span>
+        <span class="ticker-dot">·</span>
+        <span>Hardware safety layer</span>
       </div>
     </section>
 
     <section class="readable-section">
       <p class="section-index">01</p>
-      <h2>The problem with normal sprayers</h2>
-      <p class="readable-lead">A typical sprayer treats the whole row the same — weeds, crop, and bare dirt all get chemical. You pay for the full tank even when only a few spots needed it.</p>
-      <div class="plain-box">
-        <p><strong>RK-SPRAY does the opposite.</strong> It looks at each plant, skips the healthy ones, and sprays only the weeds. You use what you need. Nothing more.</p>
-      </div>
-      <div class="compare-anim" style="margin-top: 32px;">
-        <div class="compare-anim-panel compare-anim-old">
-          <div class="compare-anim-viz" aria-hidden="true">
-            <div class="compare-anim-viz-row"></div>
-            <span class="dot dot-crop" style="left:10%"></span>
-            <span class="dot dot-crop" style="left:22%"></span>
-            <span class="dot dot-weed" style="left:34%"></span>
-            <span class="dot dot-crop" style="left:46%"></span>
-            <span class="dot dot-weed" style="left:58%"></span>
-            <span class="dot dot-crop" style="left:70%"></span>
-            <span class="dot dot-weed" style="left:82%"></span>
-            <span class="dot dot-crop" style="left:94%"></span>
+      <h2>Intelligence bar retrofit</h2>
+      <p class="readable-lead">RK-SPRAY is designed as an intelligence bar that mounts directly to a tractor's existing toolbar or 3-point hitch. Use your existing tanks and pumps where possible — or run on the integrated fluid stack below.</p>
+      <figure class="video-slot" style="margin-top: 32px;">
+        <div class="video-slot-frame">
+          <video class="video-slot-player" controls playsinline preload="metadata" title="Toolbar mount installation">
+            <!-- <source src="videos/rk-spray-mount.mp4" type="video/mp4"> -->
+          </video>
+          <div class="video-slot-placeholder">
+            <div class="video-slot-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="video-slot-label">Video</span>
+            <p class="video-slot-title">Toolbar mount &amp; integration — coming soon</p>
           </div>
-          <div class="compare-spray-all" aria-hidden="true"></div>
-          <p>Normal — sprays the whole row</p>
         </div>
-        <div class="compare-anim-panel compare-anim-new">
-          <div class="compare-anim-viz" aria-hidden="true">
-            <div class="compare-anim-viz-row"></div>
-            <span class="dot dot-crop" style="left:10%"></span>
-            <span class="dot dot-crop" style="left:22%"></span>
-            <span class="dot dot-weed" style="left:34%"></span>
-            <span class="dot dot-crop" style="left:46%"></span>
-            <span class="dot dot-weed" style="left:58%"></span>
-            <span class="dot dot-crop" style="left:70%"></span>
-            <span class="dot dot-weed" style="left:82%"></span>
-            <span class="dot dot-crop" style="left:94%"></span>
-          </div>
-          <span class="compare-spray-spot" aria-hidden="true"></span>
-          <span class="compare-spray-spot" aria-hidden="true"></span>
-          <span class="compare-spray-spot" aria-hidden="true"></span>
-          <p>RK-SPRAY — only the weeds</p>
-        </div>
-      </div>
+        <figcaption class="video-slot-caption">Retrofit to existing tractor toolbar</figcaption>
+      </figure>
     </section>
 
-    <section class="readable-section" style="border-top: 1px solid var(--gray-200);">
+    <section class="readable-section" id="architecture" style="border-top: 1px solid var(--gray-200);">
       <p class="section-index">02</p>
-      <h2>How it works — step by step</h2>
-      <p class="readable-lead">Watch the animation above, or read it here:</p>
+      <h2>System architecture</h2>
+      <p class="readable-lead">Four subsystems. One closed loop from perception to fluid delivery.</p>
       <ul class="readable-list">
         <li>
-          <h3>Step 1 — Drives the row</h3>
-          <p>The machine rolls through your field on its own, following the crop line.</p>
+          <h3>Compute node</h3>
+          <p>NVIDIA Jetson Orin Nano Super as the central anchor for real-time edge perception and deterministic valve control. 7–25 W power envelope. Up to 67 TOPS AI throughput.</p>
         </li>
         <li>
-          <h3>Step 2 — Looks at each plant</h3>
-          <p>Cameras on the front see what's crop and what's a weed. It works even when it's dusty.</p>
+          <h3>Perception stack</h3>
+          <p>Global-shutter stereo cameras (Intel RealSense D455 class or custom Luxonis global-shutter configurations). Global shutter is required to eliminate motion artifacts from tractor vibration and high-speed ground travel — rolling shutter is not sufficient.</p>
         </li>
         <li>
-          <h3>Step 3 — Sprays only the weeds</h3>
-          <p>A small nozzle turns on for a split second when it sees a weed. Your crop is never touched.</p>
+          <h3>Actuation &amp; fluidics</h3>
+          <p>Closed-loop pressure system with industrial fast-acting PWM solenoid valves (TeeJet Dynajet-class or equivalent individual nozzle control) integrated into a custom manifold.</p>
         </li>
         <li>
-          <h3>Step 4 — Saves a record</h3>
-          <p>Every spray is logged — where, when, how much. Ready when you need your spray paperwork.</p>
+          <h3>Safety layer</h3>
+          <p>Dedicated MCU or safety PLC running independently of Linux user-space. Hardware watchdog forces safe state — all valves, pumps, and lasers off — on any pressure anomaly, enclosure breach, or software timeout.</p>
         </li>
       </ul>
-      <figure style="margin-top: 40px;">
-        <div class="field-anim" data-field-anim role="img" aria-label="Animation showing RK-SPRAY spraying three weeds in a row"></div>
-        <figcaption class="field-anim-caption">The machine stops at nothing on your crop. It only acts on weeds.</figcaption>
+      <figure class="video-slot" style="margin-top: 32px;">
+        <div class="video-slot-frame">
+          <video class="video-slot-player" controls playsinline preload="metadata" title="System architecture walkthrough">
+            <!-- <source src="videos/rk-spray-architecture.mp4" type="video/mp4"> -->
+          </video>
+          <div class="video-slot-placeholder">
+            <div class="video-slot-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="video-slot-label">Video</span>
+            <p class="video-slot-title">Architecture walkthrough — coming soon</p>
+          </div>
+        </div>
       </figure>
     </section>
 
     <section class="readable-section stat-simple-dark-wrap" style="background: var(--black); color: var(--white); border-top: 1px solid var(--border-dark);">
       <p class="section-index" style="color: rgba(255,255,255,0.4);">03</p>
-      <h2 style="color: var(--white); max-width: none;">What that means in dollars</h2>
-      <p class="readable-lead" style="color: rgba(255,255,255,0.55);">From early trials. Your numbers will vary by crop and field.</p>
+      <h2 style="color: var(--white); max-width: none;">Performance &amp; physics</h2>
+      <p class="readable-lead" style="color: rgba(255,255,255,0.55);">Real-time object detection translated into millisecond valve responses under harsh field conditions.</p>
       <div class="stat-simple stat-simple-dark">
         <div class="stat-simple-item">
-          <strong><span data-count="10" data-suffix="×">0×</span></strong>
-          <span>Less spent per acre on spraying</span>
+          <strong>3 m</strong>
+          <span>Bar width · 12–16 nozzles at 25 cm pitch</span>
         </div>
         <div class="stat-simple-item">
-          <strong><span data-count="90" data-suffix="%">0%</span></strong>
-          <span>Less chemical to buy each season</span>
+          <strong>6 km/h</strong>
+          <span>Cruise speed · 1.67 m/s · 1.8 ha/hr coverage</span>
         </div>
         <div class="stat-simple-item">
-          <strong><span data-count="87" data-suffix="%">0%</span></strong>
-          <span>Less time for you in the cab</span>
+          <strong>6–12 ms</strong>
+          <span>Valve response at 20 Hz PWM · ~2 cm error at field speed</span>
         </div>
         <div class="stat-simple-item">
-          <strong>100%</strong>
-          <span>Spray records saved for you</span>
+          <strong>30–35 cm</strong>
+          <span>Nozzle release height · 200–300 µm coarse droplets</span>
         </div>
       </div>
     </section>
 
     <section class="readable-section" id="specifications" style="border-top: 1px solid var(--gray-200);">
       <p class="section-index">04</p>
-      <h2>The machine — plain facts</h2>
+      <h2>Technical specifications</h2>
       <ul class="readable-list">
         <li>
-          <h3>How wide?</h3>
-          <p>About 10 feet per pass. Fits standard rows in corn, soy, grapes, and orchards.</p>
+          <h3>Physical dimensions</h3>
+          <p>3-meter horizontal bar. 12 to 16 independently controlled micro-spray nozzles spaced at 25 cm pitch.</p>
         </li>
         <li>
-          <h3>How much does it hold?</h3>
-          <p>120 gallons. Enough for up to 8 hours depending on how many weeds you have.</p>
+          <h3>Throughput</h3>
+          <p>Ground cruise speed of 6 km/h (1.67 m/s). At 3 m bar width, effective coverage rate of 1.8 hectares per hour.</p>
         </li>
         <li>
-          <h3>How does it spray?</h3>
-          <p>12 small nozzles under the machine. Each one turns on only when it sees a weed.</p>
+          <h3>Valve latency</h3>
+          <p>6–12 ms response on a 20 Hz PWM control system. At 6 km/h, 12 ms latency limits spatial execution error to 2.0 cm — matching centimeter-scale weed targets.</p>
         </li>
         <li>
-          <h3>Does it need internet?</h3>
-          <p>No. It makes all decisions on the machine. Works with no cell signal in the field.</p>
+          <h3>Drift mitigation</h3>
+          <p>Nozzles at 30–35 cm above target zone. Fluid calibrated for coarse droplets in the 200–300 µm range. Opaque mechanical shroud acts as a wind lockout — validated in crosswinds up to 3 m/s.</p>
         </li>
         <li>
-          <h3>How do I see what it did?</h3>
-          <p>On your phone or laptop when you're back at the house. Every spray is listed.</p>
+          <h3>Power budget</h3>
+          <p>150–200 W total during full operation: Jetson Orin Nano 7–25 W · sensors &amp; cameras 3–10 W · fluid pump 60–120 W (duty-cycle dependent) · valves, relays, and active LED lighting from remainder.</p>
         </li>
         <li>
-          <h3>Do you help me set it up?</h3>
-          <p>Yes. We come to your farm, run the first passes with you, and train your crew.</p>
+          <h3>Integration</h3>
+          <p>Mounts to standard tractor toolbar or 3-point hitch. Compatible with existing tanks and pumps, or integrated fluid stack.</p>
         </li>
       </ul>
     </section>
 
-    <section class="domains readable-section" style="border-top: 1px solid var(--gray-200);">
+    <section class="readable-section" style="border-top: 1px solid var(--gray-200);">
       <p class="section-index">05</p>
-      <h2>Built for these crops</h2>
-      <div class="domains-grid" style="margin-top: 32px;">
-        <article class="domain-card">
-          <h3>Grapes &amp; wine</h3>
-          <p>Narrow rows. Hits weeds between vines.</p>
-        </article>
-        <article class="domain-card">
-          <h3>Corn, soy &amp; vegetables</h3>
-          <p>Weeds in the row get sprayed. Crop does not.</p>
-        </article>
-        <article class="domain-card">
-          <h3>Apples &amp; orchards</h3>
-          <p>Problem spots per tree — not the whole floor.</p>
-        </article>
-        <article class="domain-card">
-          <h3>Greenhouses</h3>
-          <p>Works indoors between benches.</p>
-        </article>
-      </div>
+      <h2>What growers gain</h2>
+      <ul class="readable-list">
+        <li>
+          <h3>Less chemical per pass</h3>
+          <p>Spot application means product goes on the target — not bare ground, not healthy crop. Early trials show up to 90% reduction in chemical use.</p>
+        </li>
+        <li>
+          <h3>Lower cost per hectare</h3>
+          <p>Spray only where needed. Early field data points to roughly 10× lower application cost per hectare vs. blanket spray.</p>
+        </li>
+        <li>
+          <h3>Compliance records</h3>
+          <p>Every valve actuation logged — location, time, volume. Export-ready for regulatory paperwork.</p>
+        </li>
+        <li>
+          <h3>Keep your tractor</h3>
+          <p>Retrofit architecture. No new platform purchase required.</p>
+        </li>
+      </ul>
+      <figure class="video-slot video-slot-wide" style="margin-top: 32px;">
+        <div class="video-slot-frame">
+          <video class="video-slot-player" controls playsinline preload="metadata" title="Precision spray demonstration">
+            <!-- <source src="videos/rk-spray-precision.mp4" type="video/mp4"> -->
+          </video>
+          <div class="video-slot-placeholder">
+            <div class="video-slot-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="video-slot-label">Video</span>
+            <p class="video-slot-title">Precision spray demonstration — coming soon</p>
+          </div>
+        </div>
+        <figcaption class="video-slot-caption">Spot application vs. blanket pass</figcaption>
+      </figure>
     </section>
 
     <section class="product-lead" id="lead-form">
       <div class="product-lead-grid">
         <div class="product-lead-copy">
           <p class="product-lead-label">Early access — 2026</p>
-          <h2>Try it on your farm</h2>
-          <p>Tell us what you grow and where you are. We'll be in touch.</p>
+          <h2>Request RK-SPRAY access</h2>
+          <p>We are onboarding a limited group of growers and operators for field trials. Tell us about your crop, toolbar setup, and spray program.</p>
           <ul class="product-lead-points">
-            <li>We visit your farm first</li>
-            <li>We set it up and train your team</li>
-            <li>You talk to the people who built it</li>
+            <li>Field evaluation on your operation</li>
+            <li>Integration support for toolbar mount</li>
+            <li>Direct access to engineering team</li>
           </ul>
         </div>
         <form class="lead-form" action="#" method="post">
@@ -280,9 +298,9 @@
             <input type="text" name="organization" required autocomplete="organization">
           </label>
           <label>
-            <span>How big is your farm?</span>
+            <span>Operation size</span>
             <select name="acres" required>
-              <option value="" disabled selected>Pick one</option>
+              <option value="" disabled selected>Select</option>
               <option value="under-250">Under 250 acres</option>
               <option value="250-1000">250 – 1,000 acres</option>
               <option value="1000-5000">1,000 – 5,000 acres</option>
@@ -290,14 +308,18 @@
             </select>
           </label>
           <label>
-            <span>What do you grow?</span>
-            <input type="text" name="crop" placeholder="e.g. Corn, grapes, apples" required>
+            <span>Tractor / toolbar setup</span>
+            <input type="text" name="equipment" placeholder="e.g. John Deere 6R, 3 m toolbar" required>
           </label>
           <label>
-            <span>Anything else?</span>
-            <textarea name="message" rows="3" placeholder="Where you're located, what you spray today."></textarea>
+            <span>Main crop</span>
+            <input type="text" name="crop" placeholder="e.g. Corn, soy, grapes" required>
           </label>
-          <button type="submit">Send my request</button>
+          <label>
+            <span>Notes</span>
+            <textarea name="message" rows="3" placeholder="Current spray program, row spacing, location."></textarea>
+          </label>
+          <button type="submit">Submit request</button>
         </form>
       </div>
     </section>

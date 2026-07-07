@@ -1,0 +1,166 @@
+/* Video placeholder slots — fill src later */
+
+.video-slot {
+  margin: 0;
+  width: 100%;
+}
+
+.video-slot-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+.video-slot-dark .video-slot-frame {
+  background: #0a0a0a;
+  border-color: var(--border-dark);
+}
+
+.video-slot-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+}
+
+.video-slot-player:not([src]):not(:has(source[src])) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-slot-frame.has-video {
+  background: var(--black);
+}
+
+.video-slot-frame.has-video .video-slot-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-slot-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.video-slot-dark .video-slot-placeholder {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.video-slot-placeholder::before,
+.video-slot-placeholder::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.video-slot-placeholder::before {
+  top: 10px;
+  left: 10px;
+  border-top: 1px solid var(--gray-400);
+  border-left: 1px solid var(--gray-400);
+}
+
+.video-slot-placeholder::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 1px solid var(--gray-400);
+  border-right: 1px solid var(--gray-400);
+}
+
+.video-slot-dark .video-slot-placeholder::before,
+.video-slot-dark .video-slot-placeholder::after {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.video-slot-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+}
+
+.video-slot-dark .video-slot-icon {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.video-slot-icon svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+}
+
+.video-slot-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.video-slot-dark .video-slot-label {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.video-slot-title {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  max-width: 28ch;
+  line-height: 1.5;
+}
+
+.video-slot-dark .video-slot-title {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.video-slot-caption {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.video-slot-dark + .video-slot-caption,
+.product-hero-visual .video-slot-caption {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.video-slot-wide .video-slot-frame {
+  aspect-ratio: 21 / 9;
+}
+
+@media (max-width: 768px) {
+  .video-slot-frame {
+    aspect-ratio: 16 / 9;
+  }
+}

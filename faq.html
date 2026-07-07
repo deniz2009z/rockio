@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>FAQ — Rockio</title>
-  <meta name="description" content="Frequently asked questions about Rockio agricultural robots and drones.">
+  <meta name="description" content="Frequently asked questions about Rockio RK-SPRAY intelligence bar — mounting, specs, safety, and early access.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="authority.css">
 </head>
@@ -35,46 +35,56 @@
 
   <main class="page">
     <section class="page-hero page-hero-compact">
-      <p class="page-label">Support</p>
-      <h1>FAQ</h1>
-      <p class="page-lead">Specifications, flight regulations, integration, and operations.</p>
+      <div class="page-hero-inner">
+        <p class="page-label">Support</p>
+        <h1>FAQ</h1>
+        <p class="page-lead">RK-SPRAY intelligence bar — mounting, performance, safety, and early access.</p>
+      </div>
     </section>
 
     <section class="faq-list">
       <details class="faq-item">
-        <summary>What is the flight time of the RK-SPRAY drone?</summary>
-        <p>Typical flight time is 18–22 minutes per battery at full payload. Hot-swappable batteries enable continuous operation with two or more packs.</p>
+        <summary>What is the RK-SPRAY intelligence bar?</summary>
+        <p>A retrofit spray module that mounts to a tractor toolbar or 3-point hitch. It adds global-shutter stereo cameras, onboard edge compute, and individually controlled PWM solenoid nozzles — so you spray targets, not the full row width.</p>
       </details>
       <details class="faq-item">
-        <summary>How long does charging take?</summary>
-        <p>Fast charge to 80% in approximately 35 minutes using the Rockio field charger. Full charge in under 60 minutes.</p>
+        <summary>How does it mount to my equipment?</summary>
+        <p>The bar is designed as a standard-width toolbar implement (3 m). It interfaces with your existing tanks and pumps where possible. Mounting hardware adapts to common toolbar and 3-point hitch configurations — we validate fit during early access onboarding.</p>
       </details>
       <details class="faq-item">
-        <summary>Is Rockio FAA-compliant in the US?</summary>
-        <p>Rockio systems are designed for compliance with FAA Part 107 and applicable state agricultural regulations. Operators must hold a valid remote pilot certificate and any required state applicator licenses.</p>
+        <summary>What are the key performance specs?</summary>
+        <p>3 m bar width, 12–16 nozzles at 25 cm pitch, design ground speed of 6 km/h, target coverage of 1.8 ha/hr, and valve actuation latency of 6–12 ms. Full architecture details are on the <a href="rk-spray.html">RK-SPRAY product page</a>.</p>
       </details>
       <details class="faq-item">
-        <summary>Can robots operate without internet connectivity?</summary>
-        <p>Yes. Mission planning, execution, and logging work offline. Data syncs automatically when connectivity is restored.</p>
+        <summary>Does it require internet or cell service?</summary>
+        <p>No. Perception, valve control, and application logging run entirely on the edge. Mission data syncs when connectivity is available — the tractor keeps spraying when it is not.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the safety architecture?</summary>
+        <p>A dedicated safety MCU runs outside the main Linux compute stack. It monitors pressure, enclosure integrity, and software heartbeat. Any fault forces valves, pumps, and lasers to a safe state independently of the perception pipeline.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What regulatory requirements apply?</summary>
+        <p>Ground spray applications are subject to EPA requirements and state pesticide applicator regulations. Operators are responsible for licensing, record-keeping, and label compliance. Rockio systems log valve events and coverage data to support your records.</p>
       </details>
       <details class="faq-item">
         <summary>Which farm management systems do you integrate with?</summary>
-        <p>REST API and standard export formats. Direct integrations available for John Deere Operations Center and custom ERP connections on request.</p>
+        <p>REST API and standard export formats. Direct integrations for John Deere Operations Center and custom ERP connections are available on request during early access.</p>
       </details>
       <details class="faq-item">
-        <summary>How is drone imagery data handled?</summary>
-        <p>Field data is processed under contract with the operator. We apply data minimization, encryption, and access controls. See our <a href="privacy.html">Privacy policy</a> for details.</p>
+        <summary>How is field data handled?</summary>
+        <p>Perception and application data are processed under contract with the operator. We apply data minimization, encryption at rest and in transit, and role-based access controls. See our <a href="privacy.html">Privacy policy</a> for details.</p>
       </details>
       <details class="faq-item">
-        <summary>Is Rockio available for purchase today?</summary>
-        <p>We are in active development and early deployment with select partners. Contact us to join the early access program.</p>
+        <summary>Is RK-SPRAY available for purchase today?</summary>
+        <p>We are in active development and structured field trials with select partners. Request early access on the <a href="rk-spray.html#lead-form">product page</a> or <a href="contact.html">contact us</a> directly.</p>
       </details>
     </section>
 
     <section class="page-cta">
       <div class="page-cta-inner">
         <h2>Still have questions?</h2>
-        <p>Our support team responds within 2 business days.</p>
+        <p>Technical support responds within 2 business days.</p>
         <a href="mailto:support@rockio.com" class="cta">support@rockio.com</a>
       </div>
     </section>

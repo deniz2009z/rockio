@@ -4,7 +4,7 @@ const FOOTER_HTML = `
       <a href="index.html" class="footer-logo-link" aria-label="Rockio">
         <img src="images/logo-header.png" alt="" class="footer-logo-img" width="187" height="48">
       </a>
-      <p class="footer-tagline">Robots for agriculture. Currently in active development — partnering with early adopters and investors.</p>
+      <p class="footer-tagline">Edge intelligence for precision agriculture. RK-SPRAY intelligence bar in active development — partnering with early access growers.</p>
       <address class="footer-address">
         Rockio Inc.<br>
         548 Market Street, Suite 35410<br>
@@ -60,10 +60,10 @@ const FOOTER_HTML = `
   <div class="footer-trust">
     <p class="footer-trust-label">Compliance</p>
     <ul class="footer-trust-list">
-      <li>FAA Part 107</li>
+      <li>EPA spray logging</li>
       <li>CCPA Ready</li>
-      <li>SOC 2 Type II</li>
-      <li>ISO 27001</li>
+      <li>Edge compute</li>
+      <li>Safety MCU</li>
     </ul>
   </div>
   <div class="footer-bottom">
@@ -123,53 +123,6 @@ const COOKIE_PANEL_HTML = `
     </div>
   </div>
 `;
-
-const FIELD_ANIM_HTML = `
-  <div class="field-anim-legend" aria-hidden="true">
-    <span><i class="leg-crop" aria-hidden="true"></i> Your crop — left alone</span>
-    <span><i class="leg-weed" aria-hidden="true"></i> Weed — gets spray</span>
-    <span><i class="leg-spray" aria-hidden="true"></i> Spray — only on weeds</span>
-  </div>
-  <div class="field-anim-ground">
-    <div class="field-anim-row-single" aria-hidden="true"></div>
-    <span class="field-anim-target field-anim-plant" style="left:10%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:18%"></span>
-    <span class="field-anim-target field-anim-weed field-anim-weed-1" style="left:28%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:38%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:46%"></span>
-    <span class="field-anim-target field-anim-weed field-anim-weed-2" style="left:52%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:62%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:70%"></span>
-    <span class="field-anim-target field-anim-weed field-anim-weed-3" style="left:76%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:86%"></span>
-    <span class="field-anim-target field-anim-plant" style="left:94%"></span>
-    <span class="field-anim-spray-burst field-anim-spray-burst-1" aria-hidden="true"></span>
-    <span class="field-anim-spray-burst field-anim-spray-burst-2" aria-hidden="true"></span>
-    <span class="field-anim-spray-burst field-anim-spray-burst-3" aria-hidden="true"></span>
-    <div class="field-anim-machine" aria-hidden="true">
-      <div class="field-anim-machine-wheel"></div>
-      <div class="field-anim-machine-wheel"></div>
-      <div class="field-anim-machine-body"></div>
-      <div class="field-anim-machine-tank"></div>
-      <div class="field-anim-machine-boom"></div>
-      <div class="field-anim-scan-beam"></div>
-    </div>
-  </div>
-  <div class="field-anim-step" aria-live="polite">
-    <p class="field-anim-step-1">Step 1 — The machine drives down your row.</p>
-    <p class="field-anim-step-2">Step 2 — It looks at each plant and picks out the weeds.</p>
-    <p class="field-anim-step-3">Step 3 — It sprays only the weeds. Your crop stays dry.</p>
-    <p class="field-anim-step-4">Done — three weeds treated. Zero crop sprayed.</p>
-  </div>
-`;
-
-function mountFieldAnims() {
-  document.querySelectorAll('[data-field-anim]').forEach((el) => {
-    if (el.dataset.mounted === 'true') return;
-    el.innerHTML = FIELD_ANIM_HTML;
-    el.dataset.mounted = 'true';
-  });
-}
 
 function getPageName() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
@@ -254,10 +207,39 @@ function mountFooter() {
 
 }
 
+function mountInnerBand() {
+  const page = document.body.dataset.page || getPageName();
+  if (page === 'home' || page === 'rk-spray' || document.querySelector('.inner-band')) return;
+
+  const items = [
+    'RK-SPRAY',
+    'Intelligence bar',
+    'Edge compute',
+    'Field trials',
+    'San Francisco',
+    'Precision agriculture',
+    'PWM valve control',
+    'Safety MCU',
+  ];
+  const trackContent = [...items, ...items].map((t) => `<span>${t}</span>`).join('');
+  const band = document.createElement('div');
+  band.className = 'inner-band';
+  band.setAttribute('aria-hidden', 'true');
+  band.innerHTML = `<div class="inner-band-track">${trackContent}</div>`;
+
+  const header = document.querySelector('.site-header');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (header && mobileMenu) {
+    mobileMenu.after(band);
+  } else if (header) {
+    header.after(band);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   mountCookiePanel();
   bindCookieTriggers();
-  mountFieldAnims();
   mountFooter();
+  mountInnerBand();
   setActiveNav();
 });

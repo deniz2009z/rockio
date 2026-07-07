@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>About us — Rockio</title>
-  <meta name="description" content="About Rockio — building robots for agriculture since 2022.">
+  <meta name="description" content="About Rockio — edge intelligence for precision agriculture. Engineering-led, field-tested, San Francisco.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="video-slot.css">
   <link rel="stylesheet" href="authority.css">
 </head>
 <body data-page="about">
@@ -39,10 +40,12 @@
 
   <main class="page">
 
-    <section class="page-hero">
-      <p class="page-label">About us</p>
-      <h1>Built for operators, not observers.</h1>
-      <p class="page-lead">Rockio was founded to close the gap between agricultural technology and field reality. We are engineers, operators, and builders.</p>
+    <section class="page-hero page-hero--band">
+      <div class="page-hero-inner">
+        <p class="page-label">About us</p>
+        <h1>Built for operators,<br>not observers.</h1>
+        <p class="page-lead">Rockio designs edge perception and actuation systems for commercial agriculture — hardware that mounts to the equipment you already run, and software that decides at the nozzle.</p>
+      </div>
     </section>
 
     <section class="company">
@@ -50,7 +53,7 @@
         <div>
           <p class="section-index">01</p>
           <h2>Company</h2>
-          <p class="company-lead">We build robots that work in real fields — not demos, not lab conditions. Headquartered in San Francisco with field operations across three continents.</p>
+          <p class="company-lead">We are an engineering-led agricultural robotics company headquartered in San Francisco. Our first system — the RK-SPRAY intelligence bar — is in active development with field trials in California and the Midwest.</p>
         </div>
         <div class="company-facts">
           <div class="fact">
@@ -59,15 +62,15 @@
           </div>
           <div class="fact">
             <p class="fact-label">Team</p>
-            <p class="fact-value">120+</p>
+            <p class="fact-value">Engineering-led</p>
           </div>
           <div class="fact">
             <p class="fact-label">Headquarters</p>
             <p class="fact-value">San Francisco</p>
           </div>
           <div class="fact">
-            <p class="fact-label">Field offices</p>
-            <p class="fact-value">Austin · London · Tokyo</p>
+            <p class="fact-label">Field trials</p>
+            <p class="fact-value">CA · Midwest</p>
           </div>
         </div>
       </div>
@@ -76,7 +79,7 @@
     <section class="doctrine" id="vision">
       <div class="doctrine-inner">
         <p class="doctrine-label">Vision</p>
-        <p class="doctrine-text">Autonomous machines that treat every hectare with precision — less waste, less labor, more yield. Agriculture that scales without compromising the field.</p>
+        <p class="doctrine-text">Every nozzle should know what it is spraying before it opens. Agriculture that scales without treating every hectare the same — less waste, less drift, more yield per pass.</p>
       </div>
     </section>
 
@@ -85,52 +88,69 @@
         <div>
           <p class="section-index">02</p>
           <h2>Team</h2>
-          <p class="company-lead">Engineers from robotics, autonomy, and agriculture. Operators who have deployed in the field. Based in San Francisco with teams in Austin, London, and Tokyo.</p>
+          <p class="company-lead">Robotics engineers, perception researchers, embedded systems designers, and field operators who have stood in a spray rig at 4 AM. We hire for depth in hardware and software — and for people who will ship to a real field, not only a demo booth.</p>
         </div>
         <div class="company-facts">
           <div class="fact">
-            <p class="fact-label">Engineering</p>
-            <p class="fact-value">60+</p>
+            <p class="fact-label">Perception</p>
+            <p class="fact-value">CV · Stereo</p>
+          </div>
+          <div class="fact">
+            <p class="fact-label">Embedded</p>
+            <p class="fact-value">Jetson · MCU</p>
+          </div>
+          <div class="fact">
+            <p class="fact-label">Fluidics</p>
+            <p class="fact-value">PWM valves</p>
           </div>
           <div class="fact">
             <p class="fact-label">Field ops</p>
-            <p class="fact-value">25+</p>
-          </div>
-          <div class="fact">
-            <p class="fact-label">Agronomy</p>
-            <p class="fact-value">12+</p>
-          </div>
-          <div class="fact">
-            <p class="fact-label">Total team</p>
-            <p class="fact-value">120+</p>
+            <p class="fact-value">Deploy · tune</p>
           </div>
         </div>
       </div>
     </section>
 
+    <figure class="video-slot video-slot-wide" style="padding: 0 var(--side-pad) var(--section-pad); max-width: var(--max-width); margin: 0 auto;">
+      <div class="video-slot-frame">
+        <video class="video-slot-player" controls playsinline preload="metadata" title="Rockio team and field operations">
+          <!-- <source src="videos/about-field.mp4" type="video/mp4"> -->
+        </video>
+        <div class="video-slot-placeholder">
+          <div class="video-slot-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-slot-label">Video</span>
+          <p class="video-slot-title">Field operations — coming soon</p>
+        </div>
+      </div>
+      <figcaption class="video-slot-caption">Bench testing and field trial footage</figcaption>
+    </figure>
+
     <section class="doctrine">
       <div class="doctrine-inner">
         <p class="doctrine-label">Doctrine</p>
-        <p class="doctrine-text">We build for operators, not observers. Systems that work in remote fields, disconnected networks, and under constraint. No demos. No drift.</p>
+        <p class="doctrine-text">We build for constraint — vibration, dust, disconnected networks, pressure swings. Retrofit, not rip-and-replace. Correctness over velocity. No demos that only work on pavement.</p>
       </div>
     </section>
-    <section class="metrics">
+
+    <section class="metrics metrics--dev">
       <div class="metrics-grid">
         <div class="metric">
-          <p class="metric-value">99.99%</p>
-          <p class="metric-label">Fleet uptime across deployed robots</p>
+          <p class="metric-value">6–12 ms</p>
+          <p class="metric-label">Target valve actuation latency</p>
         </div>
         <div class="metric">
-          <p class="metric-value">40+</p>
-          <p class="metric-label">Active field deployments</p>
+          <p class="metric-value">3 m</p>
+          <p class="metric-label">Intelligence bar width</p>
         </div>
         <div class="metric">
-          <p class="metric-value">14</p>
-          <p class="metric-label">Countries with operations</p>
+          <p class="metric-value">6 km/h</p>
+          <p class="metric-label">Design ground speed</p>
         </div>
         <div class="metric">
-          <p class="metric-value">2M+</p>
-          <p class="metric-label">Hectares covered to date</p>
+          <p class="metric-value">1.8 ha/hr</p>
+          <p class="metric-label">Target coverage rate</p>
         </div>
       </div>
     </section>
@@ -138,12 +158,12 @@
     <section class="quotes">
       <div class="quotes-grid">
         <blockquote>
-          <p>Rockio's spray drones cut our chemical costs by a third. More importantly, the coverage data gives us proof for every application.</p>
-          <cite>Operations Director — Commercial grower, California</cite>
+          <p>The bar mounts like any other implement. What changes is that each nozzle only fires when the camera sees a target — we are not blanketing the row anymore.</p>
+          <cite>Operations lead — Early trial partner, California</cite>
         </blockquote>
         <blockquote>
-          <p>We deployed across twelve sites in six weeks. The robots run when the network does not. That is the entire point.</p>
-          <cite>Head of Agronomy — Multi-site operator</cite>
+          <p>Edge compute matters out here. Cell service drops three rows in. The system has to decide locally — and log every valve event when we sync back at the yard.</p>
+          <cite>Field technician — Midwest trial site</cite>
         </blockquote>
       </div>
     </section>
@@ -151,20 +171,20 @@
     <section class="brief">
       <div class="brief-header">
         <p class="section-index">03</p>
-        <h2>Brief</h2>
+        <h2>Milestones</h2>
       </div>
       <ul class="brief-list">
         <li>
           <time datetime="2026-03">Mar 2026</time>
-          <p>RK-SPRAY deployed to 40+ commercial farms across North America and Europe.</p>
+          <p>RK-SPRAY intelligence bar enters structured field trials with select grower partners in California.</p>
         </li>
         <li>
           <time datetime="2026-01">Jan 2026</time>
-          <p>Series B closed. Expansion into APAC agricultural markets announced.</p>
+          <p>Safety MCU layer validated — independent watchdog for valve, pump, and laser interlocks.</p>
         </li>
         <li>
           <time datetime="2025-09">Sep 2025</time>
-          <p>Rockio achieves SOC 2 Type II certification across all production environments.</p>
+          <p>Global-shutter stereo perception pipeline benchmarked at 6 km/h on toolbar mount.</p>
         </li>
       </ul>
     </section>
@@ -176,8 +196,19 @@
         <li>Agricultural cooperatives</li>
         <li>Input distributors</li>
         <li>Research institutions</li>
-        <li>Government programs</li>
+        <li>Early access partners</li>
       </ul>
+    </section>
+
+    <section class="page-cta">
+      <div class="page-cta-inner">
+        <h2>Join the early access program</h2>
+        <p>RK-SPRAY specifications and architecture details are on the product page. For partnerships or general inquiries — contact us.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+          <a href="rk-spray.html" class="cta">RK-SPRAY system</a>
+          <a href="contact.html" class="cta-secondary">Contact Rockio</a>
+        </div>
+      </div>
     </section>
 
   </main>
