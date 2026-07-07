@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>RK-SPRAY — Rockio</title>
-  <meta name="description" content="RK-SPRAY — Rockio's autonomous ground spraying system. 10x lower application cost. Computer vision guided pesticide application with centimeter-level precision.">
+  <title>RK-SPRAY — Spray Only the Weeds</title>
+  <meta name="description" content="RK-SPRAY finds weeds in your row and sprays only those spots. Less chemical. Less money. Spray records done for you.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="field-anim.css">
+  <link rel="stylesheet" href="authority.css">
 </head>
 <body data-page="rk-spray">
 
@@ -44,622 +46,210 @@
           <div class="product-meta">
             <span class="product-id">RK-SPRAY</span>
             <span class="product-meta-divider" aria-hidden="true">/</span>
-            <span class="product-status">Flagship system</span>
+            <span class="product-status">Our spraying machine</span>
           </div>
-          <h1 class="product-hero-title">Apply only where it matters.</h1>
-          <p class="product-hero-lead">Rockio builds autonomous ground systems that see every plant, classify every target, and apply chemical with surgical precision. Less waste. Higher efficacy. Full traceability.</p>
+          <h1 class="product-hero-title">Finds the weed.<br>Sprays the weed.<br>That's it.</h1>
+          <p class="product-hero-lead">RK-SPRAY drives your crop row, spots the weeds, and hits only those spots. Your healthy plants stay dry. You use less chemical and spend less per acre.</p>
           <div class="product-hero-actions">
             <a href="#lead-form" class="cta cta-light">Request early access</a>
-            <a href="#specifications" class="cta-secondary cta-secondary-light">View specifications</a>
+            <a href="#specifications" class="cta-secondary cta-secondary-light">See specs</a>
           </div>
           <dl class="product-hero-stats">
             <div>
-              <dt>Cost per hectare</dt>
-              <dd>10× lower</dd>
+              <dt>Your cost per acre</dt>
+              <dd>About 10× less</dd>
             </div>
             <div>
-              <dt>Target accuracy</dt>
-              <dd>±2 cm</dd>
+              <dt>Chemical you use</dt>
+              <dd>Up to 90% less</dd>
             </div>
             <div>
-              <dt>Chemical reduction</dt>
-              <dd>Up to 90%</dd>
+              <dt>One tank lasts</dt>
+              <dd>Up to 8 hours</dd>
             </div>
           </dl>
         </div>
-        <figure class="product-hero-visual product-anim-wrap">
-          <div class="product-anim-stage">
-            <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY autonomous ground spraying system — 3D engineering render" width="1200" height="800">
-            <div class="anim-scan-line" aria-hidden="true"></div>
-            <div class="anim-lidar anim-lidar-left" aria-hidden="true"></div>
-            <div class="anim-lidar anim-lidar-right" aria-hidden="true"></div>
-            <div class="anim-spray-row" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="anim-hud" aria-hidden="true">
-              <span class="anim-hud-tag">LIDAR ACTIVE</span>
-              <span class="anim-hud-tag">INFERENCE 30Hz</span>
-            </div>
-          </div>
-          <figcaption class="product-visual-caption">RK-SPRAY · Engineering render · Rev 0.4</figcaption>
+        <figure class="product-hero-visual">
+          <div class="field-anim field-anim-dark" data-field-anim role="img" aria-label="Step-by-step: machine drives row, spots three weeds, sprays only weeds, leaves crop alone"></div>
+          <figcaption class="field-anim-caption">White dots = weeds (sprayed). Gray dots = your crop (left alone). Steps show at the bottom.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="ticker ticker-dark">
+    <section class="ticker-mobile" aria-label="Quick facts">
+      <ul>
+        <li>120 gallon tank — runs up to 8 hours per fill</li>
+        <li>12 nozzles — each one fires only when it sees a weed</li>
+        <li>Works with no cell signal</li>
+        <li>Saves a spray log for every pass</li>
+      </ul>
+    </section>
+
+    <section class="ticker ticker-dark" aria-hidden="true">
       <div class="ticker-track">
-        <span>10× lower cost per hectare</span>
+        <span>120 gallon tank</span>
         <span class="ticker-dot">·</span>
-        <span>90% chemical reduction</span>
+        <span>12 smart nozzles</span>
         <span class="ticker-dot">·</span>
-        <span>99.7% targeting accuracy</span>
+        <span>No cell signal needed</span>
         <span class="ticker-dot">·</span>
-        <span>12 ms perception-to-spray</span>
+        <span>Spray log included</span>
         <span class="ticker-dot">·</span>
-        <span>Edge GPU inference</span>
+        <span>120 gallon tank</span>
         <span class="ticker-dot">·</span>
-        <span>GPS-denied navigation</span>
+        <span>12 smart nozzles</span>
         <span class="ticker-dot">·</span>
-        <span>10× lower cost per hectare</span>
+        <span>No cell signal needed</span>
         <span class="ticker-dot">·</span>
-        <span>90% chemical reduction</span>
-        <span class="ticker-dot">·</span>
-        <span>99.7% targeting accuracy</span>
-        <span class="ticker-dot">·</span>
-        <span>12 ms perception-to-spray</span>
-        <span class="ticker-dot">·</span>
-        <span>Edge GPU inference</span>
-        <span class="ticker-dot">·</span>
-        <span>GPS-denied navigation</span>
+        <span>Spray log included</span>
       </div>
     </section>
 
-    <section class="doctrine">
-      <div class="doctrine-inner">
-        <p class="doctrine-label">Operating principle</p>
-        <p class="doctrine-text">Blanket spraying is a blunt instrument. RK-SPRAY treats every plant as a discrete target — sensing, classifying, and applying in a single pass.</p>
+    <section class="readable-section">
+      <p class="section-index">01</p>
+      <h2>The problem with normal sprayers</h2>
+      <p class="readable-lead">A typical sprayer treats the whole row the same — weeds, crop, and bare dirt all get chemical. You pay for the full tank even when only a few spots needed it.</p>
+      <div class="plain-box">
+        <p><strong>RK-SPRAY does the opposite.</strong> It looks at each plant, skips the healthy ones, and sprays only the weeds. You use what you need. Nothing more.</p>
       </div>
-    </section>
-
-    <section class="product-what">
-      <div class="product-what-grid">
-        <div class="product-what-intro">
-          <p class="section-index">01</p>
-          <h2>What Rockio does</h2>
-          <p>We build the perception, compute, and actuation stack for precision agriculture — from the sensor suite on the machine to the mission console in your office.</p>
+      <div class="compare-anim" style="margin-top: 32px;">
+        <div class="compare-anim-panel compare-anim-old">
+          <div class="compare-anim-viz" aria-hidden="true">
+            <div class="compare-anim-viz-row"></div>
+            <span class="dot dot-crop" style="left:10%"></span>
+            <span class="dot dot-crop" style="left:22%"></span>
+            <span class="dot dot-weed" style="left:34%"></span>
+            <span class="dot dot-crop" style="left:46%"></span>
+            <span class="dot dot-weed" style="left:58%"></span>
+            <span class="dot dot-crop" style="left:70%"></span>
+            <span class="dot dot-weed" style="left:82%"></span>
+            <span class="dot dot-crop" style="left:94%"></span>
+          </div>
+          <div class="compare-spray-all" aria-hidden="true"></div>
+          <p>Normal — sprays the whole row</p>
         </div>
-        <ul class="product-what-list">
-          <li class="product-what-item">
-            <span class="what-num">01</span>
-            <div>
-              <h3>See the field</h3>
-              <p>Dual LiDAR and RGB stereo build a real-time 3D model of every row. The system operates in dust, low light, and GPS-denied environments.</p>
-            </div>
-          </li>
-          <li class="product-what-item">
-            <span class="what-num">02</span>
-            <div>
-              <h3>Classify every target</h3>
-              <p>Onboard edge GPU runs crop, weed, and pest classifiers at 30 Hz. Each plant gets a treatment decision — not a zone average.</p>
-            </div>
-          </li>
-          <li class="product-what-item">
-            <span class="what-num">03</span>
-            <div>
-              <h3>Apply with precision</h3>
-              <p>12 independently controlled nozzles deliver variable-rate application within 12 ms of detection. Chemical goes on the target, nowhere else.</p>
-            </div>
-          </li>
-          <li class="product-what-item">
-            <span class="what-num">04</span>
-            <div>
-              <h3>Prove every drop</h3>
-              <p>Every application event is logged with coordinates, volume, and chemical type. Audit-ready records for EPA and state compliance.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="product-impact">
-      <div class="product-impact-header">
-        <p class="section-index">02</p>
-        <h2>Measured impact</h2>
-        <p>Field trial data from early deployments across row crops and vineyards in California and the Midwest.</p>
-      </div>
-      <div class="product-impact-grid">
-        <article class="impact-card impact-card-hero">
-          <p class="impact-value"><span data-count="10" data-suffix="×" data-decimals="0">0×</span></p>
-          <h3>Lower cost per hectare</h3>
-          <p>vs. conventional blanket spraying when accounting for chemical, labor, and equipment hours.</p>
-        </article>
-        <article class="impact-card">
-          <p class="impact-value"><span data-count="90" data-suffix="%" data-decimals="0">0%</span></p>
-          <h3>Chemical reduction</h3>
-          <p>Average reduction in active ingredient applied per hectare across trial sites.</p>
-        </article>
-        <article class="impact-card">
-          <p class="impact-value"><span data-count="99.7" data-suffix="%" data-decimals="1">0%</span></p>
-          <h3>Targeting accuracy</h3>
-          <p>Classification and application accuracy on labeled validation sets.</p>
-        </article>
-        <article class="impact-card">
-          <p class="impact-value"><span data-count="12" data-suffix=" ms" data-decimals="0">0 ms</span></p>
-          <h3>Perception-to-spray</h3>
-          <p>End-to-end latency from target detection to nozzle actuation.</p>
-        </article>
-        <article class="impact-card">
-          <p class="impact-value"><span data-count="3.2" data-suffix=" m" data-decimals="1">0 m</span></p>
-          <h3>Application swath</h3>
-          <p>Full row coverage in a single autonomous pass.</p>
-        </article>
-        <article class="impact-card">
-          <p class="impact-value"><span data-count="8" data-suffix=" hr" data-decimals="0">0 hr</span></p>
-          <h3>Continuous runtime</h3>
-          <p>Per tank charge with hot-swap battery support for extended shifts.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="product-pipeline">
-      <div class="product-pipeline-header">
-        <p class="section-index">03</p>
-        <h2>How it works</h2>
-      </div>
-      <div class="pipeline-track">
-        <article class="pipeline-step">
-          <div class="pipeline-icon">
-            <span class="pipeline-pulse" aria-hidden="true"></span>
-            <span class="pipeline-step-num">01</span>
+        <div class="compare-anim-panel compare-anim-new">
+          <div class="compare-anim-viz" aria-hidden="true">
+            <div class="compare-anim-viz-row"></div>
+            <span class="dot dot-crop" style="left:10%"></span>
+            <span class="dot dot-crop" style="left:22%"></span>
+            <span class="dot dot-weed" style="left:34%"></span>
+            <span class="dot dot-crop" style="left:46%"></span>
+            <span class="dot dot-weed" style="left:58%"></span>
+            <span class="dot dot-crop" style="left:70%"></span>
+            <span class="dot dot-weed" style="left:82%"></span>
+            <span class="dot dot-crop" style="left:94%"></span>
           </div>
-          <h3>Perceive</h3>
-          <p>LiDAR point clouds and stereo imagery fused into a dense field model at 30 Hz.</p>
-        </article>
-        <article class="pipeline-step">
-          <div class="pipeline-icon">
-            <span class="pipeline-pulse" aria-hidden="true"></span>
-            <span class="pipeline-step-num">02</span>
-          </div>
-          <h3>Classify</h3>
-          <p>Edge neural networks identify crop, weed, pest, and bare soil per plant instance.</p>
-        </article>
-        <article class="pipeline-step">
-          <div class="pipeline-icon">
-            <span class="pipeline-pulse" aria-hidden="true"></span>
-            <span class="pipeline-step-num">03</span>
-          </div>
-          <h3>Apply</h3>
-          <p>Variable-rate solenoid control delivers precise volume to each classified target.</p>
-        </article>
-        <article class="pipeline-step">
-          <div class="pipeline-icon">
-            <span class="pipeline-pulse" aria-hidden="true"></span>
-            <span class="pipeline-step-num">04</span>
-          </div>
-          <h3>Verify</h3>
-          <p>Application logs sync to Rockio console with GPS tracks and compliance exports.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="product-visuals">
-      <div class="product-visuals-header">
-        <p class="section-index">04</p>
-        <h2>System architecture</h2>
-      </div>
-      <div class="product-visuals-grid">
-        <figure class="product-visual-card product-visual-card-wide">
-          <div class="product-visual-frame product-anim-wrap">
-            <div class="product-anim-stage product-anim-stage-inline">
-              <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY top-down perspective showing sensor array, fluid tank, and spray nozzle row" width="1200" height="800">
-              <div class="anim-scan-line anim-scan-slow" aria-hidden="true"></div>
-              <div class="anim-spray-row" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <span class="product-visual-tag">Perspective</span>
-            <p>Integrated perception stack, 120 L fluid reservoir, and linear nozzle array mounted on a rigid steel frame with end-wheel drive.</p>
-          </figcaption>
-        </figure>
-        <figure class="product-visual-card">
-          <div class="product-visual-frame product-visual-frame-schematic product-anim-wrap">
-            <div class="product-anim-stage product-anim-stage-schematic">
-              <img src="images/products/rk-spray-schematic.png" alt="RK-SPRAY side schematic with numbered component callouts" width="800" height="600">
-              <div class="anim-schematic-beam" aria-hidden="true"></div>
-              <div class="anim-schematic-ping" aria-hidden="true"></div>
-            </div>
-          </div>
-          <figcaption>
-            <span class="product-visual-tag">Schematic</span>
-            <p>Side elevation with perception cones, fluid delivery, and drive subsystem annotated for field service.</p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="product-callouts">
-      <div class="product-callouts-header">
-        <p class="section-index">05</p>
-        <h2>Subsystems</h2>
-      </div>
-      <div class="product-callouts-layout">
-        <div class="product-callouts-image" data-active="2">
-          <img src="images/products/rk-spray-schematic.png" alt="" aria-hidden="true" width="800" height="600">
-          <div class="callout-ring callout-ring-2" aria-hidden="true"></div>
-          <div class="callout-ring callout-ring-4" aria-hidden="true"></div>
-          <div class="callout-ring callout-ring-5" aria-hidden="true"></div>
-          <div class="callout-ring callout-ring-11" aria-hidden="true"></div>
-        </div>
-        <ol class="product-callout-list">
-          <li class="product-callout-item" data-callout="2">
-            <span class="callout-num">02</span>
-            <div>
-              <h3>Perception housing</h3>
-              <p>Sealed enclosure for dual LiDAR units and RGB cameras. Downward-facing field of view covers full application swath.</p>
-            </div>
-          </li>
-          <li class="product-callout-item" data-callout="4">
-            <span class="callout-num">04</span>
-            <div>
-              <h3>Fluid reservoir</h3>
-              <p>120 L chemical tank with level sensing and quick-release fittings. Compatible with standard agricultural formulations.</p>
-            </div>
-          </li>
-          <li class="product-callout-item" data-callout="5">
-            <span class="callout-num">05</span>
-            <div>
-              <h3>Nozzle manifold</h3>
-              <p>12 individually addressable nozzles with solenoid control. Variable-rate output per nozzle based on plant detection.</p>
-            </div>
-          </li>
-          <li class="product-callout-item" data-callout="8">
-            <span class="callout-num">08</span>
-            <div>
-              <h3>Pump assembly</h3>
-              <p>High-pressure diaphragm pump with inline filtration. Maintains consistent droplet size across operating pressure range.</p>
-            </div>
-          </li>
-          <li class="product-callout-item" data-callout="10">
-            <span class="callout-num">10</span>
-            <div>
-              <h3>Drive module</h3>
-              <p>End-mounted wheels with independent motor control. Low ground pressure for row-crop and vineyard operation.</p>
-            </div>
-          </li>
-          <li class="product-callout-item" data-callout="11">
-            <span class="callout-num">11</span>
-            <div>
-              <h3>Application field</h3>
-              <p>Perception-to-actuation loop runs at 30 Hz. Spray commands issued within 12 ms of target classification.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="product-compare">
-      <div class="product-compare-header">
-        <p class="section-index">06</p>
-        <h2>Why RK-SPRAY wins</h2>
-        <p>Conventional equipment applies chemical to the entire field. Rockio applies it to the target.</p>
-      </div>
-      <div class="compare-table">
-        <div class="compare-row compare-row-head">
-          <span>Metric</span>
-          <span>Conventional</span>
-          <span>RK-SPRAY</span>
-        </div>
-        <div class="compare-row">
-          <span>Cost per hectare</span>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
-            <span>$48</span>
-          </div>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-new" style="--bar: 10%"></div>
-            <span>$4.80</span>
-          </div>
-        </div>
-        <div class="compare-row">
-          <span>Chemical used</span>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
-            <span>100%</span>
-          </div>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-new" style="--bar: 10%"></div>
-            <span>~10%</span>
-          </div>
-        </div>
-        <div class="compare-row">
-          <span>Targeting precision</span>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-old" style="--bar: 35%"></div>
-            <span>Zone-level</span>
-          </div>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-new" style="--bar: 99%"></div>
-            <span>Plant-level</span>
-          </div>
-        </div>
-        <div class="compare-row">
-          <span>Compliance logging</span>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-old" style="--bar: 20%"></div>
-            <span>Manual</span>
-          </div>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-new" style="--bar: 100%"></div>
-            <span>Automatic</span>
-          </div>
-        </div>
-        <div class="compare-row">
-          <span>Labor per hectare</span>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
-            <span>2.4 hrs</span>
-          </div>
-          <div class="compare-bar-wrap">
-            <div class="compare-bar compare-bar-new" style="--bar: 15%"></div>
-            <span>0.3 hrs</span>
-          </div>
+          <span class="compare-spray-spot" aria-hidden="true"></span>
+          <span class="compare-spray-spot" aria-hidden="true"></span>
+          <span class="compare-spray-spot" aria-hidden="true"></span>
+          <p>RK-SPRAY — only the weeds</p>
         </div>
       </div>
     </section>
 
-    <section class="product-stack">
-      <div class="product-stack-header">
-        <p class="section-index">07</p>
-        <h2>Technology stack</h2>
-      </div>
-      <div class="stack-grid">
-        <article class="stack-item">
-          <p class="stack-layer">Perception</p>
-          <h3>Multi-modal sensing</h3>
-          <ul>
-            <li>Dual 128-beam LiDAR</li>
-            <li>Stereo RGB + NIR</li>
-            <li>IMU + wheel odometry</li>
-          </ul>
-        </article>
-        <article class="stack-item">
-          <p class="stack-layer">Compute</p>
-          <h3>Edge inference</h3>
-          <ul>
-            <li>Onboard GPU, 30 TOPS</li>
-            <li>Custom crop classifiers</li>
-            <li>Sub-12 ms actuation loop</li>
-          </ul>
-        </article>
-        <article class="stack-item">
-          <p class="stack-layer">Actuation</p>
-          <h3>Precision delivery</h3>
-          <ul>
-            <li>12 solenoid nozzles</li>
-            <li>Variable-rate 0.2–2.4 L/min</li>
-            <li>150–300 μm droplet control</li>
-          </ul>
-        </article>
-        <article class="stack-item">
-          <p class="stack-layer">Platform</p>
-          <h3>Rockio OS</h3>
-          <ul>
-            <li>Mission planning console</li>
-            <li>Fleet orchestration</li>
-            <li>Compliance export API</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="capabilities">
-      <div class="capabilities-header">
-        <p class="section-index">08</p>
-        <h2>Capabilities</h2>
-      </div>
-      <ul class="capability-list">
+    <section class="readable-section" style="border-top: 1px solid var(--gray-200);">
+      <p class="section-index">02</p>
+      <h2>How it works — step by step</h2>
+      <p class="readable-lead">Watch the animation above, or read it here:</p>
+      <ul class="readable-list">
         <li>
-          <span class="cap-num">I</span>
-          <div>
-            <h3>Plant-level targeting</h3>
-            <p>Onboard vision classifies crop, weed, and bare soil in real time. Chemical applied only to classified targets — not the entire row.</p>
-          </div>
+          <h3>Step 1 — Drives the row</h3>
+          <p>The machine rolls through your field on its own, following the crop line.</p>
         </li>
         <li>
-          <span class="cap-num">II</span>
-          <div>
-            <h3>Variable-rate per nozzle</h3>
-            <p>Each of the 12 nozzles operates independently. Application volume adjusts to plant density, size, and pest pressure across the swath.</p>
-          </div>
+          <h3>Step 2 — Looks at each plant</h3>
+          <p>Cameras on the front see what's crop and what's a weed. It works even when it's dusty.</p>
         </li>
         <li>
-          <span class="cap-num">III</span>
-          <div>
-            <h3>Autonomous row following</h3>
-            <p>LiDAR-based navigation maintains row alignment without GPS dependency. Operates in tree canopy, tunnel, and greenhouse environments.</p>
-          </div>
+          <h3>Step 3 — Sprays only the weeds</h3>
+          <p>A small nozzle turns on for a split second when it sees a weed. Your crop is never touched.</p>
         </li>
         <li>
-          <span class="cap-num">IV</span>
-          <div>
-            <h3>Compliance-grade logging</h3>
-            <p>Every application event logged with GPS coordinates, chemical type, volume, and timestamp. Export-ready for EPA and state reporting.</p>
-          </div>
+          <h3>Step 4 — Saves a record</h3>
+          <p>Every spray is logged — where, when, how much. Ready when you need your spray paperwork.</p>
+        </li>
+      </ul>
+      <figure style="margin-top: 40px;">
+        <div class="field-anim" data-field-anim role="img" aria-label="Animation showing RK-SPRAY spraying three weeds in a row"></div>
+        <figcaption class="field-anim-caption">The machine stops at nothing on your crop. It only acts on weeds.</figcaption>
+      </figure>
+    </section>
+
+    <section class="readable-section stat-simple-dark-wrap" style="background: var(--black); color: var(--white); border-top: 1px solid var(--border-dark);">
+      <p class="section-index" style="color: rgba(255,255,255,0.4);">03</p>
+      <h2 style="color: var(--white); max-width: none;">What that means in dollars</h2>
+      <p class="readable-lead" style="color: rgba(255,255,255,0.55);">From early trials. Your numbers will vary by crop and field.</p>
+      <div class="stat-simple stat-simple-dark">
+        <div class="stat-simple-item">
+          <strong><span data-count="10" data-suffix="×">0×</span></strong>
+          <span>Less spent per acre on spraying</span>
+        </div>
+        <div class="stat-simple-item">
+          <strong><span data-count="90" data-suffix="%">0%</span></strong>
+          <span>Less chemical to buy each season</span>
+        </div>
+        <div class="stat-simple-item">
+          <strong><span data-count="87" data-suffix="%">0%</span></strong>
+          <span>Less time for you in the cab</span>
+        </div>
+        <div class="stat-simple-item">
+          <strong>100%</strong>
+          <span>Spray records saved for you</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="readable-section" id="specifications" style="border-top: 1px solid var(--gray-200);">
+      <p class="section-index">04</p>
+      <h2>The machine — plain facts</h2>
+      <ul class="readable-list">
+        <li>
+          <h3>How wide?</h3>
+          <p>About 10 feet per pass. Fits standard rows in corn, soy, grapes, and orchards.</p>
+        </li>
+        <li>
+          <h3>How much does it hold?</h3>
+          <p>120 gallons. Enough for up to 8 hours depending on how many weeds you have.</p>
+        </li>
+        <li>
+          <h3>How does it spray?</h3>
+          <p>12 small nozzles under the machine. Each one turns on only when it sees a weed.</p>
+        </li>
+        <li>
+          <h3>Does it need internet?</h3>
+          <p>No. It makes all decisions on the machine. Works with no cell signal in the field.</p>
+        </li>
+        <li>
+          <h3>How do I see what it did?</h3>
+          <p>On your phone or laptop when you're back at the house. Every spray is listed.</p>
+        </li>
+        <li>
+          <h3>Do you help me set it up?</h3>
+          <p>Yes. We come to your farm, run the first passes with you, and train your crew.</p>
         </li>
       </ul>
     </section>
 
-    <section class="product-economics">
-      <div class="product-economics-inner">
-        <div class="product-economics-copy">
-          <p class="section-index">09</p>
-          <h2>The economics are clear.</h2>
-          <p>At scale, RK-SPRAY pays for itself in the first season. Lower chemical costs, reduced labor, and higher crop protection efficacy compound across every hectare.</p>
-          <ul class="economics-list">
-            <li><strong>10×</strong> lower application cost per hectare</li>
-            <li><strong>90%</strong> reduction in chemical input</li>
-            <li><strong>87%</strong> less operator time required</li>
-            <li><strong>100%</strong> application traceability</li>
-          </ul>
-        </div>
-        <div class="economics-chart">
-          <p class="economics-chart-label">Annual cost per 100 hectares</p>
-          <div class="economics-bars">
-            <div class="economics-bar-group">
-              <div class="economics-bar economics-bar-old" style="--h: 100%">
-                <span>$48,000</span>
-              </div>
-              <p>Conventional</p>
-            </div>
-            <div class="economics-bar-group">
-              <div class="economics-bar economics-bar-new" style="--h: 10%">
-                <span>$4,800</span>
-              </div>
-              <p>RK-SPRAY</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-specs" id="specifications">
-      <div class="product-specs-header">
-        <p class="section-index">10</p>
-        <h2>Specifications</h2>
-      </div>
-      <div class="product-specs-grid">
-        <dl class="spec-group">
-          <dt>Platform</dt>
-          <dd>Autonomous ground sprayer</dd>
-          <dt>Dimensions (L × W × H)</dt>
-          <dd>4.8 m × 3.4 m × 1.6 m</dd>
-          <dt>Weight (loaded)</dt>
-          <dd>680 kg</dd>
-          <dt>Drive</dt>
-          <dd>Electric, end-wheel, 4 km/h operating speed</dd>
-        </dl>
-        <dl class="spec-group">
-          <dt>Fluid capacity</dt>
-          <dd>120 L</dd>
-          <dt>Nozzle count</dt>
-          <dd>12 (individually controlled)</dd>
-          <dt>Flow rate</dt>
-          <dd>0.2 – 2.4 L/min per nozzle</dd>
-          <dt>Droplet size</dt>
-          <dd>150 – 300 μm (configurable)</dd>
-        </dl>
-        <dl class="spec-group">
-          <dt>Perception</dt>
-          <dd>Dual LiDAR + RGB stereo</dd>
-          <dt>Compute</dt>
-          <dd>Edge GPU, 30 Hz inference</dd>
-          <dt>Connectivity</dt>
-          <dd>4G/LTE, Wi-Fi, offline capable</dd>
-          <dt>Battery</dt>
-          <dd>48 V Li-ion, 8 hr runtime</dd>
-        </dl>
-        <dl class="spec-group">
-          <dt>Operating temp</dt>
-          <dd>−10 °C to 45 °C</dd>
-          <dt>Certification</dt>
-          <dd>FAA Part 107 compatible deployment</dd>
-          <dt>Status</dt>
-          <dd>Early access · Field trials active</dd>
-          <dt>Warranty</dt>
-          <dd>12 months · Extendable</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section class="deployment">
-      <div class="deployment-grid">
-        <div class="deployment-intro">
-          <p class="section-index">11</p>
-          <h2>Field deployment</h2>
-          <p>RK-SPRAY integrates into existing operations without replacing your fleet. Deploy in four steps.</p>
-        </div>
-        <ol class="deployment-steps">
-          <li>
-            <span class="step-num">01</span>
-            <div>
-              <h3>Field survey</h3>
-              <p>Map row geometry, entry points, and chemical zones. RK-SPRAY builds a mission plan from your field boundaries.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">02</span>
-            <div>
-              <h3>Calibration pass</h3>
-              <p>Run a calibration pass to tune perception models for your crop type, growth stage, and lighting conditions.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">03</span>
-            <div>
-              <h3>Autonomous operation</h3>
-              <p>Assign missions from the Rockio console or run pre-programmed schedules. Monitor coverage and chemical use in real time.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">04</span>
-            <div>
-              <h3>Compliance export</h3>
-              <p>Download application logs with GPS tracks, volumes, and timestamps. Ready for regulatory submission.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="domains">
-      <div class="domains-header">
-        <p class="section-index">12</p>
-        <h2>Applications</h2>
-      </div>
-      <div class="domains-grid">
+    <section class="domains readable-section" style="border-top: 1px solid var(--gray-200);">
+      <p class="section-index">05</p>
+      <h2>Built for these crops</h2>
+      <div class="domains-grid" style="margin-top: 32px;">
         <article class="domain-card">
-          <p class="domain-code">VIN</p>
-          <h3>Vineyards</h3>
-          <p>Row-following between trellises. Targeted fungicide application on canopy without drift to adjacent rows.</p>
-          <ul class="domain-tags">
-            <li>Narrow row</li>
-            <li>Canopy spray</li>
-            <li>Low drift</li>
-          </ul>
+          <h3>Grapes &amp; wine</h3>
+          <p>Narrow rows. Hits weeds between vines.</p>
         </article>
         <article class="domain-card">
-          <p class="domain-code">ROW</p>
-          <h3>Row crops</h3>
-          <p>Corn, soy, and specialty vegetables. Weed-specific application reduces herbicide load across entire fields.</p>
-          <ul class="domain-tags">
-            <li>Weed targeting</li>
-            <li>Band spray</li>
-            <li>Scalable</li>
-          </ul>
+          <h3>Corn, soy &amp; vegetables</h3>
+          <p>Weeds in the row get sprayed. Crop does not.</p>
         </article>
         <article class="domain-card">
-          <p class="domain-code">ORC</p>
-          <h3>Orchards</h3>
-          <p>Tree-level pest management with perception tuned for trunk and canopy geometry in perennial systems.</p>
-          <ul class="domain-tags">
-            <li>Per-tree</li>
-            <li>IPM ready</li>
-            <li>Seasonal</li>
-          </ul>
+          <h3>Apples &amp; orchards</h3>
+          <p>Problem spots per tree — not the whole floor.</p>
         </article>
         <article class="domain-card">
-          <p class="domain-code">GRN</p>
           <h3>Greenhouses</h3>
-          <p>GPS-denied navigation for enclosed environments. Precise application in high-density bench and tray layouts.</p>
-          <ul class="domain-tags">
-            <li>Indoor</li>
-            <li>LiDAR nav</li>
-            <li>Bench-level</li>
-          </ul>
+          <p>Works indoors between benches.</p>
         </article>
       </div>
     </section>
@@ -667,47 +257,47 @@
     <section class="product-lead" id="lead-form">
       <div class="product-lead-grid">
         <div class="product-lead-copy">
-          <p class="product-lead-label">Early access program</p>
-          <h2>Deploy RK-SPRAY on your operation.</h2>
-          <p>We are partnering with growers for field trials across the US. Limited slots available for the 2026 season.</p>
+          <p class="product-lead-label">Early access — 2026</p>
+          <h2>Try it on your farm</h2>
+          <p>Tell us what you grow and where you are. We'll be in touch.</p>
           <ul class="product-lead-points">
-            <li>On-site deployment support</li>
-            <li>Custom crop model calibration</li>
-            <li>Priority access to fleet console</li>
+            <li>We visit your farm first</li>
+            <li>We set it up and train your team</li>
+            <li>You talk to the people who built it</li>
           </ul>
         </div>
         <form class="lead-form" action="#" method="post">
           <label>
-            <span>Full name</span>
+            <span>Your name</span>
             <input type="text" name="name" required autocomplete="name">
           </label>
           <label>
-            <span>Work email</span>
+            <span>Email</span>
             <input type="email" name="email" required autocomplete="email">
           </label>
           <label>
-            <span>Organization</span>
+            <span>Farm or company</span>
             <input type="text" name="organization" required autocomplete="organization">
           </label>
           <label>
-            <span>Operation size</span>
-            <select name="hectares" required>
-              <option value="" disabled selected>Select</option>
-              <option value="under-100">Under 100 hectares</option>
-              <option value="100-500">100 – 500 hectares</option>
-              <option value="500-2000">500 – 2,000 hectares</option>
-              <option value="2000+">2,000+ hectares</option>
+            <span>How big is your farm?</span>
+            <select name="acres" required>
+              <option value="" disabled selected>Pick one</option>
+              <option value="under-250">Under 250 acres</option>
+              <option value="250-1000">250 – 1,000 acres</option>
+              <option value="1000-5000">1,000 – 5,000 acres</option>
+              <option value="5000+">5,000+ acres</option>
             </select>
           </label>
           <label>
-            <span>Crop type</span>
-            <input type="text" name="crop" placeholder="e.g. Vineyards, corn, orchards" required>
+            <span>What do you grow?</span>
+            <input type="text" name="crop" placeholder="e.g. Corn, grapes, apples" required>
           </label>
           <label>
-            <span>Message</span>
-            <textarea name="message" rows="4" placeholder="Tell us about your operation and spraying needs."></textarea>
+            <span>Anything else?</span>
+            <textarea name="message" rows="3" placeholder="Where you're located, what you spray today."></textarea>
           </label>
-          <button type="submit">Request early access</button>
+          <button type="submit">Send my request</button>
         </form>
       </div>
     </section>
@@ -718,6 +308,5 @@
 
   <script src="partials.js"></script>
   <script src="script.js"></script>
-  <script src="rk-spray.js"></script>
 </body>
 </html>

@@ -1,10 +1,9 @@
 const FOOTER_HTML = `
   <div class="footer-main">
     <div class="footer-brand">
-      <p class="footer-logo">
-        <span class="logo-mark" aria-hidden="true"></span>
-        Rockio
-      </p>
+      <a href="index.html" class="footer-logo-link" aria-label="Rockio">
+        <img src="images/logo-header.png" alt="" class="footer-logo-img" width="187" height="48">
+      </a>
       <p class="footer-tagline">Robots for agriculture. Currently in active development — partnering with early adopters and investors.</p>
       <address class="footer-address">
         Rockio Inc.<br>
@@ -125,6 +124,53 @@ const COOKIE_PANEL_HTML = `
   </div>
 `;
 
+const FIELD_ANIM_HTML = `
+  <div class="field-anim-legend" aria-hidden="true">
+    <span><i class="leg-crop" aria-hidden="true"></i> Your crop — left alone</span>
+    <span><i class="leg-weed" aria-hidden="true"></i> Weed — gets spray</span>
+    <span><i class="leg-spray" aria-hidden="true"></i> Spray — only on weeds</span>
+  </div>
+  <div class="field-anim-ground">
+    <div class="field-anim-row-single" aria-hidden="true"></div>
+    <span class="field-anim-target field-anim-plant" style="left:10%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:18%"></span>
+    <span class="field-anim-target field-anim-weed field-anim-weed-1" style="left:28%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:38%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:46%"></span>
+    <span class="field-anim-target field-anim-weed field-anim-weed-2" style="left:52%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:62%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:70%"></span>
+    <span class="field-anim-target field-anim-weed field-anim-weed-3" style="left:76%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:86%"></span>
+    <span class="field-anim-target field-anim-plant" style="left:94%"></span>
+    <span class="field-anim-spray-burst field-anim-spray-burst-1" aria-hidden="true"></span>
+    <span class="field-anim-spray-burst field-anim-spray-burst-2" aria-hidden="true"></span>
+    <span class="field-anim-spray-burst field-anim-spray-burst-3" aria-hidden="true"></span>
+    <div class="field-anim-machine" aria-hidden="true">
+      <div class="field-anim-machine-wheel"></div>
+      <div class="field-anim-machine-wheel"></div>
+      <div class="field-anim-machine-body"></div>
+      <div class="field-anim-machine-tank"></div>
+      <div class="field-anim-machine-boom"></div>
+      <div class="field-anim-scan-beam"></div>
+    </div>
+  </div>
+  <div class="field-anim-step" aria-live="polite">
+    <p class="field-anim-step-1">Step 1 — The machine drives down your row.</p>
+    <p class="field-anim-step-2">Step 2 — It looks at each plant and picks out the weeds.</p>
+    <p class="field-anim-step-3">Step 3 — It sprays only the weeds. Your crop stays dry.</p>
+    <p class="field-anim-step-4">Done — three weeds treated. Zero crop sprayed.</p>
+  </div>
+`;
+
+function mountFieldAnims() {
+  document.querySelectorAll('[data-field-anim]').forEach((el) => {
+    if (el.dataset.mounted === 'true') return;
+    el.innerHTML = FIELD_ANIM_HTML;
+    el.dataset.mounted = 'true';
+  });
+}
+
 function getPageName() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
   if (path === '' || path === '/') return 'home';
@@ -211,6 +257,7 @@ function mountFooter() {
 document.addEventListener('DOMContentLoaded', () => {
   mountCookiePanel();
   bindCookieTriggers();
+  mountFieldAnims();
   mountFooter();
   setActiveNav();
 });

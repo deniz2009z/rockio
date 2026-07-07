@@ -15,7 +15,10 @@
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --max-width: 1120px;
-  --header-height: 72px;
+  --header-height: 64px;
+  --header-height-mobile: 56px;
+  --logo-height: 40px;
+  --logo-height-mobile: 32px;
   --section-pad: clamp(64px, 12vw, 120px);
   --section-pad-mobile: clamp(48px, 10vw, 80px);
   --side-pad: clamp(20px, 5vw, 64px);
@@ -53,42 +56,40 @@ a {
   left: 0;
   right: 0;
   z-index: 200;
-  height: var(--header-height);
+  height: calc(var(--header-height) + env(safe-area-inset-top, 0));
+  padding: env(safe-area-inset-top, 0) var(--side-pad) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--side-pad);
-  padding-top: env(safe-area-inset-top, 0);
+  gap: 16px;
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  height: 100%;
+  min-width: 0;
+  max-width: min(52vw, 200px);
+  height: var(--header-height);
   z-index: 201;
 }
 
 .logo-img {
   display: block;
-  height: 38px;
+  height: var(--logo-height);
   width: auto;
-  max-width: min(220px, 55vw);
-}
-
-@media (min-width: 768px) {
-  .logo-img {
-    height: 48px;
-    max-width: none;
-  }
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: clamp(20px, 3vw, 40px);
 }
 
@@ -150,16 +151,21 @@ a {
 
 .mobile-menu {
   position: fixed;
-  inset: 0;
+  top: calc(var(--header-height) + env(safe-area-inset-top, 0));
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 150;
   background: var(--white);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: clamp(32px, 8vh, 64px) var(--side-pad) env(safe-area-inset-bottom, 0);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: env(safe-area-inset-top, 0) var(--side-pad) env(safe-area-inset-bottom, 0);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.open {
@@ -170,21 +176,30 @@ a {
 .mobile-menu nav {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  text-align: center;
+  gap: 0;
+  width: 100%;
+  max-width: 320px;
+  border-top: 2px solid var(--black);
 }
 
 .mobile-menu a {
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--black);
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 /* Page layout */
 
 .page {
-  padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0));
 }
 
 .page-hero {
@@ -372,10 +387,11 @@ a {
 .hero-visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  margin: 0;
+}
+
+.hero-visual .field-anim {
   border: 1px solid var(--gray-200);
-  background: #0a0a0a;
-  overflow: hidden;
 }
 
 .hero-visual .product-anim-stage {
@@ -1419,22 +1435,50 @@ a {
 /* Footer */
 
 .site-footer {
-  border-top: 1px solid var(--gray-200);
+  border-top: 2px solid var(--black);
   padding: 0 var(--side-pad);
   padding-bottom: env(safe-area-inset-bottom, 0);
+  background: var(--white);
 }
 
 .footer-main {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
-  gap: clamp(24px, 4vw, 48px);
-  padding: 56px 0 40px;
+  grid-template-columns: minmax(240px, 1.5fr) repeat(4, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 40px);
+  padding: clamp(40px, 6vw, 56px) 0 clamp(32px, 5vw, 40px);
 }
 
 .footer-brand {
-  padding-right: 16px;
+  padding-right: clamp(0px, 2vw, 24px);
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  max-width: 160px;
+}
+
+.footer-logo-img {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .footer-tagline {
@@ -1589,18 +1633,7 @@ a {
   gap: 16px 24px;
 }
 
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.footer-col {
+.footer-tagline {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1957,16 +1990,22 @@ body.cookie-panel-open {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 20px 0;
+  padding: clamp(16px, 3vw, 20px) 0 clamp(20px, 4vw, 28px);
+  border-top: 1px solid var(--gray-200);
 }
 
 .footer-copy {
-  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
   color: var(--gray-400);
 }
 
 .footer-legal a {
-  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--gray-600);
   transition: color 0.2s ease;
 }
@@ -1991,8 +2030,13 @@ body.cookie-panel-open {
 /* Product page — RK-SPRAY */
 
 .site-header-dark {
-  background: var(--black);
+  background: rgba(10, 10, 10, 0.97);
   border-bottom-color: var(--border-dark);
+}
+
+.site-header-dark.site-header-scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom-color: var(--gray-200);
 }
 
 .site-header-dark .site-nav a {
@@ -2010,11 +2054,6 @@ body.cookie-panel-open {
 
 .site-header-dark .logo-img {
   filter: brightness(0) invert(1);
-}
-
-.site-header-dark.site-header-scrolled {
-  background: var(--white);
-  border-bottom-color: var(--gray-200);
 }
 
 .site-header-dark.site-header-scrolled .site-nav a {
@@ -3364,12 +3403,12 @@ body.cookie-panel-open {
   max-width: 14ch;
 }
 
-.home-flagship-copy > p {
-  font-size: 0.9375rem;
+.home-flagship-copy .readable-lead {
+  font-size: clamp(1rem, 2.5vw, 1.0625rem);
   color: var(--gray-600);
   line-height: 1.75;
   max-width: 440px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .home-flagship-stats {
@@ -3401,16 +3440,12 @@ body.cookie-panel-open {
   margin: 0;
 }
 
-.home-flagship-visual .product-anim-stage {
-  aspect-ratio: 4 / 3;
-  background: #0a0a0a;
+.home-flagship-visual .field-anim {
   border: 1px solid var(--gray-200);
 }
 
-.home-flagship-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.product-hero-visual .field-anim {
+  border: 1px solid var(--border-dark);
 }
 
 .home-operating {
@@ -3550,13 +3585,15 @@ body.cookie-panel-open {
 
   .hero-visual {
     order: -1;
-    aspect-ratio: 16 / 9;
-    max-height: min(52svh, 420px);
     width: calc(100% + var(--side-pad) * 2);
     margin-left: calc(var(--side-pad) * -1);
     margin-right: calc(var(--side-pad) * -1);
+  }
+
+  .hero-visual .field-anim {
     border-left: none;
     border-right: none;
+    border-radius: 0;
   }
 
   .home-flagship-inner,
@@ -3705,7 +3742,8 @@ body.cookie-panel-open {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 60px;
+    --header-height: var(--header-height-mobile);
+    --logo-height: var(--logo-height-mobile);
   }
 
   .site-nav {
@@ -3714,17 +3752,11 @@ body.cookie-panel-open {
 
   .menu-toggle {
     display: flex;
+    margin-right: -6px;
   }
 
-  .mobile-menu a {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-menu nav {
-    gap: 24px;
+  .logo {
+    max-width: min(58vw, 180px);
   }
 
   .statement-grid,
@@ -3802,8 +3834,33 @@ body.cookie-panel-open {
   }
 
   .footer-main {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+    padding-top: 36px;
+    padding-bottom: 28px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+
+  .footer-logo-link {
+    max-width: 140px;
+    margin-bottom: 14px;
+  }
+
+  .footer-logo-img {
+    height: 26px;
+  }
+
+  .footer-tagline {
+    max-width: none;
+  }
+
+  .footer-newsletter {
+    max-width: none;
+    grid-column: 1 / -1;
   }
 
   .footer-newsletter-row {

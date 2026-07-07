@@ -36,9 +36,10 @@ const revealSelector = [
   '.product-lead-grid > div',
   '.lead-form',
   '.product-economics-inner > div',
-  '.role-link',
-  '.faq-item',
-].join(', ');
+  '.readable-section',
+  '.readable-list li',
+  '.stat-simple-item',
+  '.compare-anim-panel',
 
 const observer = new IntersectionObserver(
   (entries) => {
