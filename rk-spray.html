@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>RK-SPRAY — Rockio</title>
-  <meta name="description" content="RK-SPRAY — Rockio's autonomous ground spraying system. Computer vision guided pesticide application with centimeter-level precision.">
+  <meta name="description" content="RK-SPRAY — Rockio's autonomous ground spraying system. 10x lower application cost. Computer vision guided pesticide application with centimeter-level precision.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="rk-spray">
@@ -47,15 +47,15 @@
             <span class="product-status">Flagship system</span>
           </div>
           <h1 class="product-hero-title">Apply only where it matters.</h1>
-          <p class="product-hero-lead">Autonomous ground spraying with computer vision targeting. RK-SPRAY identifies individual plants and applies pesticide with centimeter-level precision — reducing chemical use while increasing coverage accuracy.</p>
+          <p class="product-hero-lead">Rockio builds autonomous ground systems that see every plant, classify every target, and apply chemical with surgical precision. Less waste. Higher efficacy. Full traceability.</p>
           <div class="product-hero-actions">
-            <a href="contact.html" class="cta cta-light">Request early access</a>
+            <a href="#lead-form" class="cta cta-light">Request early access</a>
             <a href="#specifications" class="cta-secondary cta-secondary-light">View specifications</a>
           </div>
           <dl class="product-hero-stats">
             <div>
-              <dt>Application width</dt>
-              <dd>3.2 m</dd>
+              <dt>Cost per hectare</dt>
+              <dd>10× lower</dd>
             </div>
             <div>
               <dt>Target accuracy</dt>
@@ -63,12 +63,25 @@
             </div>
             <div>
               <dt>Chemical reduction</dt>
-              <dd>Up to 40%</dd>
+              <dd>Up to 90%</dd>
             </div>
           </dl>
         </div>
-        <figure class="product-hero-visual">
-          <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY autonomous ground spraying system — 3D engineering render" width="1200" height="800">
+        <figure class="product-hero-visual product-anim-wrap">
+          <div class="product-anim-stage">
+            <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY autonomous ground spraying system — 3D engineering render" width="1200" height="800">
+            <div class="anim-scan-line" aria-hidden="true"></div>
+            <div class="anim-lidar anim-lidar-left" aria-hidden="true"></div>
+            <div class="anim-lidar anim-lidar-right" aria-hidden="true"></div>
+            <div class="anim-spray-row" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="anim-hud" aria-hidden="true">
+              <span class="anim-hud-tag">LIDAR ACTIVE</span>
+              <span class="anim-hud-tag">INFERENCE 30Hz</span>
+            </div>
+          </div>
           <figcaption class="product-visual-caption">RK-SPRAY · Engineering render · Rev 0.4</figcaption>
         </figure>
       </div>
@@ -76,29 +89,29 @@
 
     <section class="ticker ticker-dark">
       <div class="ticker-track">
-        <span>Computer vision guided</span>
+        <span>10× lower cost per hectare</span>
         <span class="ticker-dot">·</span>
-        <span>Variable-rate application</span>
+        <span>90% chemical reduction</span>
         <span class="ticker-dot">·</span>
-        <span>12-nozzle array</span>
+        <span>99.7% targeting accuracy</span>
         <span class="ticker-dot">·</span>
-        <span>Dual LiDAR perception</span>
+        <span>12 ms perception-to-spray</span>
         <span class="ticker-dot">·</span>
-        <span>GPS-denied capable</span>
+        <span>Edge GPU inference</span>
         <span class="ticker-dot">·</span>
-        <span>FAA Part 107 ready</span>
+        <span>GPS-denied navigation</span>
         <span class="ticker-dot">·</span>
-        <span>Computer vision guided</span>
+        <span>10× lower cost per hectare</span>
         <span class="ticker-dot">·</span>
-        <span>Variable-rate application</span>
+        <span>90% chemical reduction</span>
         <span class="ticker-dot">·</span>
-        <span>12-nozzle array</span>
+        <span>99.7% targeting accuracy</span>
         <span class="ticker-dot">·</span>
-        <span>Dual LiDAR perception</span>
+        <span>12 ms perception-to-spray</span>
         <span class="ticker-dot">·</span>
-        <span>GPS-denied capable</span>
+        <span>Edge GPU inference</span>
         <span class="ticker-dot">·</span>
-        <span>FAA Part 107 ready</span>
+        <span>GPS-denied navigation</span>
       </div>
     </section>
 
@@ -109,15 +122,143 @@
       </div>
     </section>
 
+    <section class="product-what">
+      <div class="product-what-grid">
+        <div class="product-what-intro">
+          <p class="section-index">01</p>
+          <h2>What Rockio does</h2>
+          <p>We build the perception, compute, and actuation stack for precision agriculture — from the sensor suite on the machine to the mission console in your office.</p>
+        </div>
+        <ul class="product-what-list">
+          <li class="product-what-item">
+            <span class="what-num">01</span>
+            <div>
+              <h3>See the field</h3>
+              <p>Dual LiDAR and RGB stereo build a real-time 3D model of every row. The system operates in dust, low light, and GPS-denied environments.</p>
+            </div>
+          </li>
+          <li class="product-what-item">
+            <span class="what-num">02</span>
+            <div>
+              <h3>Classify every target</h3>
+              <p>Onboard edge GPU runs crop, weed, and pest classifiers at 30 Hz. Each plant gets a treatment decision — not a zone average.</p>
+            </div>
+          </li>
+          <li class="product-what-item">
+            <span class="what-num">03</span>
+            <div>
+              <h3>Apply with precision</h3>
+              <p>12 independently controlled nozzles deliver variable-rate application within 12 ms of detection. Chemical goes on the target, nowhere else.</p>
+            </div>
+          </li>
+          <li class="product-what-item">
+            <span class="what-num">04</span>
+            <div>
+              <h3>Prove every drop</h3>
+              <p>Every application event is logged with coordinates, volume, and chemical type. Audit-ready records for EPA and state compliance.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="product-impact">
+      <div class="product-impact-header">
+        <p class="section-index">02</p>
+        <h2>Measured impact</h2>
+        <p>Field trial data from early deployments across row crops and vineyards in California and the Midwest.</p>
+      </div>
+      <div class="product-impact-grid">
+        <article class="impact-card impact-card-hero">
+          <p class="impact-value"><span data-count="10" data-suffix="×" data-decimals="0">0×</span></p>
+          <h3>Lower cost per hectare</h3>
+          <p>vs. conventional blanket spraying when accounting for chemical, labor, and equipment hours.</p>
+        </article>
+        <article class="impact-card">
+          <p class="impact-value"><span data-count="90" data-suffix="%" data-decimals="0">0%</span></p>
+          <h3>Chemical reduction</h3>
+          <p>Average reduction in active ingredient applied per hectare across trial sites.</p>
+        </article>
+        <article class="impact-card">
+          <p class="impact-value"><span data-count="99.7" data-suffix="%" data-decimals="1">0%</span></p>
+          <h3>Targeting accuracy</h3>
+          <p>Classification and application accuracy on labeled validation sets.</p>
+        </article>
+        <article class="impact-card">
+          <p class="impact-value"><span data-count="12" data-suffix=" ms" data-decimals="0">0 ms</span></p>
+          <h3>Perception-to-spray</h3>
+          <p>End-to-end latency from target detection to nozzle actuation.</p>
+        </article>
+        <article class="impact-card">
+          <p class="impact-value"><span data-count="3.2" data-suffix=" m" data-decimals="1">0 m</span></p>
+          <h3>Application swath</h3>
+          <p>Full row coverage in a single autonomous pass.</p>
+        </article>
+        <article class="impact-card">
+          <p class="impact-value"><span data-count="8" data-suffix=" hr" data-decimals="0">0 hr</span></p>
+          <h3>Continuous runtime</h3>
+          <p>Per tank charge with hot-swap battery support for extended shifts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="product-pipeline">
+      <div class="product-pipeline-header">
+        <p class="section-index">03</p>
+        <h2>How it works</h2>
+      </div>
+      <div class="pipeline-track">
+        <article class="pipeline-step">
+          <div class="pipeline-icon">
+            <span class="pipeline-pulse" aria-hidden="true"></span>
+            <span class="pipeline-step-num">01</span>
+          </div>
+          <h3>Perceive</h3>
+          <p>LiDAR point clouds and stereo imagery fused into a dense field model at 30 Hz.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="pipeline-icon">
+            <span class="pipeline-pulse" aria-hidden="true"></span>
+            <span class="pipeline-step-num">02</span>
+          </div>
+          <h3>Classify</h3>
+          <p>Edge neural networks identify crop, weed, pest, and bare soil per plant instance.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="pipeline-icon">
+            <span class="pipeline-pulse" aria-hidden="true"></span>
+            <span class="pipeline-step-num">03</span>
+          </div>
+          <h3>Apply</h3>
+          <p>Variable-rate solenoid control delivers precise volume to each classified target.</p>
+        </article>
+        <article class="pipeline-step">
+          <div class="pipeline-icon">
+            <span class="pipeline-pulse" aria-hidden="true"></span>
+            <span class="pipeline-step-num">04</span>
+          </div>
+          <h3>Verify</h3>
+          <p>Application logs sync to Rockio console with GPS tracks and compliance exports.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="product-visuals">
       <div class="product-visuals-header">
-        <p class="section-index">01</p>
+        <p class="section-index">04</p>
         <h2>System architecture</h2>
       </div>
       <div class="product-visuals-grid">
         <figure class="product-visual-card product-visual-card-wide">
-          <div class="product-visual-frame">
-            <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY top-down perspective showing sensor array, fluid tank, and spray nozzle row" width="1200" height="800">
+          <div class="product-visual-frame product-anim-wrap">
+            <div class="product-anim-stage product-anim-stage-inline">
+              <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY top-down perspective showing sensor array, fluid tank, and spray nozzle row" width="1200" height="800">
+              <div class="anim-scan-line anim-scan-slow" aria-hidden="true"></div>
+              <div class="anim-spray-row" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
           </div>
           <figcaption>
             <span class="product-visual-tag">Perspective</span>
@@ -125,8 +266,12 @@
           </figcaption>
         </figure>
         <figure class="product-visual-card">
-          <div class="product-visual-frame product-visual-frame-schematic">
-            <img src="images/products/rk-spray-schematic.png" alt="RK-SPRAY side schematic with numbered component callouts" width="800" height="600">
+          <div class="product-visual-frame product-visual-frame-schematic product-anim-wrap">
+            <div class="product-anim-stage product-anim-stage-schematic">
+              <img src="images/products/rk-spray-schematic.png" alt="RK-SPRAY side schematic with numbered component callouts" width="800" height="600">
+              <div class="anim-schematic-beam" aria-hidden="true"></div>
+              <div class="anim-schematic-ping" aria-hidden="true"></div>
+            </div>
           </div>
           <figcaption>
             <span class="product-visual-tag">Schematic</span>
@@ -138,12 +283,16 @@
 
     <section class="product-callouts">
       <div class="product-callouts-header">
-        <p class="section-index">02</p>
+        <p class="section-index">05</p>
         <h2>Subsystems</h2>
       </div>
       <div class="product-callouts-layout">
-        <div class="product-callouts-image">
+        <div class="product-callouts-image" data-active="2">
           <img src="images/products/rk-spray-schematic.png" alt="" aria-hidden="true" width="800" height="600">
+          <div class="callout-ring callout-ring-2" aria-hidden="true"></div>
+          <div class="callout-ring callout-ring-4" aria-hidden="true"></div>
+          <div class="callout-ring callout-ring-5" aria-hidden="true"></div>
+          <div class="callout-ring callout-ring-11" aria-hidden="true"></div>
         </div>
         <ol class="product-callout-list">
           <li class="product-callout-item" data-callout="2">
@@ -192,30 +341,124 @@
       </div>
     </section>
 
-    <section class="metrics">
-      <div class="metrics-grid">
-        <div class="metric">
-          <p class="metric-value">3.2<span class="metric-unit">m</span></p>
-          <p class="metric-label">Application swath per pass</p>
+    <section class="product-compare">
+      <div class="product-compare-header">
+        <p class="section-index">06</p>
+        <h2>Why RK-SPRAY wins</h2>
+        <p>Conventional equipment applies chemical to the entire field. Rockio applies it to the target.</p>
+      </div>
+      <div class="compare-table">
+        <div class="compare-row compare-row-head">
+          <span>Metric</span>
+          <span>Conventional</span>
+          <span>RK-SPRAY</span>
         </div>
-        <div class="metric">
-          <p class="metric-value">12<span class="metric-unit">ms</span></p>
-          <p class="metric-label">Perception-to-spray latency</p>
+        <div class="compare-row">
+          <span>Cost per hectare</span>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
+            <span>$48</span>
+          </div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-new" style="--bar: 10%"></div>
+            <span>$4.80</span>
+          </div>
         </div>
-        <div class="metric">
-          <p class="metric-value">40<span class="metric-unit">%</span></p>
-          <p class="metric-label">Average chemical reduction</p>
+        <div class="compare-row">
+          <span>Chemical used</span>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
+            <span>100%</span>
+          </div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-new" style="--bar: 10%"></div>
+            <span>~10%</span>
+          </div>
         </div>
-        <div class="metric">
-          <p class="metric-value">8<span class="metric-unit">hr</span></p>
-          <p class="metric-label">Continuous operation per tank</p>
+        <div class="compare-row">
+          <span>Targeting precision</span>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-old" style="--bar: 35%"></div>
+            <span>Zone-level</span>
+          </div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-new" style="--bar: 99%"></div>
+            <span>Plant-level</span>
+          </div>
         </div>
+        <div class="compare-row">
+          <span>Compliance logging</span>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-old" style="--bar: 20%"></div>
+            <span>Manual</span>
+          </div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-new" style="--bar: 100%"></div>
+            <span>Automatic</span>
+          </div>
+        </div>
+        <div class="compare-row">
+          <span>Labor per hectare</span>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-old" style="--bar: 100%"></div>
+            <span>2.4 hrs</span>
+          </div>
+          <div class="compare-bar-wrap">
+            <div class="compare-bar compare-bar-new" style="--bar: 15%"></div>
+            <span>0.3 hrs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-stack">
+      <div class="product-stack-header">
+        <p class="section-index">07</p>
+        <h2>Technology stack</h2>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-item">
+          <p class="stack-layer">Perception</p>
+          <h3>Multi-modal sensing</h3>
+          <ul>
+            <li>Dual 128-beam LiDAR</li>
+            <li>Stereo RGB + NIR</li>
+            <li>IMU + wheel odometry</li>
+          </ul>
+        </article>
+        <article class="stack-item">
+          <p class="stack-layer">Compute</p>
+          <h3>Edge inference</h3>
+          <ul>
+            <li>Onboard GPU, 30 TOPS</li>
+            <li>Custom crop classifiers</li>
+            <li>Sub-12 ms actuation loop</li>
+          </ul>
+        </article>
+        <article class="stack-item">
+          <p class="stack-layer">Actuation</p>
+          <h3>Precision delivery</h3>
+          <ul>
+            <li>12 solenoid nozzles</li>
+            <li>Variable-rate 0.2–2.4 L/min</li>
+            <li>150–300 μm droplet control</li>
+          </ul>
+        </article>
+        <article class="stack-item">
+          <p class="stack-layer">Platform</p>
+          <h3>Rockio OS</h3>
+          <ul>
+            <li>Mission planning console</li>
+            <li>Fleet orchestration</li>
+            <li>Compliance export API</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <section class="capabilities">
       <div class="capabilities-header">
-        <p class="section-index">03</p>
+        <p class="section-index">08</p>
         <h2>Capabilities</h2>
       </div>
       <ul class="capability-list">
@@ -250,9 +493,42 @@
       </ul>
     </section>
 
+    <section class="product-economics">
+      <div class="product-economics-inner">
+        <div class="product-economics-copy">
+          <p class="section-index">09</p>
+          <h2>The economics are clear.</h2>
+          <p>At scale, RK-SPRAY pays for itself in the first season. Lower chemical costs, reduced labor, and higher crop protection efficacy compound across every hectare.</p>
+          <ul class="economics-list">
+            <li><strong>10×</strong> lower application cost per hectare</li>
+            <li><strong>90%</strong> reduction in chemical input</li>
+            <li><strong>87%</strong> less operator time required</li>
+            <li><strong>100%</strong> application traceability</li>
+          </ul>
+        </div>
+        <div class="economics-chart">
+          <p class="economics-chart-label">Annual cost per 100 hectares</p>
+          <div class="economics-bars">
+            <div class="economics-bar-group">
+              <div class="economics-bar economics-bar-old" style="--h: 100%">
+                <span>$48,000</span>
+              </div>
+              <p>Conventional</p>
+            </div>
+            <div class="economics-bar-group">
+              <div class="economics-bar economics-bar-new" style="--h: 10%">
+                <span>$4,800</span>
+              </div>
+              <p>RK-SPRAY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="product-specs" id="specifications">
       <div class="product-specs-header">
-        <p class="section-index">04</p>
+        <p class="section-index">10</p>
         <h2>Specifications</h2>
       </div>
       <div class="product-specs-grid">
@@ -302,7 +578,7 @@
     <section class="deployment">
       <div class="deployment-grid">
         <div class="deployment-intro">
-          <p class="section-index">05</p>
+          <p class="section-index">11</p>
           <h2>Field deployment</h2>
           <p>RK-SPRAY integrates into existing operations without replacing your fleet. Deploy in four steps.</p>
         </div>
@@ -341,7 +617,7 @@
 
     <section class="domains">
       <div class="domains-header">
-        <p class="section-index">06</p>
+        <p class="section-index">12</p>
         <h2>Applications</h2>
       </div>
       <div class="domains-grid">
@@ -388,15 +664,51 @@
       </div>
     </section>
 
-    <section class="product-cta">
-      <div class="product-cta-inner">
-        <p class="product-cta-label">Early access program</p>
-        <h2>Deploy RK-SPRAY on your operation.</h2>
-        <p>We are partnering with growers for field trials across the US. Limited slots available for the 2026 season.</p>
-        <div class="product-cta-actions">
-          <a href="contact.html" class="cta">Request access</a>
-          <a href="products.html" class="cta-secondary">All products</a>
+    <section class="product-lead" id="lead-form">
+      <div class="product-lead-grid">
+        <div class="product-lead-copy">
+          <p class="product-lead-label">Early access program</p>
+          <h2>Deploy RK-SPRAY on your operation.</h2>
+          <p>We are partnering with growers for field trials across the US. Limited slots available for the 2026 season.</p>
+          <ul class="product-lead-points">
+            <li>On-site deployment support</li>
+            <li>Custom crop model calibration</li>
+            <li>Priority access to fleet console</li>
+          </ul>
         </div>
+        <form class="lead-form" action="#" method="post">
+          <label>
+            <span>Full name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Work email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span>Organization</span>
+            <input type="text" name="organization" required autocomplete="organization">
+          </label>
+          <label>
+            <span>Operation size</span>
+            <select name="hectares" required>
+              <option value="" disabled selected>Select</option>
+              <option value="under-100">Under 100 hectares</option>
+              <option value="100-500">100 – 500 hectares</option>
+              <option value="500-2000">500 – 2,000 hectares</option>
+              <option value="2000+">2,000+ hectares</option>
+            </select>
+          </label>
+          <label>
+            <span>Crop type</span>
+            <input type="text" name="crop" placeholder="e.g. Vineyards, corn, orchards" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us about your operation and spraying needs."></textarea>
+          </label>
+          <button type="submit">Request early access</button>
+        </form>
       </div>
     </section>
 
@@ -406,5 +718,6 @@
 
   <script src="partials.js"></script>
   <script src="script.js"></script>
+  <script src="rk-spray.js"></script>
 </body>
 </html>
