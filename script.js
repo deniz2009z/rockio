@@ -1,4 +1,5 @@
-const revealSelector = [  '.statement',
+const revealSelector = [
+  '.statement',
   '.doctrine-inner',
   '.capability-list li',
   '.arch-layer',
@@ -19,6 +20,10 @@ const revealSelector = [  '.statement',
   '.contact-form',
   '.home-link-card',
   '.page-cta-inner',
+  '.product-cta-inner',
+  '.product-visual-card',
+  '.product-callout-item',
+  '.spec-group',
   '.role-link',
   '.faq-item',
 ].join(', ');
@@ -119,5 +124,22 @@ if (heroVideo && heroVideoWrap) {
   heroVideo.addEventListener('loadeddata', () => {
     heroVideoWrap.classList.add('has-video');
   });
+}
+
+const productHero = document.querySelector('.product-hero');
+const darkHeader = document.querySelector('.site-header-dark');
+
+if (productHero && darkHeader) {
+  const toggleHeader = () => {
+    const heroBottom = productHero.offsetTop + productHero.offsetHeight - 80;
+    if (window.scrollY > heroBottom) {
+      darkHeader.classList.add('site-header-scrolled');
+    } else {
+      darkHeader.classList.remove('site-header-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', toggleHeader, { passive: true });
+  toggleHeader();
 }
 

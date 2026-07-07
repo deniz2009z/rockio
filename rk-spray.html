@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RK-SPRAY — Rockio</title>
+  <meta name="description" content="RK-SPRAY — Rockio's autonomous ground spraying system. Computer vision guided pesticide application with centimeter-level precision.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="rk-spray">
+
+  <header class="site-header site-header-dark">
+    <a href="index.html" class="logo" aria-label="Rockio">
+      <img src="images/logo-header.png" alt="Rockio" class="logo-img" width="187" height="48">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav-links">
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <section class="product-hero">
+      <div class="product-hero-inner">
+        <div class="product-hero-content">
+          <div class="product-meta">
+            <span class="product-id">RK-SPRAY</span>
+            <span class="product-meta-divider" aria-hidden="true">/</span>
+            <span class="product-status">Flagship system</span>
+          </div>
+          <h1 class="product-hero-title">Apply only where it matters.</h1>
+          <p class="product-hero-lead">Autonomous ground spraying with computer vision targeting. RK-SPRAY identifies individual plants and applies pesticide with centimeter-level precision — reducing chemical use while increasing coverage accuracy.</p>
+          <div class="product-hero-actions">
+            <a href="contact.html" class="cta cta-light">Request early access</a>
+            <a href="#specifications" class="cta-secondary cta-secondary-light">View specifications</a>
+          </div>
+          <dl class="product-hero-stats">
+            <div>
+              <dt>Application width</dt>
+              <dd>3.2 m</dd>
+            </div>
+            <div>
+              <dt>Target accuracy</dt>
+              <dd>±2 cm</dd>
+            </div>
+            <div>
+              <dt>Chemical reduction</dt>
+              <dd>Up to 40%</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="product-hero-visual">
+          <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY autonomous ground spraying system — 3D engineering render" width="1200" height="800">
+          <figcaption class="product-visual-caption">RK-SPRAY · Engineering render · Rev 0.4</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ticker ticker-dark">
+      <div class="ticker-track">
+        <span>Computer vision guided</span>
+        <span class="ticker-dot">·</span>
+        <span>Variable-rate application</span>
+        <span class="ticker-dot">·</span>
+        <span>12-nozzle array</span>
+        <span class="ticker-dot">·</span>
+        <span>Dual LiDAR perception</span>
+        <span class="ticker-dot">·</span>
+        <span>GPS-denied capable</span>
+        <span class="ticker-dot">·</span>
+        <span>FAA Part 107 ready</span>
+        <span class="ticker-dot">·</span>
+        <span>Computer vision guided</span>
+        <span class="ticker-dot">·</span>
+        <span>Variable-rate application</span>
+        <span class="ticker-dot">·</span>
+        <span>12-nozzle array</span>
+        <span class="ticker-dot">·</span>
+        <span>Dual LiDAR perception</span>
+        <span class="ticker-dot">·</span>
+        <span>GPS-denied capable</span>
+        <span class="ticker-dot">·</span>
+        <span>FAA Part 107 ready</span>
+      </div>
+    </section>
+
+    <section class="doctrine">
+      <div class="doctrine-inner">
+        <p class="doctrine-label">Operating principle</p>
+        <p class="doctrine-text">Blanket spraying is a blunt instrument. RK-SPRAY treats every plant as a discrete target — sensing, classifying, and applying in a single pass.</p>
+      </div>
+    </section>
+
+    <section class="product-visuals">
+      <div class="product-visuals-header">
+        <p class="section-index">01</p>
+        <h2>System architecture</h2>
+      </div>
+      <div class="product-visuals-grid">
+        <figure class="product-visual-card product-visual-card-wide">
+          <div class="product-visual-frame">
+            <img src="images/products/rk-spray-hero.png" alt="RK-SPRAY top-down perspective showing sensor array, fluid tank, and spray nozzle row" width="1200" height="800">
+          </div>
+          <figcaption>
+            <span class="product-visual-tag">Perspective</span>
+            <p>Integrated perception stack, 120 L fluid reservoir, and linear nozzle array mounted on a rigid steel frame with end-wheel drive.</p>
+          </figcaption>
+        </figure>
+        <figure class="product-visual-card">
+          <div class="product-visual-frame product-visual-frame-schematic">
+            <img src="images/products/rk-spray-schematic.png" alt="RK-SPRAY side schematic with numbered component callouts" width="800" height="600">
+          </div>
+          <figcaption>
+            <span class="product-visual-tag">Schematic</span>
+            <p>Side elevation with perception cones, fluid delivery, and drive subsystem annotated for field service.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-callouts">
+      <div class="product-callouts-header">
+        <p class="section-index">02</p>
+        <h2>Subsystems</h2>
+      </div>
+      <div class="product-callouts-layout">
+        <div class="product-callouts-image">
+          <img src="images/products/rk-spray-schematic.png" alt="" aria-hidden="true" width="800" height="600">
+        </div>
+        <ol class="product-callout-list">
+          <li class="product-callout-item" data-callout="2">
+            <span class="callout-num">02</span>
+            <div>
+              <h3>Perception housing</h3>
+              <p>Sealed enclosure for dual LiDAR units and RGB cameras. Downward-facing field of view covers full application swath.</p>
+            </div>
+          </li>
+          <li class="product-callout-item" data-callout="4">
+            <span class="callout-num">04</span>
+            <div>
+              <h3>Fluid reservoir</h3>
+              <p>120 L chemical tank with level sensing and quick-release fittings. Compatible with standard agricultural formulations.</p>
+            </div>
+          </li>
+          <li class="product-callout-item" data-callout="5">
+            <span class="callout-num">05</span>
+            <div>
+              <h3>Nozzle manifold</h3>
+              <p>12 individually addressable nozzles with solenoid control. Variable-rate output per nozzle based on plant detection.</p>
+            </div>
+          </li>
+          <li class="product-callout-item" data-callout="8">
+            <span class="callout-num">08</span>
+            <div>
+              <h3>Pump assembly</h3>
+              <p>High-pressure diaphragm pump with inline filtration. Maintains consistent droplet size across operating pressure range.</p>
+            </div>
+          </li>
+          <li class="product-callout-item" data-callout="10">
+            <span class="callout-num">10</span>
+            <div>
+              <h3>Drive module</h3>
+              <p>End-mounted wheels with independent motor control. Low ground pressure for row-crop and vineyard operation.</p>
+            </div>
+          </li>
+          <li class="product-callout-item" data-callout="11">
+            <span class="callout-num">11</span>
+            <div>
+              <h3>Application field</h3>
+              <p>Perception-to-actuation loop runs at 30 Hz. Spray commands issued within 12 ms of target classification.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metrics-grid">
+        <div class="metric">
+          <p class="metric-value">3.2<span class="metric-unit">m</span></p>
+          <p class="metric-label">Application swath per pass</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value">12<span class="metric-unit">ms</span></p>
+          <p class="metric-label">Perception-to-spray latency</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value">40<span class="metric-unit">%</span></p>
+          <p class="metric-label">Average chemical reduction</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value">8<span class="metric-unit">hr</span></p>
+          <p class="metric-label">Continuous operation per tank</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="capabilities-header">
+        <p class="section-index">03</p>
+        <h2>Capabilities</h2>
+      </div>
+      <ul class="capability-list">
+        <li>
+          <span class="cap-num">I</span>
+          <div>
+            <h3>Plant-level targeting</h3>
+            <p>Onboard vision classifies crop, weed, and bare soil in real time. Chemical applied only to classified targets — not the entire row.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cap-num">II</span>
+          <div>
+            <h3>Variable-rate per nozzle</h3>
+            <p>Each of the 12 nozzles operates independently. Application volume adjusts to plant density, size, and pest pressure across the swath.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cap-num">III</span>
+          <div>
+            <h3>Autonomous row following</h3>
+            <p>LiDAR-based navigation maintains row alignment without GPS dependency. Operates in tree canopy, tunnel, and greenhouse environments.</p>
+          </div>
+        </li>
+        <li>
+          <span class="cap-num">IV</span>
+          <div>
+            <h3>Compliance-grade logging</h3>
+            <p>Every application event logged with GPS coordinates, chemical type, volume, and timestamp. Export-ready for EPA and state reporting.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="product-specs" id="specifications">
+      <div class="product-specs-header">
+        <p class="section-index">04</p>
+        <h2>Specifications</h2>
+      </div>
+      <div class="product-specs-grid">
+        <dl class="spec-group">
+          <dt>Platform</dt>
+          <dd>Autonomous ground sprayer</dd>
+          <dt>Dimensions (L × W × H)</dt>
+          <dd>4.8 m × 3.4 m × 1.6 m</dd>
+          <dt>Weight (loaded)</dt>
+          <dd>680 kg</dd>
+          <dt>Drive</dt>
+          <dd>Electric, end-wheel, 4 km/h operating speed</dd>
+        </dl>
+        <dl class="spec-group">
+          <dt>Fluid capacity</dt>
+          <dd>120 L</dd>
+          <dt>Nozzle count</dt>
+          <dd>12 (individually controlled)</dd>
+          <dt>Flow rate</dt>
+          <dd>0.2 – 2.4 L/min per nozzle</dd>
+          <dt>Droplet size</dt>
+          <dd>150 – 300 μm (configurable)</dd>
+        </dl>
+        <dl class="spec-group">
+          <dt>Perception</dt>
+          <dd>Dual LiDAR + RGB stereo</dd>
+          <dt>Compute</dt>
+          <dd>Edge GPU, 30 Hz inference</dd>
+          <dt>Connectivity</dt>
+          <dd>4G/LTE, Wi-Fi, offline capable</dd>
+          <dt>Battery</dt>
+          <dd>48 V Li-ion, 8 hr runtime</dd>
+        </dl>
+        <dl class="spec-group">
+          <dt>Operating temp</dt>
+          <dd>−10 °C to 45 °C</dd>
+          <dt>Certification</dt>
+          <dd>FAA Part 107 compatible deployment</dd>
+          <dt>Status</dt>
+          <dd>Early access · Field trials active</dd>
+          <dt>Warranty</dt>
+          <dd>12 months · Extendable</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="deployment">
+      <div class="deployment-grid">
+        <div class="deployment-intro">
+          <p class="section-index">05</p>
+          <h2>Field deployment</h2>
+          <p>RK-SPRAY integrates into existing operations without replacing your fleet. Deploy in four steps.</p>
+        </div>
+        <ol class="deployment-steps">
+          <li>
+            <span class="step-num">01</span>
+            <div>
+              <h3>Field survey</h3>
+              <p>Map row geometry, entry points, and chemical zones. RK-SPRAY builds a mission plan from your field boundaries.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <div>
+              <h3>Calibration pass</h3>
+              <p>Run a calibration pass to tune perception models for your crop type, growth stage, and lighting conditions.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <div>
+              <h3>Autonomous operation</h3>
+              <p>Assign missions from the Rockio console or run pre-programmed schedules. Monitor coverage and chemical use in real time.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <div>
+              <h3>Compliance export</h3>
+              <p>Download application logs with GPS tracks, volumes, and timestamps. Ready for regulatory submission.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="domains">
+      <div class="domains-header">
+        <p class="section-index">06</p>
+        <h2>Applications</h2>
+      </div>
+      <div class="domains-grid">
+        <article class="domain-card">
+          <p class="domain-code">VIN</p>
+          <h3>Vineyards</h3>
+          <p>Row-following between trellises. Targeted fungicide application on canopy without drift to adjacent rows.</p>
+          <ul class="domain-tags">
+            <li>Narrow row</li>
+            <li>Canopy spray</li>
+            <li>Low drift</li>
+          </ul>
+        </article>
+        <article class="domain-card">
+          <p class="domain-code">ROW</p>
+          <h3>Row crops</h3>
+          <p>Corn, soy, and specialty vegetables. Weed-specific application reduces herbicide load across entire fields.</p>
+          <ul class="domain-tags">
+            <li>Weed targeting</li>
+            <li>Band spray</li>
+            <li>Scalable</li>
+          </ul>
+        </article>
+        <article class="domain-card">
+          <p class="domain-code">ORC</p>
+          <h3>Orchards</h3>
+          <p>Tree-level pest management with perception tuned for trunk and canopy geometry in perennial systems.</p>
+          <ul class="domain-tags">
+            <li>Per-tree</li>
+            <li>IPM ready</li>
+            <li>Seasonal</li>
+          </ul>
+        </article>
+        <article class="domain-card">
+          <p class="domain-code">GRN</p>
+          <h3>Greenhouses</h3>
+          <p>GPS-denied navigation for enclosed environments. Precise application in high-density bench and tray layouts.</p>
+          <ul class="domain-tags">
+            <li>Indoor</li>
+            <li>LiDAR nav</li>
+            <li>Bench-level</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="product-cta">
+      <div class="product-cta-inner">
+        <p class="product-cta-label">Early access program</p>
+        <h2>Deploy RK-SPRAY on your operation.</h2>
+        <p>We are partnering with growers for field trials across the US. Limited slots available for the 2026 season.</p>
+        <div class="product-cta-actions">
+          <a href="contact.html" class="cta">Request access</a>
+          <a href="products.html" class="cta-secondary">All products</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
