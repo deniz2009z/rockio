@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact — Rockio</title>
+  <meta name="description" content="Contact Rockio — request access, partner, or inquire about agricultural robotics.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Rockio">
+      <img src="images/logo-header.png" alt="Rockio" class="logo-img" width="187" height="48">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav-links">
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About us</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </div>
+
+  <main class="page">
+
+    <section class="page-hero page-hero-compact">
+      <p class="page-label">Contact</p>
+      <h1>Work with us.</h1>
+      <p class="page-lead">Rockio engages with growers, partners, and organizations worldwide. Tell us about your operation.</p>
+    </section>
+
+    <section class="contact contact-page">
+      <div class="contact-grid">
+        <div>
+          <p class="section-index">01</p>
+          <h2>Get in touch.</h2>
+          <p class="contact-lead">Whether you are deploying across thousands of hectares or starting with a single field, we want to hear from you.</p>
+          <div class="contact-details">
+            <a href="mailto:hello@rockio.com">hello@rockio.com</a>
+            <p>San Francisco, CA</p>
+            <p class="contact-hours">Response within 2 business days</p>
+          </div>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span>Organization</span>
+            <input type="text" name="organization" required autocomplete="organization">
+          </label>
+          <label>
+            <span>Inquiry type</span>
+            <select name="inquiry" required>
+              <option value="" disabled selected>Select</option>
+              <option value="access">Request product access</option>
+              <option value="partner">Partnership</option>
+              <option value="careers">Careers</option>
+              <option value="press">Press</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
