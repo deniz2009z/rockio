@@ -43,6 +43,8 @@ const revealSelector = [
   '.farm-cycle-header',
   '.farm-cycle-phase',
   '.farm-cycle-steps li',
+  '.home-contact-header',
+  '.home-contact-form',
   '.iphone',
   '.faq-item',
   '.page-hero-inner',
@@ -68,21 +70,74 @@ document.querySelectorAll(revealSelector).forEach((el) => {
   observer.observe(el);
 });
 
-const form = document.querySelector('.contact-form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    const original = btn.textContent;
-    btn.textContent = 'Received';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      e.target.reset();
-    }, 2400);
+function initContactForms() {
+  document.querySelectorAll('.home-contact-form, .contact-form').forEach((form) => {
+    if (form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const btn = form.querySelector('button[type="submit"]');
+      const status = form.querySelector('.form-status');
+      const original = btn.textContent;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      if (status) {
+        status.hidden = true;
+        status.textContent = '';
+        status.className = 'form-status';
+      }
+
+      const payload = Object.fromEntries(new FormData(form));
+      const endpoint = window.ROCKIO_FORMS?.contactEndpoint || 'https://formsubmit.co/ajax/hello@rockio.com';
+      const subject = `Rockio inquiry — ${payload.organization || payload.name || 'Website'}`;
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            ...payload,
+            _subject: subject,
+            _template: 'table',
+          }),
+        });
+
+        if (!response.ok) throw new Error('Form submit failed');
+
+        btn.textContent = 'Sent';
+        if (status) {
+          status.hidden = false;
+          status.textContent = 'Message received. We will be in touch.';
+          status.className = 'form-status form-status--success';
+        }
+        form.reset();
+      } catch (error) {
+        btn.textContent = original;
+        btn.disabled = false;
+        if (status) {
+          status.hidden = false;
+          status.textContent = 'Something went wrong. Email hello@rockio.com directly.';
+          status.className = 'form-status form-status--error';
+        }
+      }
+
+      setTimeout(() => {
+        if (btn.textContent === 'Sent') {
+          btn.textContent = original;
+          btn.disabled = false;
+        }
+      }, 4000);
+    });
   });
 }
+
+initContactForms();
 
 document.querySelectorAll('.lead-form').forEach((leadForm) => {
   leadForm.addEventListener('submit', (e) => {
@@ -160,6 +215,18 @@ if (menuToggle && mobileMenu) {
     link.addEventListener('click', closeMenu);
   });
 }
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    const id = anchor.getAttribute('href');
+    if (!id || id === '#') return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (typeof closeMenu === 'function') closeMenu();
+  });
+});
 
 window.addEventListener('scroll', () => {
   if (!header) return;

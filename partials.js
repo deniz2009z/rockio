@@ -1,79 +1,34 @@
 const FOOTER_HTML = `
-  <div class="footer-main">
+  <div class="footer-main footer-main--minimal">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo-link" aria-label="Rockio">
         <img src="images/logo-header.png" alt="" class="footer-logo-img" width="187" height="48">
       </a>
-      <p class="footer-tagline">Edge intelligence for precision agriculture. RK-SPRAY intelligence bar in active development — partnering with early access growers.</p>
       <address class="footer-address">
         Rockio Inc.<br>
         548 Market Street, Suite 35410<br>
-        San Francisco, CA 94104<br>
-        United States
+        San Francisco, CA 94104
       </address>
       <div class="footer-contact-lines">
         <a href="mailto:hello@rockio.com">hello@rockio.com</a>
-        <a href="mailto:support@rockio.com">support@rockio.com</a>
-        <a href="tel:+14155550142">+1 (415) 555-0142</a>
       </div>
-      <div class="footer-social">
-        <a href="https://linkedin.com/company/rockio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-        <a href="https://youtube.com/@rockio" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
-      </div>
-      <form class="footer-newsletter" action="#" method="post">
-        <label class="footer-newsletter-label" for="footer-email">Newsletter</label>
-        <p class="footer-newsletter-hint">Product updates and field deployment news. No spam.</p>
-        <div class="footer-newsletter-row">
-          <input type="email" id="footer-email" name="email" placeholder="your@email.com" required autocomplete="email">
-          <button type="submit">Subscribe</button>
-        </div>
-      </form>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Company</p>
-      <a href="about.html">About us</a>
-      <a href="about.html#vision">Vision</a>
-      <a href="about.html#team">Team</a>
+      <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Resources</p>
-      <a href="press.html">Press</a>
-      <a href="press.html#media-kit">Media kit</a>
-      <a href="press.html#case-studies">Case studies</a>
-      <a href="products.html">Products</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Support</p>
-      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-      <a href="mailto:support@rockio.com">Technical support</a>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Legal</p>
       <a href="legal.html">Legal notice</a>
-      <a href="privacy.html">Privacy policy</a>
-      <a href="terms.html">Terms of service</a>
-      <button type="button" class="footer-link-btn cookie-settings-trigger">Cookie settings</button>
-    </div>
-  </div>
-  <div class="footer-trust">
-    <p class="footer-trust-label">Compliance</p>
-    <ul class="footer-trust-list">
-      <li>EPA spray logging</li>
-      <li>CCPA Ready</li>
-      <li>Edge compute</li>
-      <li>Safety MCU</li>
-    </ul>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Rockio Inc. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="legal.html">Legal</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
       <button type="button" class="footer-link-btn cookie-settings-trigger">Cookies</button>
     </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Rockio Inc.</p>
   </div>
 `;
 
@@ -187,59 +142,11 @@ function mountFooter() {
   if (!footer || footer.dataset.mounted === 'true') return;
   footer.innerHTML = FOOTER_HTML;
   footer.dataset.mounted = 'true';
-
-  const form = footer.querySelector('.footer-newsletter');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button');
-      const input = form.querySelector('input');
-      const original = btn.textContent;
-      btn.textContent = 'Subscribed';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.disabled = false;
-        input.value = '';
-      }, 2400);
-    });
-  }
-
-}
-
-function mountInnerBand() {
-  const page = document.body.dataset.page || getPageName();
-  if (page === 'home' || page === 'rk-spray' || document.querySelector('.inner-band')) return;
-
-  const items = [
-    'RK-SPRAY',
-    'Intelligence bar',
-    'Edge compute',
-    'Field trials',
-    'San Francisco',
-    'Precision agriculture',
-    'PWM valve control',
-    'Safety MCU',
-  ];
-  const trackContent = [...items, ...items].map((t) => `<span>${t}</span>`).join('');
-  const band = document.createElement('div');
-  band.className = 'inner-band';
-  band.setAttribute('aria-hidden', 'true');
-  band.innerHTML = `<div class="inner-band-track">${trackContent}</div>`;
-
-  const header = document.querySelector('.site-header');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  if (header && mobileMenu) {
-    mobileMenu.after(band);
-  } else if (header) {
-    header.after(band);
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   mountCookiePanel();
   bindCookieTriggers();
   mountFooter();
-  mountInnerBand();
   setActiveNav();
 });

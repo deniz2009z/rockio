@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Rockio — Precision Agriculture Intelligence</title>
-  <meta name="description" content="Rockio builds edge intelligence for precision spraying — retrofit systems that mount to your existing tractor and toolbar.">
+  <title>Rockio — Agricultural Robotics</title>
+  <meta name="description" content="Rockio builds autonomous robots for commercial farming — from soil prep through harvest.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="video-slot.css">
   <link rel="stylesheet" href="hero-app.css">
@@ -19,7 +19,7 @@
     <nav class="site-nav" aria-label="Primary">
       <div class="site-nav-links">
         <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
         <a href="about.html">About us</a>
         <a href="careers.html">Careers</a>
       </div>
@@ -33,7 +33,7 @@
   <div class="mobile-menu" aria-hidden="true">
     <nav aria-label="Mobile">
       <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
+      <a href="#contact">Contact</a>
       <a href="about.html">About us</a>
       <a href="careers.html">Careers</a>
     </nav>
@@ -50,7 +50,7 @@
             <span class="hero-title-line hero-title-line--soft">You just open the app and check on them.</span>
           </h1>
           <div class="hero-actions">
-            <a href="contact.html" class="cta cta-app">Download app</a>
+            <a href="#contact" class="cta cta-app">Get in touch</a>
             <a href="about.html" class="cta-secondary">About us</a>
           </div>
         </div>
@@ -181,7 +181,7 @@
         <header class="farm-cycle-header">
           <p class="farm-cycle-label">Autonomous operations</p>
           <h2 class="farm-cycle-title" id="farm-cycle-title">We made it happen.</h2>
-          <p class="farm-cycle-lead">Autonomous robots for every operation in the crop cycle — from soil prep and planting through in-season care to harvest and post-harvest handling.</p>
+          <p class="farm-cycle-lead">A robot for each step — soil prep, planting, in-season work, harvest, and post-harvest handling.</p>
         </header>
 
         <div class="farm-cycle-procedures">
@@ -337,125 +337,34 @@
       </div>
     </section>
 
-    <section class="readable-section">
-      <p class="section-index">01</p>
-      <h2>Who we are</h2>
-      <p class="readable-lead">Rockio is an agricultural robotics company based in San Francisco. We design and build perception, compute, and spray-control systems for commercial growers — not as a replacement for your operation, but as a layer of intelligence on top of it.</p>
-      <div class="plain-box">
-        <p><strong>Our focus:</strong> turn real-time computer vision into millisecond valve control under real field conditions — vibration, dust, speed, and pressure swings included.</p>
-      </div>
-    </section>
-
-    <section class="readable-section">
-      <p class="section-index">02</p>
-      <h2>Why we exist</h2>
-      <p class="readable-lead">Blanket spraying treats every inch of a field the same. Most of the chemical never needed to be there. Growers pay for full-tank passes, carry compliance burden, and accept drift and crop stress as the cost of doing business.</p>
-      <p class="readable-lead">We believe the fix is not a bigger sprayer — it is better decisions, faster, at the nozzle.</p>
-    </section>
-
-    <section class="readable-section">
-      <p class="section-index">03</p>
-      <h2>What we are building</h2>
-      <p class="readable-lead">Our first product is an <strong>intelligence bar</strong> — a retrofit module that mounts to a tractor toolbar or 3-point hitch. It uses your existing tanks and pumps where possible, and adds the sensing, compute, and individual nozzle control needed for spot application.</p>
-      <ul class="readable-list">
-        <li>
-          <h3>See at speed</h3>
-          <p>Global-shutter stereo vision that holds up under tractor vibration and ground travel — not rolling-shutter cameras that smear in the field.</p>
-        </li>
-        <li>
-          <h3>Decide on the edge</h3>
-          <p>Onboard compute runs perception and valve logic locally. No cloud round-trip. No cell signal required.</p>
-        </li>
-        <li>
-          <h3>Act in milliseconds</h3>
-          <p>Individual PWM solenoid valves fire in 6–12 ms — tight enough to hit centimeter-scale targets at field speed.</p>
-        </li>
-        <li>
-          <h3>Fail safe</h3>
-          <p>A dedicated safety controller runs outside Linux. Any pressure fault, enclosure breach, or software timeout forces valves, pumps, and lasers to a safe state.</p>
-        </li>
-      </ul>
-      <p class="flagship-cta-wrap">
-        <a href="rk-spray.html" class="cta-secondary">Full RK-SPRAY specifications</a>
-      </p>
-    </section>
-
-    <section class="home-flagship">
-      <div class="home-flagship-inner">
-        <div class="home-flagship-copy">
-          <p class="section-index">04</p>
-          <p class="product-meta product-meta-light">
-            <span class="product-id">RK-SPRAY</span>
-            <span class="product-meta-divider" aria-hidden="true">/</span>
-            <span class="product-status">Intelligence bar · In development</span>
-          </p>
-          <h2>Our first system.</h2>
-          <p class="readable-lead">A 3-meter bar with 12–16 independently controlled micro-spray nozzles at 25 cm pitch. Designed for 6 km/h ground speed, 1.8 ha/hr coverage, and coarse-droplet delivery with physical drift shielding.</p>
-          <a href="rk-spray.html" class="cta flagship-cta">View product page</a>
-        </div>
-        <figure class="home-flagship-visual video-slot">
-          <div class="video-slot-frame">
-            <video class="video-slot-player" controls playsinline preload="metadata" title="RK-SPRAY system overview">
-              <!-- <source src="videos/rk-spray-overview.mp4" type="video/mp4"> -->
-            </video>
-            <div class="video-slot-placeholder">
-              <div class="video-slot-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <span class="video-slot-label">Video</span>
-              <p class="video-slot-title">RK-SPRAY system overview — coming soon</p>
-            </div>
-          </div>
-          <figcaption class="video-slot-caption">Intelligence bar retrofit · Toolbar mount</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="readable-section">
-      <p class="section-index">05</p>
-      <h2>How we work</h2>
-      <ul class="readable-list">
-        <li>
-          <h3>Engineering-first</h3>
-          <p>We spec from physics constraints — valve latency, droplet size, release height, power budget — then build hardware that meets them in the field.</p>
-        </li>
-        <li>
-          <h3>Field partnerships</h3>
-          <p>We develop alongside growers and operators. Systems are tuned on real rows, real crops, and real spray days — not only in the lab.</p>
-        </li>
-        <li>
-          <h3>Retrofit, not rip-and-replace</h3>
-          <p>The intelligence bar integrates with existing tractors, toolbars, and fluid systems. Your capital equipment stays in service.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="readable-section video-slot video-slot-wide section-video">
-      <p class="section-index">06</p>
-      <h2>Field &amp; lab</h2>
-      <p class="readable-lead">Development footage from bench testing and field trials.</p>
-      <div class="video-slot-frame">
-        <video class="video-slot-player" controls playsinline preload="metadata" title="Rockio field and lab footage">
-          <!-- <source src="videos/field-lab.mp4" type="video/mp4"> -->
-        </video>
-        <div class="video-slot-placeholder">
-          <div class="video-slot-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span class="video-slot-label">Video</span>
-          <p class="video-slot-title">Field &amp; lab footage — coming soon</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-cta">
-      <div class="page-cta-inner">
-        <h2>Interested in RK-SPRAY?</h2>
-        <p>Product specifications, architecture details, and early-access requests live on the product page. For partnerships, press, or general inquiries — contact us directly.</p>
-        <div class="page-cta-actions">
-          <a href="rk-spray.html" class="cta cta-light">RK-SPRAY product page</a>
-          <a href="contact.html" class="cta-secondary cta-secondary-light">Contact Rockio</a>
-        </div>
+    <section class="home-contact" id="contact" aria-labelledby="contact-title">
+      <div class="home-contact-inner">
+        <header class="home-contact-header">
+          <p class="home-contact-label">Contact</p>
+          <h2 class="home-contact-title" id="contact-title">Get in touch.</h2>
+          <p class="home-contact-lead">Partnerships, press, or general questions. We reply within two business days.</p>
+        </header>
+        <form class="home-contact-form contact-form" method="post">
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span>Organization</span>
+            <input type="text" name="organization" autocomplete="organization">
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="cta">Send message</button>
+        </form>
+        <p class="home-contact-direct">Or email <a href="mailto:hello@rockio.com">hello@rockio.com</a></p>
       </div>
     </section>
 
@@ -463,6 +372,7 @@
 
   <footer class="site-footer"></footer>
 
+  <script src="form-config.js"></script>
   <script src="partials.js"></script>
   <script src="script.js"></script>
 </body>
