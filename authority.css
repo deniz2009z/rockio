@@ -591,6 +591,14 @@ body {
   color: var(--ink);
 }
 
+.home-contact-note {
+  margin-top: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--gray-600);
+  max-width: 22rem;
+}
+
 .home-contact-lead {
   display: none;
 }
@@ -818,6 +826,9 @@ body {
 .page-foot {
   border-top: 1px solid var(--gray-200);
   padding: clamp(40px, 7vw, 56px) 0 clamp(64px, 10vw, 96px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
 }
 
 .page-foot-link {
@@ -1680,10 +1691,46 @@ body {
   padding: 0 var(--side-pad) var(--section-pad);
 }
 
-.faq-item summary {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.02em;
+.faq-list--page {
+  max-width: none;
+  margin: 0;
+  padding: 0 0 clamp(40px, 7vw, 56px);
+  border-top: 1px solid var(--gray-200);
+}
+
+.faq-list--page .faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding: clamp(18px, 3vw, 24px) 0;
+}
+
+.faq-list--page .faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  list-style: none;
+}
+
+.faq-list--page .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list--page .faq-item p {
+  margin-top: 12px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  max-width: 40rem;
+}
+
+.home-contact--embedded {
+  border-top: 1px solid var(--gray-200);
+  padding-top: clamp(64px, 10vw, 96px);
+}
+
+.home-contact--embedded .home-contact-inner {
+  max-width: calc(var(--max-width) + 120px);
 }
 
 /* ── Legal polish ── */

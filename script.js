@@ -42,11 +42,17 @@ const revealSelector = [
   '.video-slot-frame',
   '.app-showcase-copy',
   '.app-showcase-device',
+  '.home-stat',
+  '.home-section-header',
+  '.home-flow-step',
+  '.home-robot-card',
+  '.home-statement-inner',
+  '.home-early-inner > div',
+  '.home-contact-header',
+  '.home-contact-form',
   '.farm-cycle-header',
   '.farm-cycle-phase',
   '.farm-cycle-steps li',
-  '.home-contact-header',
-  '.home-contact-form',
   '.page-intro-header',
   '.page-block',
   '.page-doctrine-inner',
@@ -54,6 +60,7 @@ const revealSelector = [
   '.page-foot',
   '.iphone',
   '.faq-item',
+  '.faq-list--page .faq-item',
   '.page-hero-inner',
   '.legal-content',
   '.platform-cell',
@@ -301,38 +308,4 @@ if (productHero && darkHeader) {
   window.addEventListener('scroll', toggleHeader, { passive: true });
   toggleHeader();
 }
-
-function initFarmCyclePanels() {
-  const section = document.querySelector('.farm-cycle--home');
-  if (!section) return;
-
-  const panels = [...section.querySelectorAll('.farm-cycle-phase-panel')];
-  const mq = window.matchMedia('(max-width: 900px)');
-
-  const syncPanels = () => {
-    if (mq.matches) {
-      const openPanel = panels.find((panel) => panel.open) || panels[0];
-      panels.forEach((panel) => {
-        panel.open = panel === openPanel;
-      });
-    } else {
-      panels.forEach((panel) => {
-        panel.open = true;
-      });
-    }
-  };
-
-  panels.forEach((panel) => {
-    panel.addEventListener('toggle', () => {
-      if (!mq.matches || !panel.open) return;
-      panels.forEach((other) => {
-        if (other !== panel) other.open = false;
-      });
-    });
-  });
-
-  mq.addEventListener('change', syncPanels);
-}
-
-initFarmCyclePanels();
 

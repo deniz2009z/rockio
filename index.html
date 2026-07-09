@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Rockio — Agricultural Robotics</title>
-  <meta name="description" content="Rockio builds autonomous robots for commercial farming — from soil prep through harvest.">
+  <title>Rockio — Autonomous Farm Robots</title>
+  <meta name="description" content="Rockio builds autonomous robots for agriculture — 10× cheaper, 73% more effective. Scan your fields, control the fleet from one app.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="video-slot.css">
   <link rel="stylesheet" href="hero-app.css">
   <link rel="stylesheet" href="authority.css">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body data-page="home">
 
@@ -41,245 +42,166 @@
 
   <main>
 
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="hero-title-stack">
-              <span class="hero-title-line">Your entire farm,</span>
-              <span class="hero-title-line">run by autonomous robots.</span>
-            </span>
-          </h1>
-          <div class="hero-actions">
-            <a href="#contact" class="cta cta-app">Contact</a>
+    <section class="home-hero">
+      <div class="home-hero-inner">
+        <div class="home-hero-copy">
+          <p class="home-eyebrow">Agricultural robotics</p>
+          <h1 class="home-hero-title">Robots that run your fields.</h1>
+          <p class="home-hero-lead">Scan your land once. Each robot does one job — spray, plow, scout — and coordinates with the rest. About 10× cheaper than traditional equipment. 73% more effective per pass.</p>
+          <div class="home-hero-actions">
+            <a href="#contact" class="cta">Talk to us</a>
+            <a href="#fleet" class="cta-secondary">See the fleet</a>
           </div>
         </div>
-        <figure class="hero-visual hero-video-wrap" aria-label="Rockio field operations">
+        <figure class="home-hero-visual hero-video-wrap" aria-label="Rockio robots in the field">
           <div class="hero-video video-slot-frame">
-            <video class="hero-video-player video-slot-player" autoplay muted loop playsinline preload="metadata" title="Rockio autonomous field operations">
+            <video class="hero-video-player video-slot-player" autoplay muted loop playsinline preload="metadata" title="Rockio field operations">
               <!-- <source src="videos/hero.mp4" type="video/mp4"> -->
             </video>
             <div class="video-slot-placeholder hero-video-placeholder">
-              <span class="video-slot-label">Field operations</span>
+              <span class="video-slot-label">Field footage</span>
             </div>
           </div>
         </figure>
       </div>
     </section>
 
-    <section class="app-showcase" aria-labelledby="app-showcase-title">
+    <section class="home-stats" aria-label="Key metrics">
+      <div class="home-stats-inner">
+        <div class="home-stat">
+          <p class="home-stat-value">10×</p>
+          <p class="home-stat-label">Lower cost per acre than running full-size rigs for the same work</p>
+        </div>
+        <div class="home-stat">
+          <p class="home-stat-value">73%</p>
+          <p class="home-stat-label">More coverage per pass in early field trials vs. conventional spray</p>
+        </div>
+        <div class="home-stat">
+          <p class="home-stat-value">1 app</p>
+          <p class="home-stat-label">Map, fleet status, and job history — on your phone</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-flow" id="how" aria-labelledby="how-title">
+      <div class="home-flow-inner">
+        <header class="home-section-header">
+          <p class="home-section-label">How it works</p>
+          <h2 class="home-section-title" id="how-title">Scan. Assign. Run.</h2>
+          <p class="home-section-lead">No manual routing. No guessing which block needs work.</p>
+        </header>
+        <ol class="home-flow-steps">
+          <li class="home-flow-step">
+            <span class="home-flow-step-num">01</span>
+            <span class="home-flow-step-title">Scan the field</span>
+            <p class="home-flow-step-text">A mapping unit drives or flies the perimeter and builds a full acre-by-acre map — boundaries, rows, obstacles.</p>
+          </li>
+          <li class="home-flow-step">
+            <span class="home-flow-step-num">02</span>
+            <span class="home-flow-step-title">Saved to the app</span>
+            <p class="home-flow-step-text">The map lands in Rockio Fleet on your phone. Blocks, coordinates, and status stay updated automatically.</p>
+          </li>
+          <li class="home-flow-step">
+            <span class="home-flow-step-num">03</span>
+            <span class="home-flow-step-title">Robots do the work</span>
+            <p class="home-flow-step-text">You assign a job — spray Block A, plow Block C. The right machine goes out and executes without a driver in the cab.</p>
+          </li>
+          <li class="home-flow-step">
+            <span class="home-flow-step-num">04</span>
+            <span class="home-flow-step-title">They coordinate</span>
+            <p class="home-flow-step-text">Units share the same map. A sprayer knows where the scout already passed. No overlap, no missed rows.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="home-fleet" id="fleet" aria-labelledby="fleet-title">
+      <div class="home-fleet-inner">
+        <header class="home-section-header">
+          <p class="home-section-label">The fleet</p>
+          <h2 class="home-section-title" id="fleet-title">One robot. One job.</h2>
+          <p class="home-section-lead">Specialized units cost less to build and less to run than one machine that tries to do everything.</p>
+        </header>
+        <div class="home-fleet-grid">
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-SCAN</span>
+            <h3 class="home-robot-name">Field mapping</h3>
+            <p class="home-robot-desc">Builds the map every other robot uses. Runs first on a new field.</p>
+            <span class="home-robot-status home-robot-status--live">Field trials</span>
+          </article>
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-SPRAY</span>
+            <h3 class="home-robot-name">Spraying</h3>
+            <p class="home-robot-desc">Herbicide, fungicide, insecticide. Variable rate per row. Nothing else.</p>
+            <span class="home-robot-status home-robot-status--live">Field trials</span>
+          </article>
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-PLOW</span>
+            <h3 class="home-robot-name">Plowing &amp; tillage</h3>
+            <p class="home-robot-desc">Primary tillage and seedbed prep on assigned blocks.</p>
+            <span class="home-robot-status">In development</span>
+          </article>
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-SCOUT</span>
+            <h3 class="home-robot-name">Crop scouting</h3>
+            <p class="home-robot-desc">Monitors stand count, canopy health, and stress between spray passes.</p>
+            <span class="home-robot-status">In development</span>
+          </article>
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-SEED</span>
+            <h3 class="home-robot-name">Planting</h3>
+            <p class="home-robot-desc">Row placement at depth and spacing from the saved field map.</p>
+            <span class="home-robot-status">Research</span>
+          </article>
+          <article class="home-robot-card">
+            <span class="home-robot-id">RK-HARVEST</span>
+            <h3 class="home-robot-name">Harvest assist</h3>
+            <p class="home-robot-desc">Maturity checks and in-field coordination ahead of harvest crews.</p>
+            <span class="home-robot-status">Research</span>
+          </article>
+        </div>
+        <p class="home-fleet-foot">Full specs and platform details on the <a href="products.html">products page</a>.</p>
+      </div>
+    </section>
+
+    <section class="app-showcase home-app" aria-labelledby="app-showcase-title">
       <div class="app-showcase-inner">
         <header class="app-showcase-copy">
-          <h2 class="app-showcase-title" id="app-showcase-title">You just check the app.</h2>
-          <p class="app-showcase-lead">While our robots are doing your tasks.</p>
+          <p class="home-section-label">Rockio Fleet</p>
+          <h2 class="app-showcase-title" id="app-showcase-title">You check the app. They do the work.</h2>
+          <p class="app-showcase-lead">Live map, active units, and job progress. Open it when you want. The fleet runs either way.</p>
         </header>
         <div id="app-showcase-phone" class="app-showcase-device" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section class="farm-cycle farm-cycle--home" aria-labelledby="farm-cycle-title">
-      <div class="farm-cycle-inner">
-        <header class="farm-cycle-header">
-          <p class="farm-cycle-label">Autonomous operations</p>
-          <h2 class="farm-cycle-title" id="farm-cycle-title">We made it happen.</h2>
-          <p class="farm-cycle-lead">Soil prep through storage.</p>
-        </header>
+    <section class="home-statement" aria-label="Why Rockio">
+      <div class="home-statement-inner">
+        <p class="home-statement-hook">You shouldn't need a crew for every acre.</p>
+        <p class="home-statement-body">Most farms pay for machines that sit idle and labor that shows up late. Rockio maps the field once, stores it in your pocket, and sends the right robot to the right block. Units talk to each other so work gets done once — not twice, not half-done.</p>
+      </div>
+    </section>
 
-        <div class="farm-cycle-procedures">
-          <div class="farm-cycle-phase">
-            <details class="farm-cycle-phase-panel" open>
-              <summary class="farm-cycle-phase-label">
-                <span class="farm-cycle-phase-name">Pre-plant</span>
-                <span class="farm-cycle-phase-toggle">
-                  <span class="farm-cycle-phase-meta">7</span>
-                </span>
-              </summary>
-              <ol class="farm-cycle-steps" start="1">
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">01</span>
-                <span class="farm-cycle-step-name">Field planning</span>
-                <span class="farm-cycle-step-desc">Crop selection, rotation, and acreage allocation</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">02</span>
-                <span class="farm-cycle-step-name">Soil analysis</span>
-                <span class="farm-cycle-step-desc">Testing, fertility mapping, and amendment planning</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">03</span>
-                <span class="farm-cycle-step-name">Residue clearing</span>
-                <span class="farm-cycle-step-desc">Stubble, debris, and obstacle removal</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">04</span>
-                <span class="farm-cycle-step-name">Primary tillage</span>
-                <span class="farm-cycle-step-desc">Deep ripping, plowing, and compaction relief</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">05</span>
-                <span class="farm-cycle-step-name">Seedbed preparation</span>
-                <span class="farm-cycle-step-desc">Secondary tillage and fine tilth</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">06</span>
-                <span class="farm-cycle-step-name">Land leveling</span>
-                <span class="farm-cycle-step-desc">Surface grading for uniform drainage</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">07</span>
-                <span class="farm-cycle-step-name">Pre-plant nutrition</span>
-                <span class="farm-cycle-step-desc">Banded or broadcast fertilizer application</span>
-              </li>
-            </ol>
-            </details>
-          </div>
-
-          <div class="farm-cycle-phase">
-            <details class="farm-cycle-phase-panel">
-              <summary class="farm-cycle-phase-label">
-                <span class="farm-cycle-phase-name">Planting</span>
-                <span class="farm-cycle-phase-toggle">
-                  <span class="farm-cycle-phase-meta">2</span>
-                </span>
-              </summary>
-              <ol class="farm-cycle-steps" start="8">
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">08</span>
-                <span class="farm-cycle-step-name">Planting &amp; sowing</span>
-                <span class="farm-cycle-step-desc">Seed placement at depth and row spacing</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">09</span>
-                <span class="farm-cycle-step-name">Emergence monitoring</span>
-                <span class="farm-cycle-step-desc">Stand counts and germination checks</span>
-              </li>
-            </ol>
-            </details>
-          </div>
-
-          <div class="farm-cycle-phase">
-            <details class="farm-cycle-phase-panel">
-              <summary class="farm-cycle-phase-label">
-                <span class="farm-cycle-phase-name">In-season</span>
-                <span class="farm-cycle-phase-toggle">
-                  <span class="farm-cycle-phase-meta">9</span>
-                </span>
-              </summary>
-              <ol class="farm-cycle-steps" start="10">
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">10</span>
-                <span class="farm-cycle-step-name">Irrigation</span>
-                <span class="farm-cycle-step-desc">Scheduled or sensor-driven water delivery</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">11</span>
-                <span class="farm-cycle-step-name">In-season fertilization</span>
-                <span class="farm-cycle-step-desc">Side-dress or foliar nutrient application</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">12</span>
-                <span class="farm-cycle-step-name">Crop scouting</span>
-                <span class="farm-cycle-step-desc">Canopy health and growth-stage assessment</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">13</span>
-                <span class="farm-cycle-step-name">Weed control</span>
-                <span class="farm-cycle-step-desc">Mechanical, chemical, or robotic suppression</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">14</span>
-                <span class="farm-cycle-step-name">Pest management</span>
-                <span class="farm-cycle-step-desc">Insect monitoring and targeted intervention</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">15</span>
-                <span class="farm-cycle-step-name">Disease control</span>
-                <span class="farm-cycle-step-desc">Preventative and curative crop protection</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">16</span>
-                <span class="farm-cycle-step-name">Precision spraying</span>
-                <span class="farm-cycle-step-desc">Variable-rate herbicide, fungicide, or insecticide</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">17</span>
-                <span class="farm-cycle-step-name">Row cultivation</span>
-                <span class="farm-cycle-step-desc">Between-row soil management and aeration</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">18</span>
-                <span class="farm-cycle-step-name">Canopy management</span>
-                <span class="farm-cycle-step-desc">Pruning, thinning, or defoliation where required</span>
-              </li>
-            </ol>
-            </details>
-          </div>
-
-          <div class="farm-cycle-phase">
-            <details class="farm-cycle-phase-panel">
-              <summary class="farm-cycle-phase-label">
-                <span class="farm-cycle-phase-name">Harvest &amp; post-harvest</span>
-                <span class="farm-cycle-phase-toggle">
-                  <span class="farm-cycle-phase-meta">7</span>
-                </span>
-              </summary>
-              <ol class="farm-cycle-steps" start="19">
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">19</span>
-                <span class="farm-cycle-step-name">Maturity assessment</span>
-                <span class="farm-cycle-step-desc">Moisture, brix, or physiological readiness</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">20</span>
-                <span class="farm-cycle-step-name">Pre-harvest preparation</span>
-                <span class="farm-cycle-step-desc">Desiccation, windrowing, or header setup</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">21</span>
-                <span class="farm-cycle-step-name">Harvesting</span>
-                <span class="farm-cycle-step-desc">Grain, forage, fruit, or specialty-crop removal</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">22</span>
-                <span class="farm-cycle-step-name">Conditioning</span>
-                <span class="farm-cycle-step-desc">Drying, aeration, and moisture stabilization</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">23</span>
-                <span class="farm-cycle-step-name">Haul-off &amp; transport</span>
-                <span class="farm-cycle-step-desc">Field-to-bin or field-to-elevator movement</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">24</span>
-                <span class="farm-cycle-step-name">Cleaning &amp; grading</span>
-                <span class="farm-cycle-step-desc">Debris removal and quality sorting</span>
-              </li>
-              <li>
-                <span class="farm-cycle-step-num" aria-hidden="true">25</span>
-                <span class="farm-cycle-step-name">Storage</span>
-                <span class="farm-cycle-step-desc">Silo, cold chain, or controlled-atmosphere preservation</span>
-              </li>
-            </ol>
-            </details>
-          </div>
+    <section class="home-early" aria-labelledby="early-title">
+      <div class="home-early-inner">
+        <div>
+          <p class="home-early-label">Where we are</p>
+          <h2 class="home-early-title" id="early-title">We're early.</h2>
+        </div>
+        <div>
+          <p class="home-early-text">Rockio is a small team testing in California fields. Hardware changes week to week. We work with a handful of growers who want in before the product is polished.</p>
+          <p class="home-early-text">If that's the stage you're looking for, tell us about your operation.</p>
+          <a href="#contact" class="cta">Get in touch</a>
         </div>
       </div>
-      <script>
-        (function () {
-          var panels = document.querySelectorAll('.farm-cycle--home .farm-cycle-phase-panel');
-          if (!panels.length) return;
-          if (window.matchMedia('(min-width: 901px)').matches) {
-            panels.forEach(function (panel) { panel.open = true; });
-          }
-        })();
-      </script>
     </section>
 
     <section class="home-contact" id="contact" aria-labelledby="contact-title">
       <div class="home-contact-inner">
         <header class="home-contact-header">
           <p class="home-contact-label">Contact</p>
-          <h2 class="home-contact-title" id="contact-title">Get in touch.</h2>
+          <h2 class="home-contact-title" id="contact-title">Tell us about your farm.</h2>
+          <p class="home-contact-note">We read every message. Usually reply within two business days.</p>
         </header>
         <form class="home-contact-form contact-form" method="post">
           <p class="form-status" role="status" aria-live="polite" hidden></p>
@@ -292,12 +214,12 @@
             <input type="email" name="email" required autocomplete="email">
           </label>
           <label>
-            <span>Organization</span>
+            <span>Farm / organization</span>
             <input type="text" name="organization" autocomplete="organization">
           </label>
           <label>
-            <span>Message</span>
-            <textarea name="message" rows="4" required></textarea>
+            <span>Acreage &amp; crops</span>
+            <textarea name="message" rows="4" required placeholder="e.g. 800 acres, almonds and tomatoes"></textarea>
           </label>
           <button type="submit" class="cta">Send message</button>
         </form>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>FAQ — Rockio</title>
-  <meta name="description" content="Frequently asked questions about Rockio RK-SPRAY intelligence bar — mounting, specs, safety, and early access.">
+  <meta name="description" content="Common questions about Rockio autonomous farm robots, the fleet app, and field trials.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="authority.css">
 </head>
@@ -18,76 +18,73 @@
       <div class="site-nav-links">
         <a href="products.html">Products</a>
         <a href="contact.html">Contact</a>
-        <a href="about.html">About us</a>
+        <a href="about.html">About</a>
         <a href="careers.html">Careers</a>
       </div>
     </nav>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </header>
+
   <div class="mobile-menu" aria-hidden="true">
     <nav aria-label="Mobile">
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
-      <a href="about.html">About us</a>
+      <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
     </nav>
   </div>
 
-  <main class="page">
-    <section class="page-hero page-hero-compact">
-      <div class="page-hero-inner">
-        <p class="page-label">Support</p>
-        <h1>FAQ</h1>
-        <p class="page-lead">RK-SPRAY intelligence bar — mounting, performance, safety, and early access.</p>
-      </div>
-    </section>
+  <main class="site-page">
+    <div class="page-shell">
 
-    <section class="faq-list">
-      <details class="faq-item">
-        <summary>What is the RK-SPRAY intelligence bar?</summary>
-        <p>A retrofit spray module that mounts to a tractor toolbar or 3-point hitch. It adds global-shutter stereo cameras, onboard edge compute, and individually controlled PWM solenoid nozzles — so you spray targets, not the full row width.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How does it mount to my equipment?</summary>
-        <p>The bar is designed as a standard-width toolbar implement (3 m). It interfaces with your existing tanks and pumps where possible. Mounting hardware adapts to common toolbar and 3-point hitch configurations — we validate fit during early access onboarding.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What are the key performance specs?</summary>
-        <p>3 m bar width, 12–16 nozzles at 25 cm pitch, design ground speed of 6 km/h, target coverage of 1.8 ha/hr, and valve actuation latency of 6–12 ms. Full architecture details are on the <a href="rk-spray.html">RK-SPRAY product page</a>.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Does it require internet or cell service?</summary>
-        <p>No. Perception, valve control, and application logging run entirely on the edge. Mission data syncs when connectivity is available — the tractor keeps spraying when it is not.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What is the safety architecture?</summary>
-        <p>A dedicated safety MCU runs outside the main Linux compute stack. It monitors pressure, enclosure integrity, and software heartbeat. Any fault forces valves, pumps, and lasers to a safe state independently of the perception pipeline.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What regulatory requirements apply?</summary>
-        <p>Ground spray applications are subject to EPA requirements and state pesticide applicator regulations. Operators are responsible for licensing, record-keeping, and label compliance. Rockio systems log valve events and coverage data to support your records.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Which farm management systems do you integrate with?</summary>
-        <p>REST API and standard export formats. Direct integrations for John Deere Operations Center and custom ERP connections are available on request during early access.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How is field data handled?</summary>
-        <p>Perception and application data are processed under contract with the operator. We apply data minimization, encryption at rest and in transit, and role-based access controls. See our <a href="privacy.html">Privacy policy</a> for details.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Is RK-SPRAY available for purchase today?</summary>
-        <p>We are in active development and structured field trials with select partners. Request early access on the <a href="rk-spray.html#lead-form">product page</a> or <a href="contact.html">contact us</a> directly.</p>
-      </details>
-    </section>
+      <section class="page-intro">
+        <header class="farm-cycle-header page-intro-header">
+          <p class="farm-cycle-label">Support</p>
+          <h1 class="farm-cycle-title">FAQ.</h1>
+          <p class="farm-cycle-lead">Robots, the app, pricing, and where we are today.</p>
+        </header>
+      </section>
 
-    <section class="page-cta">
-      <div class="page-cta-inner">
-        <h2>Still have questions?</h2>
-        <p>Technical support responds within 2 business days.</p>
-        <a href="mailto:support@rockio.com" class="cta">support@rockio.com</a>
-      </div>
-    </section>
+      <section class="faq-list faq-list--page" aria-label="Frequently asked questions">
+        <details class="faq-item">
+          <summary>What does Rockio actually sell?</summary>
+          <p>Autonomous robots for commercial farms. Each unit does one job — spray, plow, map, scout. They share a field map through Rockio Fleet, the app you use to assign work and check status.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does a field get into the app?</summary>
+          <p>RK-SCAN (or a mapping pass with another unit) records boundaries, rows, and obstacles. That map is saved to Rockio Fleet. Every robot on your account uses the same map.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need cell service in the field?</summary>
+          <p>No for day-to-day operation. Robots run from the onboard map. The app syncs when you have connectivity.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where do the 10× and 73% numbers come from?</summary>
+          <p>Early comparisons against conventional spray and full-size equipment on trial acres in California. We will publish methodology as trials expand. Numbers will vary by crop and operation.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I buy robots today?</summary>
+          <p>Not off the shelf. We are in field trials with a small set of growers. <a href="contact.html">Contact us</a> if you want to be considered for early access.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which robots are closest to shipping?</summary>
+          <p>RK-SCAN and RK-SPRAY are in California field trials. RK-PLOW and RK-SCOUT are in development. Planting and harvest units are in research.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Who handles pesticide compliance?</summary>
+          <p>You do. Rockio logs where and when product was applied. Licensing, labels, and record-keeping stay with the operator.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is field data stored?</summary>
+          <p>Encrypted in transit and at rest. Details are in our <a href="privacy.html">privacy policy</a>. Customer agreements govern retention.</p>
+        </details>
+      </section>
+
+      <section class="page-foot">
+        <a href="contact.html" class="page-foot-link">Still have a question? Contact us →</a>
+      </section>
+
+    </div>
   </main>
 
   <footer class="site-footer"></footer>

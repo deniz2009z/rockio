@@ -15,9 +15,11 @@ const FOOTER_HTML = `
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Company</p>
+      <a href="products.html">Products</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Legal</p>

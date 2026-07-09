@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Products — Rockio</title>
-  <meta name="description" content="Rockio autonomous systems — spray, scout, monitor, and harvest.">
+  <meta name="description" content="Rockio fleet — specialized robots for mapping, spraying, plowing, scouting, planting, and harvest.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="authority.css">
 </head>
@@ -43,33 +43,47 @@
       <section class="page-intro">
         <header class="farm-cycle-header page-intro-header">
           <p class="farm-cycle-label">Products</p>
-          <h1 class="farm-cycle-title">The fleet.</h1>
-          <p class="farm-cycle-lead">Spray · Scout · Monitor · Harvest</p>
+          <h1 class="farm-cycle-title">Specialized robots.</h1>
+          <p class="farm-cycle-lead">Each unit does one field job. All share one map.</p>
         </header>
       </section>
 
       <section class="page-block" aria-labelledby="systems-label">
-        <h2 class="page-block-label" id="systems-label">Systems</h2>
+        <h2 class="page-block-label" id="systems-label">Field units</h2>
         <ol class="farm-cycle-steps">
-          <li>
-            <a href="rk-spray.html" class="page-row-link">
-              <span class="farm-cycle-step-num">RK-SPRAY</span>
-              <span class="farm-cycle-step-name">Intelligence bar</span>
-              <span class="farm-cycle-step-meta">In development</span>
-            </a>
-          </li>
           <li>
             <span class="page-row-link">
               <span class="farm-cycle-step-num">RK-SCAN</span>
               <span class="farm-cycle-step-name">Field mapping</span>
+              <span class="farm-cycle-step-meta">Field trials</span>
+            </span>
+          </li>
+          <li>
+            <a href="rk-spray.html" class="page-row-link">
+              <span class="farm-cycle-step-num">RK-SPRAY</span>
+              <span class="farm-cycle-step-name">Spraying only</span>
+              <span class="farm-cycle-step-meta">Field trials</span>
+            </a>
+          </li>
+          <li>
+            <span class="page-row-link">
+              <span class="farm-cycle-step-num">RK-PLOW</span>
+              <span class="farm-cycle-step-name">Plowing &amp; tillage</span>
               <span class="farm-cycle-step-meta">In development</span>
             </span>
           </li>
           <li>
             <span class="page-row-link">
-              <span class="farm-cycle-step-num">RK-GROUND</span>
-              <span class="farm-cycle-step-name">Ground unit</span>
+              <span class="farm-cycle-step-num">RK-SCOUT</span>
+              <span class="farm-cycle-step-name">Crop scouting</span>
               <span class="farm-cycle-step-meta">In development</span>
+            </span>
+          </li>
+          <li>
+            <span class="page-row-link">
+              <span class="farm-cycle-step-num">RK-SEED</span>
+              <span class="farm-cycle-step-name">Planting</span>
+              <span class="farm-cycle-step-meta">Research</span>
             </span>
           </li>
           <li>
@@ -82,42 +96,50 @@
         </ol>
       </section>
 
+      <section class="page-doctrine">
+        <div class="page-doctrine-inner">
+          <p class="page-doctrine-label">Why one job per robot</p>
+          <p class="page-doctrine-text">A sprayer doesn't need tillage hardware. A mapper doesn't need a chemical tank. Smaller, focused machines cost less to buy, less to fix, and less to run per acre.</p>
+        </div>
+      </section>
+
       <section class="page-block" aria-labelledby="platform-label">
-        <h2 class="page-block-label" id="platform-label">Platform</h2>
+        <h2 class="page-block-label" id="platform-label">Shared platform</h2>
         <ol class="farm-cycle-steps">
           <li>
             <span class="page-row-link">
               <span class="farm-cycle-step-num">01</span>
-              <span class="farm-cycle-step-name">Perceive</span>
-              <span class="farm-cycle-step-meta">Stereo vision</span>
+              <span class="farm-cycle-step-name">Field map</span>
+              <span class="farm-cycle-step-meta">One source for all units</span>
             </span>
           </li>
           <li>
             <span class="page-row-link">
               <span class="farm-cycle-step-num">02</span>
-              <span class="farm-cycle-step-name">Compute</span>
-              <span class="farm-cycle-step-meta">Onboard</span>
+              <span class="farm-cycle-step-name">Fleet app</span>
+              <span class="farm-cycle-step-meta">Assign · monitor · review</span>
             </span>
           </li>
           <li>
             <span class="page-row-link">
               <span class="farm-cycle-step-num">03</span>
-              <span class="farm-cycle-step-name">Actuate</span>
-              <span class="farm-cycle-step-meta">Valve control</span>
+              <span class="farm-cycle-step-name">Coordination</span>
+              <span class="farm-cycle-step-meta">Units avoid overlap</span>
             </span>
           </li>
           <li>
             <span class="page-row-link">
               <span class="farm-cycle-step-num">04</span>
-              <span class="farm-cycle-step-name">Safeguard</span>
-              <span class="farm-cycle-step-meta">Safety MCU</span>
+              <span class="farm-cycle-step-name">Safety layer</span>
+              <span class="farm-cycle-step-meta">Independent stop logic</span>
             </span>
           </li>
         </ol>
       </section>
 
       <section class="page-foot">
-        <a href="rk-spray.html" class="page-foot-link">RK-SPRAY specifications →</a>
+        <a href="rk-spray.html" class="page-foot-link">RK-SPRAY details →</a>
+        <a href="contact.html" class="page-foot-link">Request a field conversation →</a>
       </section>
 
     </div>
