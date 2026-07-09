@@ -645,10 +645,30 @@ body {
   border-bottom-color: var(--ink);
 }
 
-.home-contact-form button {
+.home-contact-form button,
+.home-contact-form.contact-form button {
   align-self: flex-start;
   margin-top: 8px;
   min-width: 160px;
+  width: auto;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  padding: 12px 28px;
+  min-height: 48px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home-contact-form button:hover,
+.home-contact-form.contact-form button:hover {
+  background: var(--white);
+  color: var(--black);
 }
 
 .home-contact-direct {

@@ -512,7 +512,7 @@
   display: flex;
 }
 
-/* ── Mobile: map-focused in hero only ── */
+/* ── Mobile: compact phone only outside app showcase ── */
 
 @media (max-width: 900px) {
   .hero-app-wrap {
@@ -520,71 +520,90 @@
     margin-bottom: 4px;
   }
 
-  .app-showcase .iphone--showcase {
-    width: min(292px, 82vw);
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
-  }
-
-  .app-showcase .iphone-frame {
-    border-radius: 44px;
-    padding: 9px;
-  }
-
-  .app-showcase .iphone-screen {
-    border-radius: 36px;
-  }
-
-  .app-showcase .app-ui {
-    min-height: 580px;
-  }
-
-  .app-showcase .app-fleet {
-    display: flex;
-    padding-bottom: 20px;
-  }
-
-  .iphone {
+  .iphone:not(.iphone--showcase) {
     width: min(234px, 70vw);
     overflow: visible;
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.1));
   }
 
-  .iphone-frame {
+  .iphone:not(.iphone--showcase) .iphone-frame {
     border-radius: 42px;
     padding: 8px;
   }
 
-  .iphone-screen {
+  .iphone:not(.iphone--showcase) .iphone-screen {
     aspect-ratio: 9 / 16;
     height: auto;
     border-radius: 34px;
   }
 
-  .iphone-side-btn--silent { top: 64px; height: 18px; }
-  .iphone-side-btn--vol-up { top: 90px; height: 28px; }
-  .iphone-side-btn--vol-down { top: 126px; height: 28px; }
-  .iphone-side-btn--power { top: 104px; height: 40px; }
+  .iphone:not(.iphone--showcase) .iphone-side-btn--silent { top: 64px; height: 18px; }
+  .iphone:not(.iphone--showcase) .iphone-side-btn--vol-up { top: 90px; height: 28px; }
+  .iphone:not(.iphone--showcase) .iphone-side-btn--vol-down { top: 126px; height: 28px; }
+  .iphone:not(.iphone--showcase) .iphone-side-btn--power { top: 104px; height: 40px; }
 
-  .app-ui {
+  .iphone:not(.iphone--showcase) .app-ui {
     min-height: 0;
     height: 100%;
   }
 
-  .app-status {
+  .iphone:not(.iphone--showcase) .app-status {
     padding-top: 10px;
   }
 
-  .app-fleet {
+  .iphone:not(.iphone--showcase) .app-fleet {
     display: none;
   }
 
-  .app-map {
+  .iphone:not(.iphone--showcase) .app-map {
     flex: 1;
     min-height: 200px;
   }
 
-  .iphone-home-bar {
+  .iphone:not(.iphone--showcase) .iphone-home-bar {
     display: block;
+  }
+
+  /* App showcase — full phone, same proportions as desktop */
+  .app-showcase .iphone--showcase {
+    width: min(368px, 90vw);
+    filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.12));
+  }
+
+  .app-showcase .iphone--showcase .iphone-frame {
+    border-radius: 46px;
+    padding: 9px;
+  }
+
+  .app-showcase .iphone--showcase .iphone-screen {
+    aspect-ratio: 9 / 19.5;
+    border-radius: 37px;
+    height: auto;
+  }
+
+  .app-showcase .iphone--showcase .iphone-side-btn--silent { top: 100px; height: 24px; }
+  .app-showcase .iphone--showcase .iphone-side-btn--vol-up { top: 138px; height: 38px; }
+  .app-showcase .iphone--showcase .iphone-side-btn--vol-down { top: 186px; height: 38px; }
+  .app-showcase .iphone--showcase .iphone-side-btn--power { top: 156px; height: 56px; }
+
+  .app-showcase .iphone--showcase .app-ui {
+    min-height: 640px;
+    height: auto;
+  }
+
+  .app-showcase .iphone--showcase .app-fleet {
+    display: flex;
+    padding-bottom: 18px;
+  }
+
+  .app-showcase .iphone--showcase .app-map {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .app-showcase-device {
+    overflow: visible;
+    padding: 8px 0 16px;
   }
 }
 
