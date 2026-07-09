@@ -5,41 +5,120 @@
   justify-content: center;
   align-items: center;
   margin: 0;
+  order: -1;
+  width: 100%;
 }
 
 .iphone {
+  position: relative;
   width: min(100%, 300px);
-  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.14));
+  filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.18));
+}
+
+/* Side hardware buttons */
+.iphone-side-btn {
+  position: absolute;
+  background: linear-gradient(180deg, #3a3a3a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.iphone-side-btn--silent {
+  left: -2px;
+  top: 108px;
+  width: 3px;
+  height: 28px;
+}
+
+.iphone-side-btn--vol-up {
+  left: -2px;
+  top: 152px;
+  width: 3px;
+  height: 44px;
+}
+
+.iphone-side-btn--vol-down {
+  left: -2px;
+  top: 206px;
+  width: 3px;
+  height: 44px;
+}
+
+.iphone-side-btn--power {
+  right: -2px;
+  top: 168px;
+  width: 3px;
+  height: 64px;
 }
 
 .iphone-frame {
   position: relative;
-  background: #111;
-  border-radius: 44px;
-  padding: 10px;
-  border: 1px solid #2a2a2a;
+  background: linear-gradient(145deg, #2c2c2e 0%, #1c1c1e 40%, #0a0a0a 100%);
+  border-radius: 48px;
+  padding: 11px;
+  border: 1px solid #3a3a3c;
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 0 0 1px rgba(0, 0, 0, 0.8);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.9);
 }
 
-.iphone-notch {
+.iphone-frame::before {
+  content: "";
   position: absolute;
-  top: 14px;
+  inset: 4px;
+  border-radius: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Dynamic Island */
+.iphone-island {
+  position: absolute;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
-  width: 88px;
-  height: 24px;
-  background: #111;
-  border-radius: 0 0 16px 16px;
-  z-index: 10;
+  width: 92px;
+  height: 26px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 12;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.iphone-island-cam {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1a2840 0%, #080810 55%, #000 100%);
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.15);
 }
 
 .iphone-screen {
-  border-radius: 36px;
+  position: relative;
+  border-radius: 38px;
   overflow: hidden;
   background: #050505;
   aspect-ratio: 9 / 19.5;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.iphone-home-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  z-index: 20;
+  pointer-events: none;
 }
 
 .app-ui {
@@ -55,14 +134,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 18px 6px;
+  padding: 14px 20px 4px;
   font-size: 0.5625rem;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.app-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .app-header {
-  padding: 4px 16px 12px;
+  padding: 2px 16px 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -78,6 +164,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #fff;
+  font-weight: 600;
 }
 
 .app-live {
@@ -87,7 +174,7 @@
   font-size: 0.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .app-live-dot {
@@ -107,84 +194,122 @@
 .app-subtitle {
   font-size: 0.5rem;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.45);
 }
+
+/* ── Farm map with aerial photo ── */
 
 .app-map {
   position: relative;
   flex: 1;
   min-height: 0;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    #080808;
-  background-size: 20px 20px;
   overflow: hidden;
+  background: #0a0a0a;
 }
 
-.app-map-svg {
+.app-map-photo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.app-map-tint {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.45) 100%),
+    rgba(0, 20, 10, 0.25);
+  z-index: 1;
+}
+
+.app-map-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.app-map-blocks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
 .app-map-field {
-  fill: rgba(62, 207, 142, 0.06);
-  stroke: rgba(62, 207, 142, 0.22);
-  stroke-width: 0.8;
+  fill: rgba(62, 207, 142, 0.18);
+  stroke: rgba(62, 207, 142, 0.75);
+  stroke-width: 1.2;
 }
 
 .app-map-field--b {
-  fill: rgba(255, 255, 255, 0.03);
-  stroke: rgba(255, 255, 255, 0.12);
+  fill: rgba(255, 200, 60, 0.12);
+  stroke: rgba(255, 200, 60, 0.55);
 }
 
 .app-map-field--c {
-  fill: rgba(62, 207, 142, 0.04);
-  stroke: rgba(62, 207, 142, 0.15);
+  fill: rgba(80, 160, 255, 0.12);
+  stroke: rgba(80, 160, 255, 0.5);
 }
 
 .app-map-grid-label {
-  font-size: 6px;
-  fill: rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.08em;
+  font-size: 7px;
+  fill: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.1em;
   font-family: var(--font-mono);
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, 0.7);
+  stroke-width: 2px;
 }
 
 .app-map-robot {
   position: absolute;
   transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .app-map-robot-pin {
-  width: 10px;
-  height: 10px;
-  border: 1px solid #3ecf8e;
-  background: rgba(62, 207, 142, 0.25);
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid #3ecf8e;
+  background: rgba(62, 207, 142, 0.45);
   transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(62, 207, 142, 0.5);
   animation: robot-pin-pulse 3s ease-in-out infinite;
 }
 
-.app-map-robot:nth-child(2) .app-map-robot-pin { animation-delay: 0.4s; }
-.app-map-robot:nth-child(3) .app-map-robot-pin { animation-delay: 0.8s; }
-.app-map-robot:nth-child(4) .app-map-robot-pin { animation-delay: 1.2s; }
-.app-map-robot:nth-child(5) .app-map-robot-pin { animation-delay: 1.6s; }
+.app-map-robot:nth-child(5) .app-map-robot-pin { animation-delay: 0s; }
+.app-map-robot:nth-child(6) .app-map-robot-pin { animation-delay: 0.4s; }
+.app-map-robot:nth-child(7) .app-map-robot-pin { animation-delay: 0.8s; }
+.app-map-robot:nth-child(8) .app-map-robot-pin { animation-delay: 1.2s; }
+.app-map-robot:nth-child(9) .app-map-robot-pin { animation-delay: 1.6s; }
 
 @keyframes robot-pin-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 207, 142, 0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(62, 207, 142, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 207, 142, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(62, 207, 142, 0); }
 }
 
 .app-map-robot-label {
   position: absolute;
-  top: 14px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.4375rem;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.55);
+  color: #fff;
   white-space: nowrap;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2px 5px;
+  border-radius: 2px;
 }
 
 .app-map-overlay {
@@ -194,14 +319,20 @@
   justify-content: space-between;
   font-size: 0.4375rem;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 2px;
 }
+
+/* ── Fleet panel (desktop) ── */
 
 .app-fleet {
   background: #0a0a0a;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 12px 14px;
+  padding: 10px 12px 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -269,6 +400,8 @@
   to { width: var(--bar-to, 85%); }
 }
 
+/* ── Desktop ── */
+
 @media (min-width: 901px) {
   .iphone {
     width: min(100%, 320px);
@@ -279,13 +412,57 @@
   }
 }
 
+/* ── Mobile: crop to upper phone (map + header) ── */
+
 @media (max-width: 900px) {
   .hero-app-wrap {
-    order: -1;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .hero-app-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
+    z-index: 5;
   }
 
   .iphone {
-    width: min(280px, 72vw);
+    width: min(260px, 78vw);
+    max-height: 340px;
+    overflow: hidden;
+  }
+
+  .iphone-side-btn--silent { top: 72px; height: 22px; }
+  .iphone-side-btn--vol-up { top: 104px; height: 34px; }
+  .iphone-side-btn--vol-down { top: 148px; height: 34px; }
+  .iphone-side-btn--power { top: 120px; height: 50px; }
+
+  .iphone-screen {
+    aspect-ratio: unset;
+    height: 340px;
+  }
+
+  .app-ui {
+    min-height: auto;
+  }
+
+  .app-fleet {
+    display: none;
+  }
+
+  .app-map {
+    flex: 1;
+    min-height: 200px;
+  }
+
+  .iphone-home-bar {
+    display: none;
   }
 }
 

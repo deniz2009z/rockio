@@ -133,8 +133,12 @@ body {
 }
 
 .hero-content {
-  padding-left: clamp(16px, 3vw, 28px);
-  border-left: 2px solid var(--ink);
+  text-align: center;
+  padding-left: 0;
+  border-left: none;
+  max-width: 34rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero-label {
@@ -155,15 +159,38 @@ body {
 }
 
 .hero-title {
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  max-width: 22ch;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  max-width: none;
+  color: #000;
+}
+
+.hero-title-line {
+  display: block;
+  margin-top: 0.32em;
+}
+
+.hero-title-line:first-child {
+  margin-top: 0;
+}
+
+.hero-title-line--soft {
+  margin-top: 0.4em;
+  font-weight: 500;
+  font-size: 0.82em;
+  color: #1a1a1a;
 }
 
 .hero-lead {
   color: var(--gray-600);
-  line-height: 1.75;
-  max-width: 34rem;
+  line-height: 1.7;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  justify-content: center;
 }
 
 .hero-actions .cta {
@@ -941,11 +968,6 @@ body {
 /* ── Mobile adjustments ── */
 
 @media (max-width: 768px) {
-  .hero-content {
-    padding-left: 16px;
-    border-left-width: 2px;
-  }
-
   .product-lead-copy {
     padding-left: 16px;
   }
