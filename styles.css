@@ -1185,8 +1185,7 @@ a {
 /* Careers */
 
 .careers {
-  padding: var(--section-pad) var(--side-pad);
-  border-top: 1px solid var(--gray-200);
+  padding: clamp(72px, 12vw, 128px) var(--side-pad) clamp(80px, 11vw, 120px);
 }
 
 .careers-inner {
@@ -1196,6 +1195,12 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 8vw, 80px);
   align-items: start;
+}
+
+.careers-inner--stack {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  gap: 0;
 }
 
 .careers-content h2 {
@@ -1217,6 +1222,12 @@ a {
   list-style: none;
 }
 
+.roles-list--cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, 10vw, 96px);
+}
+
 .roles-list li {
   display: flex;
   justify-content: space-between;
@@ -1231,6 +1242,92 @@ a {
   border-bottom: 1px solid var(--gray-200);
 }
 
+.roles-list--cards li {
+  padding: 0;
+  border: none;
+}
+
+.roles-list--cards li:last-child {
+  border: none;
+}
+
+.role-card {
+  border: none;
+}
+
+.role-card-link {
+  display: block;
+  padding: 0;
+  transition: opacity 0.25s ease;
+}
+
+.role-card-link:hover {
+  opacity: 0.55;
+}
+
+.role-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
+.role-card-title {
+  font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.role-card-apply {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.role-card:hover .role-card-apply {
+  color: var(--gray-600);
+}
+
+.role-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin-bottom: clamp(18px, 2.5vw, 24px);
+}
+
+.role-card-meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.role-card-meta dt {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.role-card-meta dd {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.role-card-desc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  max-width: 48ch;
+}
+
 .role-title {
   font-size: 0.9375rem;
   font-weight: 500;
@@ -1241,6 +1338,28 @@ a {
   font-size: 0.6875rem;
   color: var(--gray-400);
   letter-spacing: 0.04em;
+}
+
+.page-cta--minimal {
+  padding-top: clamp(24px, 4vw, 40px);
+  padding-bottom: clamp(96px, 14vw, 160px);
+  border-top: none;
+}
+
+.page-cta--minimal p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.page-cta-link {
+  color: var(--black);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.page-cta-link:hover {
+  opacity: 0.6;
 }
 
 /* Brief */
@@ -3945,6 +4064,30 @@ body.cookie-panel-open {
     flex-direction: column;
     gap: 4px;
     align-items: flex-start;
+  }
+
+  .role-card-meta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .role-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .roles-list--cards {
+    gap: clamp(56px, 14vw, 80px);
+  }
+
+  .role-card-desc {
+    max-width: none;
+  }
+
+  .careers-inner--stack {
+    max-width: none;
   }
 
   .clients {
