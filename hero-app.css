@@ -2,73 +2,73 @@
 
 .hero-app-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin: 0;
-  order: -1;
   width: 100%;
 }
 
 .iphone {
   position: relative;
-  width: min(100%, 300px);
-  filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.18));
+  width: min(100%, 292px);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
 }
 
 /* Side hardware buttons */
 .iphone-side-btn {
   position: absolute;
-  background: linear-gradient(180deg, #3a3a3a 0%, #1a1a1a 50%, #2a2a2a 100%);
-  border-radius: 2px;
+  background: linear-gradient(180deg, #48484a 0%, #2c2c2e 45%, #1c1c1e 100%);
+  border-radius: 1px;
   z-index: 2;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .iphone-side-btn--silent {
   left: -2px;
-  top: 108px;
-  width: 3px;
-  height: 28px;
+  top: 100px;
+  width: 2px;
+  height: 24px;
 }
 
 .iphone-side-btn--vol-up {
   left: -2px;
-  top: 152px;
-  width: 3px;
-  height: 44px;
+  top: 138px;
+  width: 2px;
+  height: 38px;
 }
 
 .iphone-side-btn--vol-down {
   left: -2px;
-  top: 206px;
-  width: 3px;
-  height: 44px;
+  top: 186px;
+  width: 2px;
+  height: 38px;
 }
 
 .iphone-side-btn--power {
   right: -2px;
-  top: 168px;
-  width: 3px;
-  height: 64px;
+  top: 156px;
+  width: 2px;
+  height: 56px;
 }
 
 .iphone-frame {
   position: relative;
-  background: linear-gradient(145deg, #2c2c2e 0%, #1c1c1e 40%, #0a0a0a 100%);
-  border-radius: 48px;
-  padding: 11px;
-  border: 1px solid #3a3a3c;
+  background: linear-gradient(160deg, #3a3a3c 0%, #1c1c1e 38%, #0d0d0f 100%);
+  border-radius: 46px;
+  padding: 9px;
+  border: 0.5px solid #525255;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(0, 0, 0, 0.9);
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -0.5px 0 rgba(0, 0, 0, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .iphone-frame::before {
   content: "";
   position: absolute;
-  inset: 4px;
-  border-radius: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  inset: 3px;
+  border-radius: 42px;
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
   pointer-events: none;
   z-index: 1;
 }
@@ -76,47 +76,57 @@
 /* Dynamic Island */
 .iphone-island {
   position: absolute;
-  top: 18px;
+  top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 92px;
-  height: 26px;
+  width: 84px;
+  height: 22px;
   background: #000;
-  border-radius: 20px;
+  border-radius: 18px;
   z-index: 12;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 10px;
+  padding-right: 9px;
 }
 
 .iphone-island-cam {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #1a2840 0%, #080810 55%, #000 100%);
-  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.15);
+  background: radial-gradient(circle at 35% 35%, #1a2840 0%, #060608 60%, #000 100%);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .iphone-screen {
   position: relative;
-  border-radius: 38px;
+  border-radius: 37px;
   overflow: hidden;
-  background: #050505;
+  background: #000;
   aspect-ratio: 9 / 19.5;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.04);
+}
+
+.iphone-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 15;
 }
 
 .iphone-home-bar {
   position: absolute;
-  bottom: 8px;
+  bottom: 7px;
   left: 50%;
   transform: translateX(-50%);
-  width: 96px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 4px;
+  width: 88px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 3px;
   z-index: 20;
   pointer-events: none;
 }
@@ -134,10 +144,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 20px 4px;
+  padding: 12px 18px 2px;
   font-size: 0.5625rem;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.82);
   font-weight: 600;
 }
 
@@ -148,20 +158,20 @@
 }
 
 .app-header {
-  padding: 2px 16px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 14px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .app-header-top {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .app-title {
-  font-size: 0.6875rem;
-  letter-spacing: 0.14em;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -170,19 +180,19 @@
 .app-live {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   font-size: 0.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .app-live-dot {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: #3ecf8e;
-  box-shadow: 0 0 8px rgba(62, 207, 142, 0.6);
+  box-shadow: 0 0 6px rgba(62, 207, 142, 0.55);
   animation: live-pulse 2s ease-in-out infinite;
 }
 
@@ -193,8 +203,8 @@
 
 .app-subtitle {
   font-size: 0.5rem;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.42);
 }
 
 /* ── Farm map with aerial photo ── */
@@ -213,15 +223,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: 42% center;
 }
 
 .app-map-tint {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.45) 100%),
-    rgba(0, 20, 10, 0.25);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.3) 100%);
   z-index: 1;
 }
 
@@ -230,9 +239,9 @@
   inset: 0;
   z-index: 2;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 24px 24px;
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
   pointer-events: none;
 }
 
@@ -245,29 +254,40 @@
 }
 
 .app-map-field {
-  fill: rgba(62, 207, 142, 0.18);
-  stroke: rgba(62, 207, 142, 0.75);
-  stroke-width: 1.2;
+  fill: rgba(62, 207, 142, 0.1);
+  stroke: rgba(62, 207, 142, 0.6);
+  stroke-width: 1;
 }
 
 .app-map-field--b {
-  fill: rgba(255, 200, 60, 0.12);
-  stroke: rgba(255, 200, 60, 0.55);
+  fill: rgba(210, 170, 80, 0.12);
+  stroke: rgba(210, 170, 80, 0.55);
 }
 
 .app-map-field--c {
-  fill: rgba(80, 160, 255, 0.12);
-  stroke: rgba(80, 160, 255, 0.5);
+  fill: rgba(80, 160, 255, 0.08);
+  stroke: rgba(80, 160, 255, 0.42);
+}
+
+.app-map-road {
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 1.5;
+}
+
+.app-map-divider {
+  stroke: rgba(0, 0, 0, 0.45);
+  stroke-width: 1;
+  stroke-dasharray: 3 2;
 }
 
 .app-map-grid-label {
-  font-size: 7px;
-  fill: rgba(255, 255, 255, 0.85);
+  font-size: 6.5px;
+  fill: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.1em;
   font-family: var(--font-mono);
   font-weight: 600;
   paint-order: stroke;
-  stroke: rgba(0, 0, 0, 0.7);
+  stroke: rgba(0, 0, 0, 0.65);
   stroke-width: 2px;
 }
 
@@ -278,12 +298,12 @@
 }
 
 .app-map-robot-pin {
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border: 1.5px solid #3ecf8e;
-  background: rgba(62, 207, 142, 0.45);
+  background: rgba(62, 207, 142, 0.4);
   transform: rotate(45deg);
-  box-shadow: 0 0 12px rgba(62, 207, 142, 0.5);
+  box-shadow: 0 0 10px rgba(62, 207, 142, 0.45);
   animation: robot-pin-pulse 3s ease-in-out infinite;
 }
 
@@ -294,58 +314,58 @@
 .app-map-robot:nth-child(9) .app-map-robot-pin { animation-delay: 1.6s; }
 
 @keyframes robot-pin-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 207, 142, 0.5); }
-  50% { box-shadow: 0 0 0 8px rgba(62, 207, 142, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(62, 207, 142, 0.45); }
+  50% { box-shadow: 0 0 0 7px rgba(62, 207, 142, 0); }
 }
 
 .app-map-robot-label {
   position: absolute;
-  top: 15px;
+  top: 13px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.4375rem;
-  letter-spacing: 0.06em;
+  font-size: 0.4rem;
+  letter-spacing: 0.05em;
   color: #fff;
   white-space: nowrap;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 2px 5px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2px 4px;
   border-radius: 2px;
 }
 
 .app-map-overlay {
   position: absolute;
-  inset: auto 10px 10px 10px;
+  inset: auto 8px 8px 8px;
   display: flex;
   justify-content: space-between;
-  font-size: 0.4375rem;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.4rem;
+  letter-spacing: 0.07em;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   z-index: 5;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 3px 7px;
   border-radius: 2px;
 }
 
 /* ── Fleet panel (desktop) ── */
 
 .app-fleet {
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 12px 20px;
+  background: #080808;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 8px 12px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .app-fleet-head {
   display: flex;
   justify-content: space-between;
   font-size: 0.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 2px;
+  color: rgba(255, 255, 255, 0.38);
+  margin-bottom: 1px;
 }
 
 .app-robot-row {
@@ -357,26 +377,26 @@
 
 .app-robot-id {
   font-size: 0.5rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: #fff;
 }
 
 .app-robot-task {
   font-size: 0.4375rem;
-  color: rgba(255, 255, 255, 0.38);
-  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.36);
+  letter-spacing: 0.03em;
 }
 
 .app-robot-pct {
   font-size: 0.5rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.52);
   text-align: right;
 }
 
 .app-robot-bar {
   grid-column: 1 / -1;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.08);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 1px;
   overflow: hidden;
 }
@@ -404,48 +424,37 @@
 
 @media (min-width: 901px) {
   .iphone {
-    width: min(100%, 320px);
+    width: min(100%, 300px);
   }
 
   .app-ui {
-    min-height: 560px;
+    min-height: 540px;
   }
 }
 
-/* ── Mobile: crop to upper phone (map + header) ── */
+/* ── Mobile: upper phone crop, clean white surround ── */
 
 @media (max-width: 900px) {
   .hero-app-wrap {
+    justify-content: center;
     margin-bottom: 0;
-    position: relative;
-  }
-
-  .hero-app-wrap::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 32px;
-    background: linear-gradient(to bottom, transparent, #fff);
-    pointer-events: none;
-    z-index: 5;
   }
 
   .iphone {
-    width: min(260px, 78vw);
-    max-height: 340px;
+    width: min(248px, 72vw);
+    max-height: 320px;
     overflow: hidden;
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.1));
   }
 
-  .iphone-side-btn--silent { top: 72px; height: 22px; }
-  .iphone-side-btn--vol-up { top: 104px; height: 34px; }
-  .iphone-side-btn--vol-down { top: 148px; height: 34px; }
-  .iphone-side-btn--power { top: 120px; height: 50px; }
+  .iphone-side-btn--silent { top: 68px; height: 20px; }
+  .iphone-side-btn--vol-up { top: 96px; height: 30px; }
+  .iphone-side-btn--vol-down { top: 134px; height: 30px; }
+  .iphone-side-btn--power { top: 112px; height: 44px; }
 
   .iphone-screen {
     aspect-ratio: unset;
-    height: 340px;
+    height: 320px;
   }
 
   .app-ui {
@@ -458,7 +467,7 @@
 
   .app-map {
     flex: 1;
-    min-height: 200px;
+    min-height: 180px;
   }
 
   .iphone-home-bar {

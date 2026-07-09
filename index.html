@@ -46,10 +46,9 @@
         <div class="hero-content">
           <h1 class="hero-title">
             <span class="hero-title-line">Your entire farm,</span>
-            <span class="hero-title-line">Run by autonomous Robots</span>
-            <span class="hero-title-line hero-title-line--soft">You just open the App and check on them.</span>
+            <span class="hero-title-line">Run by autonomous robots</span>
+            <span class="hero-title-line hero-title-line--soft">You just open the app and check on them.</span>
           </h1>
-          <p class="hero-lead">Fleet perception, spray control, and field mapping — one screen.</p>
           <div class="hero-actions">
             <a href="about.html" class="cta">About Rockio</a>
             <a href="rk-spray.html" class="cta-secondary">RK-SPRAY system</a>
@@ -86,20 +85,27 @@
                     <div class="app-map-tint" aria-hidden="true"></div>
                     <div class="app-map-grid" aria-hidden="true"></div>
                     <svg class="app-map-blocks" viewBox="0 0 280 200" preserveAspectRatio="none" aria-hidden="true">
-                      <polygon class="app-map-field" points="18,28 118,18 138,78 58,98 13,68"/>
-                      <polygon class="app-map-field app-map-field--b" points="128,23 248,33 258,108 148,93"/>
-                      <polygon class="app-map-field app-map-field--c" points="38,108 148,98 168,173 28,178"/>
-                      <polygon class="app-map-field" points="158,113 253,118 238,183 153,173"/>
-                      <text class="app-map-grid-label" x="22" y="50">BLOCK A</text>
-                      <text class="app-map-grid-label" x="166" y="56">BLOCK B</text>
-                      <text class="app-map-grid-label" x="50" y="146">BLOCK C</text>
-                      <text class="app-map-grid-label" x="176" y="150">BLOCK D</text>
+                      <!-- Block A — upper left harvested field -->
+                      <polygon class="app-map-field" points="5,5 74,5 74,96 5,96"/>
+                      <!-- Block B — lower left field (curved top edge) -->
+                      <polygon class="app-map-field app-map-field--b" points="5,100 5,195 72,195 74,104 28,100 12,102 5,100"/>
+                      <!-- Block C — center green-brown field -->
+                      <polygon class="app-map-field app-map-field--c" points="80,5 166,5 164,195 78,195"/>
+                      <!-- Block D — right green field -->
+                      <polygon class="app-map-field" points="168,5 275,5 275,195 166,195"/>
+                      <!-- Farm road + field divider -->
+                      <line class="app-map-road" x1="77" y1="0" x2="77" y2="200"/>
+                      <line class="app-map-divider" x1="167" y1="0" x2="167" y2="200"/>
+                      <text class="app-map-grid-label" x="22" y="22">BLOCK A</text>
+                      <text class="app-map-grid-label" x="22" y="152">BLOCK B</text>
+                      <text class="app-map-grid-label" x="108" y="22">BLOCK C</text>
+                      <text class="app-map-grid-label" x="208" y="22">BLOCK D</text>
                     </svg>
-                    <div class="app-map-robot" style="left: 28%; top: 38%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-01</span></div>
-                    <div class="app-map-robot" style="left: 62%; top: 32%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-02</span></div>
-                    <div class="app-map-robot" style="left: 48%; top: 62%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-03</span></div>
-                    <div class="app-map-robot" style="left: 78%; top: 58%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-04</span></div>
-                    <div class="app-map-robot" style="left: 72%; top: 78%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-05</span></div>
+                    <div class="app-map-robot" style="left: 16%; top: 30%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-01</span></div>
+                    <div class="app-map-robot" style="left: 16%; top: 72%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-02</span></div>
+                    <div class="app-map-robot" style="left: 46%; top: 50%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-03</span></div>
+                    <div class="app-map-robot" style="left: 78%; top: 34%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-04</span></div>
+                    <div class="app-map-robot" style="left: 82%; top: 68%;"><div class="app-map-robot-pin"></div><span class="app-map-robot-label">RK-05</span></div>
                     <div class="app-map-overlay">
                       <span>37.7749° N</span>
                       <span>122.4194° W</span>
