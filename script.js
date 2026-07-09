@@ -40,6 +40,7 @@ const revealSelector = [
   '.readable-list li',
   '.stat-simple-item',
   '.video-slot-frame',
+  '.iphone',
   '.faq-item',
   '.page-hero-inner',
   '.legal-content',

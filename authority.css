@@ -157,7 +157,7 @@ body {
 .hero-title {
   font-weight: 400;
   letter-spacing: -0.04em;
-  max-width: 12ch;
+  max-width: 22ch;
 }
 
 .hero-lead {
@@ -180,8 +180,7 @@ body {
   font-size: 0.6875rem;
 }
 
-/* Schematic frame on hero video */
-.hero-visual .video-slot-frame,
+/* Schematic frame on flagship video */
 .home-flagship-visual .video-slot-frame {
   border: 1px solid var(--ink);
 }
