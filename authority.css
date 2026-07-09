@@ -297,6 +297,7 @@ body {
   font-size: 0.625rem;
   letter-spacing: 0.08em;
   color: var(--gray-400);
+  white-space: nowrap;
 }
 
 .farm-cycle-step-name {
@@ -472,8 +473,175 @@ body {
   }
 }
 
+/* ── Inner pages — institutional layout ── */
+
+.site-page {
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0));
+}
+
+.page-shell {
+  max-width: calc(var(--max-width) + 120px);
+  margin: 0 auto;
+  padding: 0 var(--side-pad);
+}
+
+.page-intro {
+  padding: clamp(56px, 10vw, 104px) 0 clamp(48px, 8vw, 72px);
+}
+
+.page-block {
+  border-top: 1px solid var(--ink);
+  padding: clamp(40px, 7vw, 64px) 0 clamp(48px, 8vw, 72px);
+}
+
+.page-block-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: clamp(16px, 3vw, 24px);
+}
+
+.page-row-link {
+  display: grid;
+  grid-template-columns: minmax(80px, 100px) 1fr auto;
+  gap: 16px 24px;
+  align-items: baseline;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-row-link:hover .farm-cycle-step-name {
+  color: var(--gray-600);
+}
+
+.farm-cycle-step-meta {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  color: var(--gray-400);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.page-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--gray-200);
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.page-fact {
+  padding: clamp(18px, 3vw, 24px) 0;
+  border-bottom: 1px solid var(--gray-200);
+  border-right: 1px solid var(--gray-200);
+  padding-right: 16px;
+}
+
+.page-fact:nth-child(4n) {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 16px;
+}
+
+.page-fact:nth-child(4n + 2),
+.page-fact:nth-child(4n + 3) {
+  padding-left: 16px;
+}
+
+.page-fact-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+
+.page-fact-value {
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.page-doctrine {
+  border-top: 1px solid var(--gray-200);
+  padding: clamp(48px, 8vw, 72px) 0;
+}
+
+.page-doctrine-inner {
+  max-width: 36rem;
+  padding-left: clamp(24px, 3vw, 40px);
+  border-left: 1px solid var(--gray-200);
+}
+
+.page-doctrine-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 16px;
+}
+
+.page-doctrine-text {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.page-foot {
+  border-top: 1px solid var(--gray-200);
+  padding: clamp(40px, 7vw, 56px) 0 clamp(64px, 10vw, 96px);
+}
+
+.page-foot-link {
+  font-size: 0.9375rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--gray-200);
+  transition: border-color 0.2s ease;
+}
+
+.page-foot-link:hover {
+  border-bottom-color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .page-intro-header,
+  .page-doctrine-inner {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .page-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-fact {
+    border-right: none;
+    padding-left: 0 !important;
+    padding-right: 0;
+  }
+
+  .page-row-link {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .farm-cycle-step-meta {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+
 .home-contact--page {
   padding-top: calc(var(--header-height) + 56px + env(safe-area-inset-top, 0));
+  border-top: none;
 }
 
 .home-contact-inner--page {
@@ -486,8 +654,16 @@ body {
   border-top: none;
   padding-top: 0;
   margin-top: 20px;
-  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
   color: var(--gray-400);
+}
+
+.home-contact-direct--inline a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .footer-main--minimal {
