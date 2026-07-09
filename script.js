@@ -40,6 +40,8 @@ const revealSelector = [
   '.readable-list li',
   '.stat-simple-item',
   '.video-slot-frame',
+  '.app-showcase-copy',
+  '.app-showcase-device',
   '.farm-cycle-header',
   '.farm-cycle-phase',
   '.farm-cycle-steps li',
@@ -299,4 +301,38 @@ if (productHero && darkHeader) {
   window.addEventListener('scroll', toggleHeader, { passive: true });
   toggleHeader();
 }
+
+function initFarmCyclePanels() {
+  const section = document.querySelector('.farm-cycle--home');
+  if (!section) return;
+
+  const panels = [...section.querySelectorAll('.farm-cycle-phase-panel')];
+  const mq = window.matchMedia('(max-width: 900px)');
+
+  const syncPanels = () => {
+    if (mq.matches) {
+      const openPanel = panels.find((panel) => panel.open) || panels[0];
+      panels.forEach((panel) => {
+        panel.open = panel === openPanel;
+      });
+    } else {
+      panels.forEach((panel) => {
+        panel.open = true;
+      });
+    }
+  };
+
+  panels.forEach((panel) => {
+    panel.addEventListener('toggle', () => {
+      if (!mq.matches || !panel.open) return;
+      panels.forEach((other) => {
+        if (other !== panel) other.open = false;
+      });
+    });
+  });
+
+  mq.addEventListener('change', syncPanels);
+}
+
+initFarmCyclePanels();
 

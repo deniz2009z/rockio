@@ -1,11 +1,15 @@
 /* iPhone hero — fleet command app mockup */
 
-.hero-app-wrap {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
+.hero-video-wrap {
   width: 100%;
+}
+
+.hero-video-wrap .hero-video {
+  width: 100%;
+}
+
+.hero-video-wrap .video-slot-placeholder {
+  background-color: var(--gray-100);
 }
 
 .iphone {
@@ -484,17 +488,59 @@
     width: min(100%, 318px);
   }
 
+  .iphone--showcase {
+    width: min(100%, 368px);
+    filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.12));
+  }
+
+  .iphone--showcase .app-ui {
+    min-height: 640px;
+  }
+
   .app-ui {
     min-height: 560px;
   }
 }
 
-/* ── Mobile: full phone frame, map-focused ── */
+/* ── App showcase phone ── */
+
+.app-showcase .iphone--showcase {
+  width: min(100%, 368px);
+}
+
+.app-showcase .app-fleet {
+  display: flex;
+}
+
+/* ── Mobile: map-focused in hero only ── */
 
 @media (max-width: 900px) {
   .hero-app-wrap {
     justify-content: center;
     margin-bottom: 4px;
+  }
+
+  .app-showcase .iphone--showcase {
+    width: min(292px, 82vw);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+  }
+
+  .app-showcase .iphone-frame {
+    border-radius: 44px;
+    padding: 9px;
+  }
+
+  .app-showcase .iphone-screen {
+    border-radius: 36px;
+  }
+
+  .app-showcase .app-ui {
+    min-height: 580px;
+  }
+
+  .app-showcase .app-fleet {
+    display: flex;
+    padding-bottom: 20px;
   }
 
   .iphone {

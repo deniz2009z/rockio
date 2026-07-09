@@ -164,13 +164,14 @@ body {
   }
 }
 
-.hero-title-line {
-  display: block;
-  margin-top: 0.36em;
+.hero-title-stack .hero-title-line + .hero-title-line {
+  margin-top: 0.38em;
 }
 
-.hero-title-stack .hero-title-line:first-child {
-  margin-top: 0;
+@media (min-width: 901px) {
+  .hero-title-stack .hero-title-line + .hero-title-line {
+    margin-top: 0.48em;
+  }
 }
 
 .hero-title-line:first-child {
@@ -205,6 +206,95 @@ body {
   text-transform: none;
   font-size: 0.9375rem;
   min-width: 0;
+}
+
+/* ── App showcase (fleet phone) ── */
+
+.app-showcase {
+  padding: clamp(64px, 9vw, 112px) 0;
+  border-top: 1px solid var(--gray-200);
+  background: #fff;
+}
+
+.app-showcase-inner {
+  width: 100%;
+  max-width: calc(var(--max-width) + 200px);
+  margin: 0 auto;
+  padding: 0 var(--side-pad);
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.05fr);
+  gap: clamp(48px, 7vw, 96px);
+  align-items: center;
+}
+
+.app-showcase-copy {
+  padding-left: clamp(20px, 3vw, 44px);
+  border-left: 1px solid var(--gray-200);
+}
+
+.app-showcase-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.034em;
+  line-height: 1.08;
+  color: #000;
+  text-wrap: balance;
+}
+
+.app-showcase-lead {
+  margin-top: clamp(16px, 2.5vw, 24px);
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.55;
+  color: var(--gray-600);
+  letter-spacing: -0.01em;
+  max-width: 22rem;
+}
+
+.app-showcase-device {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: clamp(2.125rem, 8.2vw, 2.875rem);
+    line-height: 1.1;
+    letter-spacing: -0.032em;
+  }
+
+  .hero-title-stack .hero-title-line + .hero-title-line {
+    margin-top: 0.42em;
+  }
+
+  .hero-actions {
+    margin-top: 32px;
+  }
+
+  .app-showcase {
+    padding: var(--section-pad-mobile) 0;
+  }
+
+  .app-showcase-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .app-showcase-device {
+    order: 1;
+  }
+
+  .app-showcase-copy {
+    order: 2;
+    padding-left: clamp(20px, 5vw, 28px);
+    max-width: none;
+  }
+
+  .app-showcase-lead {
+    max-width: none;
+  }
 }
 
 /* ── Farm cycle — procedure manual ── */
@@ -275,6 +365,22 @@ body {
   border-bottom: 1px solid var(--gray-200);
 }
 
+.farm-cycle-phase-panel {
+  border: 0;
+}
+
+.farm-cycle-phase-panel > .farm-cycle-steps {
+  padding-top: 2px;
+}
+
+.farm-cycle-phase-name {
+  display: block;
+}
+
+.farm-cycle-phase-meta {
+  display: none;
+}
+
 .farm-cycle-steps {
   list-style: none;
 }
@@ -328,6 +434,120 @@ body {
   .farm-cycle-header {
     padding-left: 0;
     border-left: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .farm-cycle--home {
+    padding: clamp(44px, 11vw, 56px) var(--side-pad);
+  }
+
+  .farm-cycle--home .farm-cycle-header {
+    margin-bottom: 24px;
+  }
+
+  .farm-cycle--home .farm-cycle-label {
+    margin-bottom: 10px;
+  }
+
+  .farm-cycle--home .farm-cycle-title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-bottom: 8px;
+  }
+
+  .farm-cycle--home .farm-cycle-phase + .farm-cycle-phase {
+    margin-top: 0;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-panel {
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .farm-cycle--home .farm-cycle-phase-panel summary.farm-cycle-phase-label {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 13px 0;
+    margin: 0;
+    border-bottom: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-panel summary.farm-cycle-phase-label::-webkit-details-marker {
+    display: none;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-panel[open] summary.farm-cycle-phase-label {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .farm-cycle--home .farm-cycle-phase-meta {
+    display: inline;
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+  }
+
+  .farm-cycle--home .farm-cycle-phase-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-toggle::after {
+    content: "+";
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--gray-400);
+  }
+
+  .farm-cycle--home .farm-cycle-phase-panel[open] .farm-cycle-phase-toggle::after {
+    content: "−";
+  }
+
+  .farm-cycle--home .farm-cycle-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    padding-bottom: 6px;
+  }
+
+  .farm-cycle--home .farm-cycle-steps li {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 6px 0;
+    border-bottom: none;
+    align-items: start;
+  }
+
+  .farm-cycle--home .farm-cycle-step-num {
+    display: none;
+  }
+
+  .farm-cycle--home .farm-cycle-step-name {
+    font-size: 0.8125rem;
+    line-height: 1.32;
+  }
+}
+
+@media (min-width: 901px) {
+  .farm-cycle--home .farm-cycle-phase-panel summary.farm-cycle-phase-label {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-toggle::after {
+    display: none;
+  }
+
+  .farm-cycle--home .farm-cycle-phase-meta {
+    display: none;
   }
 }
 
@@ -1501,12 +1721,14 @@ body {
 
 @media (max-width: 768px) {
   .hero-content {
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    margin: 0;
+    padding-left: clamp(20px, 5vw, 28px);
+    border-left: 1px solid var(--gray-200);
   }
 
   .hero-actions {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .product-lead-copy {
