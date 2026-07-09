@@ -136,7 +136,7 @@ body {
   text-align: left;
   padding-left: 0;
   border-left: none;
-  max-width: 32rem;
+  max-width: 28rem;
   margin: 0;
   width: 100%;
 }
@@ -145,6 +145,7 @@ body {
   .hero-content {
     padding-left: clamp(28px, 3.5vw, 44px);
     border-left: 1px solid var(--gray-200);
+    max-width: 31rem;
   }
 }
 
@@ -154,17 +155,22 @@ body {
   letter-spacing: -0.028em;
   max-width: none;
   color: #000;
+  text-wrap: balance;
 }
 
 @media (min-width: 901px) {
   .hero-title {
-    letter-spacing: -0.035em;
+    letter-spacing: -0.038em;
   }
 }
 
 .hero-title-line {
   display: block;
-  margin-top: 0.42em;
+  margin-top: 0.36em;
+}
+
+.hero-title-stack .hero-title-line:first-child {
+  margin-top: 0;
 }
 
 .hero-title-line:first-child {
@@ -172,16 +178,23 @@ body {
 }
 
 .hero-title-line--soft {
-  margin-top: 0.52em;
+  margin-top: 0.75em;
   font-weight: 400;
-  font-size: 0.8em;
-  color: #2a2a2a;
-  letter-spacing: -0.02em;
+  font-size: 0.92em;
+  color: var(--gray-600);
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 901px) {
+  .hero-title-line--soft {
+    margin-top: 1.35rem;
+    font-size: 1.0625rem;
+  }
 }
 
 .hero-actions {
   justify-content: flex-start;
-  margin-top: clamp(40px, 6vw, 64px);
+  margin-top: clamp(36px, 5vw, 52px);
 }
 
 .hero-actions .cta,
@@ -209,8 +222,8 @@ body {
 }
 
 .farm-cycle-header {
-  max-width: 40rem;
-  margin-bottom: clamp(56px, 8vw, 88px);
+  max-width: 28rem;
+  margin-bottom: clamp(48px, 7vw, 72px);
   padding-left: clamp(24px, 3vw, 40px);
   border-left: 1px solid var(--gray-200);
 }
@@ -225,19 +238,22 @@ body {
 }
 
 .farm-cycle-title {
-  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 400;
   letter-spacing: -0.04em;
-  line-height: 1.06;
-  margin-bottom: clamp(20px, 3vw, 28px);
+  line-height: 1.04;
+  margin-bottom: clamp(12px, 2vw, 16px);
   color: var(--ink);
 }
 
 .farm-cycle-lead {
-  font-size: clamp(1rem, 2.2vw, 1.125rem);
-  line-height: 1.75;
-  color: var(--gray-600);
-  max-width: 36rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--gray-400);
+  max-width: none;
 }
 
 .farm-cycle-procedures {
@@ -267,9 +283,13 @@ body {
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: 16px 24px;
-  padding: clamp(18px, 2.5vw, 24px) 0;
+  padding: clamp(14px, 2vw, 18px) 0;
   border-bottom: 1px solid var(--gray-200);
   align-items: baseline;
+}
+
+.farm-cycle-step-desc {
+  display: none;
 }
 
 .farm-cycle-step-num {
@@ -280,36 +300,26 @@ body {
 }
 
 .farm-cycle-step-name {
-  font-size: clamp(0.9375rem, 2vw, 1rem);
+  font-size: 0.9375rem;
   font-weight: 400;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   color: var(--ink);
   line-height: 1.35;
 }
 
-.farm-cycle-step-desc {
-  grid-column: 2;
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: var(--gray-600);
-}
-
-@media (min-width: 901px) {
-  .farm-cycle-steps li {
-    grid-template-columns: 44px minmax(160px, 220px) 1fr;
-    gap: 0 32px;
-    padding-right: 8px;
+@media (min-width: 1200px) {
+  .farm-cycle-procedures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 clamp(48px, 6vw, 80px);
   }
 
-  .farm-cycle-step-name {
-    grid-column: 2;
+  .farm-cycle-phase + .farm-cycle-phase {
+    margin-top: 0;
   }
 
-  .farm-cycle-step-desc {
-    grid-column: 3;
-    text-align: right;
-    max-width: 28rem;
-    justify-self: end;
+  .farm-cycle-phase:nth-child(n+3) {
+    margin-top: clamp(32px, 4vw, 40px);
   }
 }
 
@@ -356,15 +366,12 @@ body {
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.1;
-  margin-bottom: clamp(16px, 2.5vw, 24px);
+  margin-bottom: 0;
   color: var(--ink);
 }
 
 .home-contact-lead {
-  font-size: clamp(1rem, 2.2vw, 1.0625rem);
-  line-height: 1.75;
-  color: var(--gray-600);
-  max-width: 28rem;
+  display: none;
 }
 
 .home-contact-form {
@@ -417,8 +424,10 @@ body {
 
 .home-contact-direct {
   grid-column: 1 / -1;
-  font-size: 0.875rem;
-  color: var(--gray-600);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--gray-400);
   padding-top: clamp(8px, 2vw, 16px);
   border-top: 1px solid var(--gray-200);
 }
